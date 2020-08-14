@@ -12,11 +12,11 @@ output:
 
 **Instructor:**  Dr. Lasanthi Watagoda
 
-**Class meeting:** TR 12:00pm - 10:45am, Via zoom
+**Class meeting:** TR 12:30pm - 1:45pm, Via zoom
 
 **Office:** Virtual  
 
-**Office Hours:** Virtual  Tuesday and Thursday
+**Office Hours:** Virtual,  Tuesday and Thursday 9.30am - 11.30am
 
 
 <!--Questions related to the class should be addressed with the [piazza account for STT 3851](https://piazza.com/appstate/spring2018/stat3851/home).-->
@@ -42,17 +42,16 @@ Course Text: Applied Linear Statistical Models, Fifth Edition. Michael H. Kutner
 
 Text book, Note book, notes,  pencil, a calculator and access to AppState RStudio server
 
- **Homework:** Students are expected to work all assigned problems. Only selected assignments or parts of
-assignments may at times be graded. See schedule for the dates.
+ **Homework:** Students are expected to work all assigned problems. Only selected assignments or parts of assignments may at times be graded. See schedule for the dates.
 
-**Quizzes:** I anticipate giving in class quizzes regularly during the semester. See schedule for the dates.
+**Quizzes:** I anticipate giving in class quizzes weekly during the semester. See schedule for the dates.
 <!--The lowest quiz grade will be
 dropped when determining the final grade.-->
 
-**Tests:** Two mid exams will be given. See schedule for the dates.
+**Tests:** Two mid exams will be given. 
 
 
-**Final Exam:** A final exam will be given on May 7th at 8am. This final exam will be comprehensive, covering all
+**Final Exam:** The final exam will be comprehensive, covering all
 material that is covered in the course. 
 
 
@@ -100,4 +99,4 @@ This course conforms with all Appalachian State University policies with respect
 
 ***
 
-#[Home Page](http://stat-ata-asu.github.io/STT3851ClassRepo/) - [Assignments](http://stat-ata-asu.github.io/STT3851ClassRepo/Assignments/AssignmentsSTT3851Spring2017.html) 
+#[Home Page](https://lasanthiwatagoda.github.io/STT4830ClassRepo/index.html) 
