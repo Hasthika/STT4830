@@ -1,5 +1,5 @@
 ---
-title: "R codes by Chapter"
+title: "**R codes by Chapter**"
 author: ""
 date: ""
 output: html_document
@@ -9,8 +9,14 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
 ***
 
 #### 1) [R Codes for Chapter 1](./RCodes/Ch1Script.html)
+
+***
+
+## **Data sets**
+#### [Click here](http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/Chapter%20%201%20Data%20Sets.html) to get Data sets to use in the assignments 
 
 ***
