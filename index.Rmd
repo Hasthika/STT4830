@@ -1,0 +1,29 @@
+---
+title: "Welcome"
+---
+
+***
+
+## **Class Meetings**
+
+* [Click here to go to class](https://appstate.zoom.us/j/615904670)
+* [Click here to go to Office Hours (1pm -- 3pm, T and R)](https://appstate.zoom.us/j/275205125)
+
+***
+
+* The course syllabus is stored in the [`Syllabus`](./Syllabus/STT4880SP2020Syllabus.html) directory of the STT 4880 repository.
+
+* Course pacing and assignments are stored in the [`Assignments`](./Assignments/Assignments.html) directory of the STT 4880 repository.
+
+
+ <!--* Click [here](https://goo.gl/forms/uVbDu3i5ZubmS6BG2) to record your attendance.-->
+
+ <!--* [Flow Control](./Rmarkdown/FlowControl.html)-->
+
+<!--* [The Bootstrap](./Rmarkdown/TheBootstrap.html)-->
+
+***
+
+
+
+
