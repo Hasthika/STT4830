@@ -15,9 +15,9 @@ title: "Welcome"
 
 * Assignments [`Assignments`](./Assignments/Assignments.html) 
 
-* [R Codes](RcodesbyChapter.html)
+* [`R Codes`](RcodesbyChapter.html)
 
-* [Homework](Homework.html) - *Homework is usually due every Thursday*
+* [`Homework`](Homework.html) - *Homework is usually due every Thursday*
 
  <!--* Click [here](https://goo.gl/forms/uVbDu3i5ZubmS6BG2) to record your attendance.-->
 
