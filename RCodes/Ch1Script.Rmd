@@ -1,0 +1,58 @@
+---
+title: "Finding LS estimates in $R$"
+author: ""
+date: ""
+output: html_document
+---
+
+```{r setup, include=FALSE, comment=NA, warning=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Read data from an URL
+
+```{r comment=NA, warning=FALSE, message=FALSE}
+toluca <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%20%201%20Data%20Sets/CH01TA01.txt", sep ="" , header = FALSE)
+
+
+#Look at the first 6 entries
+head(toluca)
+```
+
+
+### Rename columns
+
+```{r comment=NA, warning=FALSE, message=FALSE}
+colnames(toluca) <- c("lotSize", "hours")
+
+#Look at the first 6 entries
+head(toluca)
+```
+
+
+### Creating a scatter plot
+
+```{r comment=NA, warning=FALSE, message=FALSE}
+library(ggplot2)
+ggplot(toluca, aes(x = lotSize, y = hours)) +
+  geom_point() +
+  labs(x = "Lot Size", y = "Work Hours", title = "Toluca example scatter plot") +
+  theme_bw()
+```
+
+### Creating a scatter plot, LS line added
+
+```{r comment=NA, warning=FALSE, message=FALSE}
+ggplot(toluca, aes(x = lotSize, y = hours)) +
+  geom_point() +
+  labs(x = "Lot Size", y = "Work Hours", title = "Toluca example, LS line added") +
+  geom_smooth(method = "lm", se = FALSE) +
+  theme_bw()
+```
+
+### Finding the LS estimates
+```{r comment=NA, warning=FALSE, message=FALSE}
+toluca_LS_model <- lm(hours ~ lotSize, data = toluca)
+summary(toluca_LS_model)
+```
+
