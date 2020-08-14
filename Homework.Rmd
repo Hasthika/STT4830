@@ -1,5 +1,5 @@
 ---
-title: "Homework for STT 4880 - SP 2020"
+title: "Homework for STT 4830 - Fall 2020"
 author: "Dr. Lasanthi Pelawa-Watagoda"
 date: 'Last Updated on: `r format(Sys.time(), "%b %d, %Y at %X")`'
 output: 
@@ -7,83 +7,30 @@ output:
     highlight: textmate
     theme: yeti
     toc: true
-    css: "../CSS/style.css"
+    css: "style.css"
 ---
 
 ***
 
-* *Homework 1*: Due Thursday, January 23rd
-    * Sec 6.1 - 2, 4, 5, 8, 10
-    
+#### ***Homework 1*: Due Thursday, August 27th**
+
+1) A regression model is $y = \beta_0 + \beta_1x + \epsilon$. There are six observations. The summary statistics are:
+
+$$\sum y_i = 8.5,\quad \sum x_i = 6,\quad \sum x_i^2 = 16,\quad \sum x_iy_i = 15.5,\quad \sum y_i^2 = 17.25$$
+Calculate the LS estimate of $\beta_1$
+
+2) 1.21
+
+***
+## **Textbook**
+[Download PFD textbook here](4830_Textbook.pdf)
 
 ***
 
-* *Homework 2*: Due Thursday, January 30th
-    * Sec 6.2 - 2, 4, 6, 8, 10
+## **Data sets**
+#### [Click here](http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/Chapter%20%201%20Data%20Sets.html) to get Data sets to use in the assignments 
 
- 
 ***
-  
-* *Homework 3*: Due Thursday, February 06th
-    * Sec 6.3 - 2, 3, 6, 8, 13, 14
-
- 
-***
-
-* *Homework 4*: Due Thursday, February 13th
-    * Sec 6.4 - 3, 5 (a and b only), 6 (Use of R is fine), 9, 12
-
- 
-***
-
-* *Homework 5*: Due Thursday, February 25th
-    * Sec 7.1 - 2, 4, 6, 8, 10, 12
-
- 
-***
-
-* *Homework 6*: Due Thursday, March 3rd
-    * Sec 7.2 - 1, 2, 4, 6, 12
-
- 
-***
-
-* *Homework 7*: Due Thursday, March 24th
-    * Sec 7.3 - 1 a),b),d),e), 4, 6, 8, 10
-    * Sec 7.4 - 2, 3, 6, 8, 10
-    
- ***   
- 
- * *Homework 8*: Due Thursday, March 31th
-    * Sec 8.1 - 2, 4, 6, 8, 10, 12
-    * Sec 8.2 - 2, 4, 6, 8, 10, 12
-    
-    
- *** 
- 
- * *Homework 9*: Due  Tuesday, April 14th
-    * Sec 8.3 - 5, 6, 8, 10, 12 
-    * Sec 8.4 - 2, 4, 6
-    
- ***  
- 
- * *Homework 10*: Due  Tuesday, April 21st
-    * Sec 9.1 - 2, 4, 6, 8, 10
-    
-    
- ***  
- 
- * *Homework 11*: Due Tuesday, April 28th
-    * Sec 9.2 - 4, 6, 8, 10 (For Q4: $\leq$ 61, 62-78, 79 $\geq$ )
-     
-    
- ***  
- 
- 
-[Probability and Statistical Infernce - 9th Edition](TextBook.pdf)
-
-
-
 
     
     
