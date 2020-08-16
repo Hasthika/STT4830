@@ -14,13 +14,18 @@ output:
 
 #### ***Homework 1*: Due Thursday, August 27th**
 
+1) (1.2)
+2) (1.5 Give reason for your answer)
+3) (1.12)
+
+<!--
 1) A regression model is $y = \beta_0 + \beta_1x + \epsilon$. There are six observations. The summary statistics are:
 
 $$\sum y_i = 8.5,\quad \sum x_i = 6,\quad \sum x_i^2 = 16,\quad \sum x_iy_i = 15.5,\quad \sum y_i^2 = 17.25$$
 Calculate the LS estimate of $\beta_1$
 
 2) 1.21
-
+-->
 ***
 ## **Textbook**
 [Download PFD textbook here](4830_Textbook.pdf)
