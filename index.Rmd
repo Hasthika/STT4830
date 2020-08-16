@@ -13,7 +13,7 @@ title: "Welcome"
 
 * The course syllabus  [`Syllabus`](STT4830F2020Syllabus.html) 
 
-* Assignments [`Assignments`](./Assignments/Assignments.html) 
+*  [`Course Pacing`](Assignments.html) 
 
 * [`R Codes`](RcodesbyChapter.html)
 
