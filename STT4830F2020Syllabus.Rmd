@@ -36,7 +36,7 @@ analysis, the effects of multicollinearity, and variable selection procedures. L
 
 Course Text: Applied Linear Statistical Models, Fifth Edition. Michael H. Kutner, Christopher J. Nachtsheim, John Neter ans William Li.
 
-[Download PFD text book here](4830_Textbook.pdf)
+[Download PDF text book here](4830_Textbook.pdf)
 
 **Required Resources:**
 
