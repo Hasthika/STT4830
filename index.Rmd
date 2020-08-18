@@ -19,7 +19,8 @@ title: "Welcome"
 
 * [`Homework`](Homework.html) - *Homework is usually due every Thursday*
 
- <!--* Click [here](https://goo.gl/forms/uVbDu3i5ZubmS6BG2) to record your attendance.-->
+
+* Click [`here`](https://forms.gle/Qy5JHkWDxNp5iqm2A) to record your attendance.
 
  <!--* [Flow Control](./Rmarkdown/FlowControl.html)-->
 
