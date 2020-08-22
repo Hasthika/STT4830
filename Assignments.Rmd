@@ -20,6 +20,10 @@ output:
     * 1.3 Simple Linear Regression Model with Distribution of Error Terms Unspecified
     * 1.4 Data for Regression Analysis
 
+  *Lecture Recordings*
+  
+  * [Tuesday's Class](https://appstate.zoom.us/rec/share/68F4BenTsVFOabOQ90uBXIQTBZ_kT6a81SEfrvYNyBnFHFJgvGB89Or4l6_on43n)
+  * [Thursday's Class](https://appstate.zoom.us/rec/share/tdJKE5Pszj1JaYnHz17EXLwrO7rKaaa81XBP_PIEz0mjXXpw44VMHowZ81f7JLes)
 
 ***
 
