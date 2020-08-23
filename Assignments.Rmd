@@ -19,6 +19,7 @@ output:
     * 1.1 Relation between variables
     * 1.3 Simple Linear Regression Model with Distribution of Error Terms Unspecified
     * 1.4 Data for Regression Analysis
+    * 1.5 Overview of Steps in Regression Analysis
 
   *Lecture Recordings*
   
@@ -27,7 +28,20 @@ output:
 
 ***
 
+**Week 2: (August 24 -- 28)**
+
+* Chapter 1: Linear Regression With One Predictor Variable
+    * 1.6 Estimation of Regression Function 
+    * 1.7 Estimation of Error Tenns Variance $\sigma^2$
+    * 1.8 Normal Error Regression Model 
+    
+  *Lecture Recordings*
+  
+  
+    
+    
 
 
+***
 
 
