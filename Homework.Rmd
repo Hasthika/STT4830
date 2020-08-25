@@ -24,7 +24,7 @@ output:
 $$\sum y_i = 8.5,\quad \sum x_i = 6,\quad \sum x_i^2 = 16,\quad \sum x_iy_i = 15.5,\quad \sum y_i^2 = 17.25$$
 Calculate the LS estimate of $\beta_1$
 
-5) You are fitting a linear regression model $y_i = \beta_0 + \beta_1x_i + \epsilon_i$ to 18 obsevations. You are given the followings:
+5) You are fitting a linear regression model $y_i = \beta_0 + \beta_1x_i + \epsilon_i$ to 18 observations. You are given the followings:
 
 $$\sum y_i = 252,\quad \sum x_i = 216,\quad \sum x_i^2 = 3092,\quad \sum x_iy_i = 3364,\quad \sum y_i^2 = 4528$$
 Calculate the LS estimate of $\beta_1$
