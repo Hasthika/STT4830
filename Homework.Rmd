@@ -18,14 +18,32 @@ output:
 2) (1.5 Give reason for your answer)
 3) (1.12)
 
-<!--
-1) A regression model is $y = \beta_0 + \beta_1x + \epsilon$. There are six observations. The summary statistics are:
+
+4) A regression model is $y = \beta_0 + \beta_1x + \epsilon$. There are six observations. The summary statistics are:
 
 $$\sum y_i = 8.5,\quad \sum x_i = 6,\quad \sum x_i^2 = 16,\quad \sum x_iy_i = 15.5,\quad \sum y_i^2 = 17.25$$
 Calculate the LS estimate of $\beta_1$
 
-2) 1.21
--->
+5) You are fitting a linear regression model $y_i = \beta_0 + \beta_1x_i + \epsilon_i$ to 18 obsevations. You are given the followings:
+
+$$\sum y_i = 252,\quad \sum x_i = 216,\quad \sum x_i^2 = 3092,\quad \sum x_iy_i = 3364,\quad \sum y_i^2 = 4528$$
+Calculate the LS estimate of $\beta_1$
+
+6) You are fitting a linear regression model $y_i = \beta_0 + \beta_1x_i + \epsilon_i$ to the following data:
+
+
+| x | 2 | 5 |8 | 11 | 13 | 15 | 16 | 18 |
+| y | -10 | -9 | -4 | 0 | 4 | 5 | 6 | 8 |
+
+
+Calculate the LS estimate of $\beta_1$ using $R$
+
+7) Given the following information 
+
+$$\sum y_i = 1742,\quad \sum x_i = 144,\quad \sum x_i^2 = 2300,\quad \sum x_iy_i = 26696,\quad \sum y_i^2 = 312674 \quad n = 12$$
+Determine the LS equation for the model $y_i = \beta_0 + \beta_1x_i + \epsilon_i$.
+
+
 ***
 ## **Textbook**
 [Download PFD textbook here](4830_Textbook.pdf)
