@@ -1,6 +1,6 @@
 ---
 title: "Schedule for STT 4830 - Fall 2020"
-author: "Dr. Lasanthi Pelawa-Watagoda"
+author: "Dr. Lasanthi Watagoda"
 date: 'Last Updated on: `r format(Sys.time(), "%b %d, %Y at %X")`'
 output: 
   bookdown::html_document2: 
@@ -32,14 +32,18 @@ output:
 
 * Chapter 1: Linear Regression With One Predictor Variable
     * 1.6 Estimation of Regression Function 
-    * 1.7 Estimation of Error Tenns Variance $\sigma^2$
-    * 1.8 Normal Error Regression Model 
     
   *Lecture Recordings*
   
   * [Tuesday's Class](https://appstate.zoom.us/rec/share/7PN1fuCuz0FOW43ox3r2Z694Atq1aaa80yRNrKAPy0s7eaoyib87HPDRJaGyyhUr)
-    
-    
+
+***
+
+**Week 3: (August 31 -- Sep 4)**
+
+* Chapter 1: Linear Regression With One Predictor Variable
+    * 1.7 Estimation of Error Terms Variance $\sigma^2$
+    * 1.8 Normal Error Regression Model     
 
 
 ***
