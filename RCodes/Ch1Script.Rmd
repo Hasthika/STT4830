@@ -40,6 +40,8 @@ ggplot(toluca, aes(x = lotSize, y = hours)) +
   theme_bw()
 ```
 
+
+
 ### Creating a scatter plot, LS line added
 
 ```{r comment=NA, warning=FALSE, message=FALSE}
@@ -56,3 +58,10 @@ toluca_LS_model <- lm(hours ~ lotSize, data = toluca)
 summary(toluca_LS_model)
 ```
 
+
+### Finding fitted values and residuals
+```{r comment=NA, warning=FALSE, message=FALSE}
+library(moderndive)
+Fittedandresiduals <-get_regression_points(toluca_LS_model)
+Fittedandresiduals
+```

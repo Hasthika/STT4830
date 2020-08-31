@@ -251,6 +251,26 @@ Residual standard error: 48.82 on 23 degrees of freedom
 Multiple R-squared:  0.8215,    Adjusted R-squared:  0.8138 
 F-statistic: 105.9 on 1 and 23 DF,  p-value: 4.449e-10</code></pre>
 </div>
+<div id="finding-fitted-values-and-residuals" class="section level3">
+<h3>Finding fitted values and residuals</h3>
+<pre class="r"><code>library(moderndive)
+Fittedandresiduals &lt;-get_regression_points(toluca_LS_model)
+Fittedandresiduals</code></pre>
+<pre><code># A tibble: 25 x 5
+      ID hours lotSize hours_hat residual
+   &lt;int&gt; &lt;int&gt;   &lt;int&gt;     &lt;dbl&gt;    &lt;dbl&gt;
+ 1     1   399      80      348.    51.0 
+ 2     2   121      30      169.   -48.5 
+ 3     3   221      50      241.   -19.9 
+ 4     4   376      90      384.    -7.68
+ 5     5   361      70      312.    48.7 
+ 6     6   224      60      277.   -52.6 
+ 7     7   546     120      491.    55.2 
+ 8     8   352      80      348.     4.02
+ 9     9   353     100      419.   -66.4 
+10    10   157      50      241.   -83.9 
+# … with 15 more rows</code></pre>
+</div>
 
 
 
