@@ -64,4 +64,6 @@ summary(toluca_LS_model)
 library(moderndive)
 Fittedandresiduals <-get_regression_points(toluca_LS_model)
 Fittedandresiduals
+rmse_mse <-get_regression_summaries(toluca_LS_model)
+rmse_mse
 ```
