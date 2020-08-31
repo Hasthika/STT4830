@@ -49,6 +49,16 @@ $$\sum y_i = 1742,\quad \sum x_i = 144,\quad \sum x_i^2 = 2300,\quad \sum x_iy_i
 Determine the LS equation for the model $y_i = \beta_0 + \beta_1x_i + \epsilon_i$.
 
 
+
+#### ***Homework 2*: Due Sunday, September 6th**
+
+1) 1.19
+2) 1.23
+3) 1.20
+4) 1.24
+5) 1.27
+
+
 ***
 ## **Textbook**
 [Download PFD textbook here](4830_Textbook.pdf)
