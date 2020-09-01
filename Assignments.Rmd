@@ -33,6 +33,8 @@ output:
 * Chapter 1: Linear Regression With One Predictor Variable
     * 1.6 Estimation of Regression Function 
     
+    ***HW1***
+    
   *Lecture Recordings*
   
   * [Tuesday's Class](https://appstate.zoom.us/rec/share/7PN1fuCuz0FOW43ox3r2Z694Atq1aaa80yRNrKAPy0s7eaoyib87HPDRJaGyyhUr)
@@ -43,8 +45,11 @@ output:
 
 * Chapter 1: Linear Regression With One Predictor Variable
     * 1.7 Estimation of Error Terms Variance $\sigma^2$
-    * 1.8 Normal Error Regression Model     
-
+    * 1.8 Normal Error Regression Model  
+    
+    ***Quiz 1***
+    
+ *Lecture Recordings*
 
 ***
 
