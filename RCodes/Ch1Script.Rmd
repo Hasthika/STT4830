@@ -59,10 +59,32 @@ summary(toluca_LS_model)
 ```
 
 
-### Finding fitted values and residuals
+### Finding fitted values $\hat{y_i}$, and residuals $e_i =(y_i-\hat{y_i})$
 ```{r comment=NA, warning=FALSE, message=FALSE}
 library(moderndive)
 Fittedandresiduals <-get_regression_points(toluca_LS_model)
 Fittedandresiduals
 
+```
+
+### Calculating $SSE = \sum (y_i-\hat{y_i})^2$
+
+```{r comment=NA, warning=FALSE, message=FALSE}
+sum_of_square_of_residuals <- sum(Fittedandresiduals$residual^2)
+sum_of_square_of_residuals
+```
+
+### Calculating $MSE =SSE/(n-2)$
+
+```{r comment=NA, warning=FALSE, message=FALSE}
+Mean_Square_Error <- sum_of_square_of_residuals/(nrow(toluca) -2)
+Mean_Square_Error
+
+```
+
+### Calculating Residual Standard Error (estimator of standard deviation $\sigma$) $s = \sqrt(MSE)$
+
+```{r}
+s <- sqrt(Mean_Square_Error)
+s
 ```

@@ -251,8 +251,8 @@ Residual standard error: 48.82 on 23 degrees of freedom
 Multiple R-squared:  0.8215,    Adjusted R-squared:  0.8138 
 F-statistic: 105.9 on 1 and 23 DF,  p-value: 4.449e-10</code></pre>
 </div>
-<div id="finding-fitted-values-and-residuals" class="section level3">
-<h3>Finding fitted values and residuals</h3>
+<div id="finding-fitted-values-haty_i-and-residuals-e_i-y_i-haty_i" class="section level3">
+<h3>Finding fitted values <span class="math inline">\(\hat{y_i}\)</span>, and residuals <span class="math inline">\(e_i =(y_i-\hat{y_i})\)</span></h3>
 <pre class="r"><code>library(moderndive)
 Fittedandresiduals &lt;-get_regression_points(toluca_LS_model)
 Fittedandresiduals</code></pre>
@@ -270,6 +270,24 @@ Fittedandresiduals</code></pre>
  9     9   353     100      419.   -66.4 
 10    10   157      50      241.   -83.9 
 # … with 15 more rows</code></pre>
+</div>
+<div id="calculating-sse-sum-y_i-haty_i2" class="section level3">
+<h3>Calculating <span class="math inline">\(SSE = \sum (y_i-\hat{y_i})^2\)</span></h3>
+<pre class="r"><code>sum_of_square_of_residuals &lt;- sum(Fittedandresiduals$residual^2)
+sum_of_square_of_residuals</code></pre>
+<pre><code>[1] 54825.46</code></pre>
+</div>
+<div id="calculating-mse-ssen-2" class="section level3">
+<h3>Calculating <span class="math inline">\(MSE =SSE/(n-2)\)</span></h3>
+<pre class="r"><code>Mean_Square_Error &lt;- sum_of_square_of_residuals/(nrow(toluca) -2)
+Mean_Square_Error</code></pre>
+<pre><code>[1] 2383.716</code></pre>
+</div>
+<div id="calculating-residual-standard-error-estimator-of-standard-deviation-sigma-s-sqrtmse" class="section level3">
+<h3>Calculating Residual Standard Error (estimator of standard deviation <span class="math inline">\(\sigma\)</span>) <span class="math inline">\(s = \sqrt(MSE)\)</span></h3>
+<pre class="r"><code>s &lt;- sqrt(Mean_Square_Error)
+s</code></pre>
+<pre><code>## [1] 48.82331</code></pre>
 </div>
 
 
