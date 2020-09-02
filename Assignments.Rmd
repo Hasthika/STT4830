@@ -47,6 +47,9 @@ output:
     * 1.7 Estimation of Error Terms Variance $\sigma^2$
     * 1.8 Normal Error Regression Model  
     
+* Chapter 5: Matrix Approach to Simple Linear Regression Analysis 
+    * 5.9  Simple Linear Regression Model in Matrix terms
+    
     * ***Quiz 1***
     
  *Lecture Recordings*
@@ -55,4 +58,31 @@ output:
 
 ***
 
+**Week 4: (Sep 7  -- Sep 11)**
+ 
+* Chapter 5: Matrix Approach to Simple Linear Regression Analysis 
+    * 5.10  Least Squares Estimation of Regression Parameters
+    * 5.11  Fitted values and Residuals
+    * 5.12  Analysis of Variance results
+    * 5.13  Inference in Regression Analysis
+    
+    * ***HW 2***
+    
+ *Lecture Recordings*
+ 
+  * 
+
+***
+
+**Week 5: (Sep 14  -- Sep 18)**
+ 
+* Chapter 3: Diagnostics and Remedial Measures
+    
+    * ***Quiz 2***
+    
+ *Lecture Recordings*
+ 
+  * 
+
+***
 
