@@ -48,7 +48,10 @@ output:
     * 1.8 Normal Error Regression Model  
     
 * Chapter 5: Matrix Approach to Simple Linear Regression Analysis 
-    * 5.9  Simple Linear Regression Model in Matrix terms
+    * 5.1 Matrices
+    * 5.2 Matrix Addition and Subtraction
+    * 5.3 Matrix Multiplication 
+    
     
     * ***Quiz 1***
     
@@ -61,7 +64,8 @@ output:
 **Week 4: (Sep 7  -- Sep 11)**
  
 * Chapter 5: Matrix Approach to Simple Linear Regression Analysis 
-    * 5.10  Least Squares Estimation of Regression Parameters
+    * 5.9 Simple Linear Regression Model in Matrix Terms
+    * 5.10  Least squares estimation of regression parameters
     * 5.11  Fitted values and Residuals
     * 5.12  Analysis of Variance results
     * 5.13  Inference in Regression Analysis
