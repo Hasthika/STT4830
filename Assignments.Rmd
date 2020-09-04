@@ -16,7 +16,7 @@ output:
 
 * Go over syllabus.
 * Chapter 1: Linear Regression With One Predictor Variable
-    * 1.1 Relation between variables
+    * 1.1 Relation between Variables
     * 1.3 Simple Linear Regression Model with Distribution of Error Terms Unspecified
     * 1.4 Data for Regression Analysis
     * 1.5 Overview of Steps in Regression Analysis
@@ -65,9 +65,9 @@ output:
  
 * Chapter 5: Matrix Approach to Simple Linear Regression Analysis 
     * 5.9 Simple Linear Regression Model in Matrix Terms
-    * 5.10  Least squares estimation of regression parameters
-    * 5.11  Fitted values and Residuals
-    * 5.12  Analysis of Variance results
+    * 5.10  Least Squares Estimation of Regression Parameters
+    * 5.11  Fitted Values and Residuals
+    * 5.12  Analysis of Variance Results
     * 5.13  Inference in Regression Analysis
     
     * ***HW 2***
