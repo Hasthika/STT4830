@@ -90,3 +90,25 @@ toluca_LS_model <- lm(hours ~ lotSize, data = toluca)
 summary(toluca_LS_model)
 ```
 
+## Uses of inverse matrix
+Consider the simultanious equations:
+$$2y_1+4y_2 =20$$
+$$3y_1+y_2=10$$
+Using Matrix methods, find the solutions for $y_1$ and $y_2$.
+
+```{r comment=NA, warning=FALSE, message=FALSE}
+library(Matrix)
+X <- matrix(c(2, 4, 3, 1),ncol=2, nrow = 2, byrow=TRUE)
+X
+Z<- matrix(c(20,10),ncol =1,nrow=2,byrow=TRUE)
+Z
+# Find inverse of X matrix 
+invX <- solve(X)
+invX 
+
+#Multiply invX with Z matrix to find solutions
+Y<- invX %*% Z
+Y
+
+```
+ $y_1=2$ and $y_2 =4$

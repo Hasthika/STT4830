@@ -367,6 +367,34 @@ Residual standard error: 48.82 on 23 degrees of freedom
 Multiple R-squared:  0.8215,    Adjusted R-squared:  0.8138 
 F-statistic: 105.9 on 1 and 23 DF,  p-value: 4.449e-10</code></pre>
 </div>
+<div id="uses-of-inverse-matrix" class="section level2">
+<h2>Uses of inverse matrix</h2>
+<p>Consider the simultanious equations: <span class="math display">\[2y_1+4y_2 =20\]</span> <span class="math display">\[3y_1+y_2=10\]</span> Using Matrix methods, find the solutions for <span class="math inline">\(y_1\)</span> and <span class="math inline">\(y_2\)</span>.</p>
+<pre class="r"><code>library(Matrix)
+X &lt;- matrix(c(2, 4, 3, 1),ncol=2, nrow = 2, byrow=TRUE)
+X</code></pre>
+<pre><code>     [,1] [,2]
+[1,]    2    4
+[2,]    3    1</code></pre>
+<pre class="r"><code>Z&lt;- matrix(c(20,10),ncol =1,nrow=2,byrow=TRUE)
+Z</code></pre>
+<pre><code>     [,1]
+[1,]   20
+[2,]   10</code></pre>
+<pre class="r"><code># Find inverse of X matrix 
+invX &lt;- solve(X)
+invX </code></pre>
+<pre><code>     [,1] [,2]
+[1,] -0.1  0.4
+[2,]  0.3 -0.2</code></pre>
+<pre class="r"><code>#Multiply invX with Z matrix to find solutions
+Y&lt;- invX %*% Z
+Y</code></pre>
+<pre><code>     [,1]
+[1,]    2
+[2,]    4</code></pre>
+<p><span class="math inline">\(y_1=2\)</span> and <span class="math inline">\(y_2 =4\)</span></p>
+</div>
 
 
 

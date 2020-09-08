@@ -54,6 +54,7 @@ output:
     
     
     * ***Quiz 1***
+    *  ***HW 2***
     
  *Lecture Recordings*
  
@@ -66,13 +67,12 @@ output:
 **Week 4: (Sep 7  -- Sep 11)**
  
 * Chapter 5: Matrix Approach to Simple Linear Regression Analysis 
+    * 5.4 Special Types of Matrices
+    * 5.6 Inverse of a Matrix (In R)
     * 5.9 Simple Linear Regression Model in Matrix Terms
     * 5.10  Least Squares Estimation of Regression Parameters
-    * 5.11  Fitted Values and Residuals
-    * 5.12  Analysis of Variance Results
-    * 5.13  Inference in Regression Analysis
     
-    * ***HW 2***
+    * ***Quiz 2***
     
  *Lecture Recordings*
  
@@ -82,9 +82,14 @@ output:
 
 **Week 5: (Sep 14  -- Sep 18)**
  
+* Chapter 5: Matrix Approach to Simple Linear Regression Analysis  
+    * 5.11  Fitted Values and Residuals
+    * 5.12  Analysis of Variance Results
+    * 5.13  Inference in Regression Analysis
+    
 * Chapter 3: Diagnostics and Remedial Measures
     
-    * ***Quiz 2***
+    * ***Quiz 3***
     
  *Lecture Recordings*
  
