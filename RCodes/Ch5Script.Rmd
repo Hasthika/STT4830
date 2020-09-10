@@ -33,7 +33,7 @@ head(toluca)
 
 ```{r comment=NA, warning=FALSE, message=FALSE}
 library(Matrix)
-n <- nrow(toluca)
+n <- nrow(toluca) # Number of observations
 n
 
 X <- toluca$lotSize
@@ -52,7 +52,7 @@ X                       # This is your X
 ### Find $X'X$
 ```{r comment=NA, warning=FALSE, message=FALSE}
 
-Xt <- t(X)
+Xt <- t(X) # Taking the transpose of X matrix
 Xt
 
 XtX <- Xt %*% X

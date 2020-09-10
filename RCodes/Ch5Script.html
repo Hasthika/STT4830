@@ -213,7 +213,7 @@ head(toluca)</code></pre>
 <div id="making-x-and-y-matrices" class="section level3">
 <h3>Making <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> matrices</h3>
 <pre class="r"><code>library(Matrix)
-n &lt;- nrow(toluca)
+n &lt;- nrow(toluca) # Number of observations
 n</code></pre>
 <pre><code>[1] 25</code></pre>
 <pre class="r"><code>X &lt;- toluca$lotSize
@@ -306,7 +306,7 @@ X                       # This is your X</code></pre>
 </div>
 <div id="find-xx" class="section level3">
 <h3>Find <span class="math inline">\(X'X\)</span></h3>
-<pre class="r"><code>Xt &lt;- t(X)
+<pre class="r"><code>Xt &lt;- t(X) # Taking the transpose of X matrix
 Xt</code></pre>
 <pre><code>     [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10] [,11] [,12] [,13] [,14]
 [1,]    1    1    1    1    1    1    1    1    1     1     1     1     1     1
