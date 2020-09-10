@@ -48,7 +48,7 @@ Calculate the LS estimate of $\beta_1$ using $R$
 $$\sum y_i = 1742,\quad \sum x_i = 144,\quad \sum x_i^2 = 2300,\quad \sum x_iy_i = 26696,\quad \sum y_i^2 = 312674 \quad n = 12$$
 Determine the LS equation for the model $y_i = \beta_0 + \beta_1x_i + \epsilon_i$.
 
-
+***
 
 #### ***Homework 2*: Due Sunday, September 6th**
 
@@ -60,6 +60,22 @@ Determine the LS equation for the model $y_i = \beta_0 + \beta_1x_i + \epsilon_i
 
 
 ***
+
+
+#### ***Homework 3*: Due Sunday, September 13th**
+
+1) 5.1
+2) 5.3
+3) 5.4
+4) 5.6
+5) 5.10 (To check the resulting matrix is indeed the inverse, $AA^{-1} =I$)
+6) 5.12
+7) 5.14
+
+
+
+***
+
 ## **Textbook**
 [Download PFD textbook here](4830_Textbook.pdf)
 
