@@ -90,7 +90,7 @@ output:
 * Chapter 3: Diagnostics and Remedial Measures
     
     * ***Quiz 3***
-    
+    *  ***HW 3 ***
  *Lecture Recordings*
  
   * 
