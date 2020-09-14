@@ -86,10 +86,9 @@ output:
  
 * Chapter 5: Matrix Approach to Simple Linear Regression Analysis  
     * 5.11  Fitted Values and Residuals
-    * 5.12  Analysis of Variance Results
-    * 5.13  Inference in Regression Analysis
     
 * Chapter 3: Diagnostics and Remedial Measures
+    * 3.1  Diagnostics for Predictor Variable 
     
     * ***Quiz 3***
     *  ***HW 3 ***

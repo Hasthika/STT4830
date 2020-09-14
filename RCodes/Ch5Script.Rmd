@@ -90,6 +90,18 @@ toluca_LS_model <- lm(hours ~ lotSize, data = toluca)
 summary(toluca_LS_model)
 ```
 
+## Section 5.11: Fitted Values and Residuals 
+
+
+```{r}
+Yhat <- X %*% b # Fitted Values
+Yhat
+
+e <- Y - Yhat # Residuals
+e
+
+```
+
 ## Uses of inverse matrix
 Consider the simultanious equations:
 $$2y_1+4y_2 =20$$
@@ -111,4 +123,20 @@ Y<- invX %*% Z
 Y
 
 ```
- $y_1=2$ and $y_2 =4$
+
+$y_1=2$ and $y_2 =4$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
