@@ -94,6 +94,7 @@ summary(toluca_LS_model)
 
 
 ```{r}
+
 Yhat <- X %*% b # Fitted Values
 Yhat
 

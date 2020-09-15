@@ -367,6 +367,65 @@ Residual standard error: 48.82 on 23 degrees of freedom
 Multiple R-squared:  0.8215,    Adjusted R-squared:  0.8138 
 F-statistic: 105.9 on 1 and 23 DF,  p-value: 4.449e-10</code></pre>
 </div>
+<div id="section-5.11-fitted-values-and-residuals" class="section level2">
+<h2>Section 5.11: Fitted Values and Residuals</h2>
+<pre class="r"><code>Yhat &lt;- X %*% b # Fitted Values
+Yhat</code></pre>
+<pre><code>##           [,1]
+##  [1,] 347.9820
+##  [2,] 169.4719
+##  [3,] 240.8760
+##  [4,] 383.6840
+##  [5,] 312.2800
+##  [6,] 276.5780
+##  [7,] 490.7901
+##  [8,] 347.9820
+##  [9,] 419.3861
+## [10,] 240.8760
+## [11,] 205.1739
+## [12,] 312.2800
+## [13,] 383.6840
+## [14,] 133.7699
+## [15,] 455.0881
+## [16,] 419.3861
+## [17,] 169.4719
+## [18,] 240.8760
+## [19,] 383.6840
+## [20,] 455.0881
+## [21,] 169.4719
+## [22,] 383.6840
+## [23,] 205.1739
+## [24,] 347.9820
+## [25,] 312.2800</code></pre>
+<pre class="r"><code>e &lt;- Y - Yhat # Residuals
+e</code></pre>
+<pre><code>##              [,1]
+##  [1,]  51.0179798
+##  [2,] -48.4719192
+##  [3,] -19.8759596
+##  [4,]  -7.6840404
+##  [5,]  48.7200000
+##  [6,] -52.5779798
+##  [7,]  55.2098990
+##  [8,]   4.0179798
+##  [9,] -66.3860606
+## [10,] -83.8759596
+## [11,] -45.1739394
+## [12,] -60.2800000
+## [13,]   5.3159596
+## [14,] -20.7698990
+## [15,] -20.0880808
+## [16,]   0.6139394
+## [17,]  42.5280808
+## [18,]  27.1240404
+## [19,]  -6.6840404
+## [20,] -34.0880808
+## [21,] 103.5280808
+## [22,]  84.3159596
+## [23,]  38.8260606
+## [24,]  -5.9820202
+## [25,]  10.7200000</code></pre>
+</div>
 <div id="uses-of-inverse-matrix" class="section level2">
 <h2>Uses of inverse matrix</h2>
 <p>Consider the simultanious equations: <span class="math display">\[2y_1+4y_2 =20\]</span> <span class="math display">\[3y_1+y_2=10\]</span> Using Matrix methods, find the solutions for <span class="math inline">\(y_1\)</span> and <span class="math inline">\(y_2\)</span>.</p>
