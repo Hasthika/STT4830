@@ -78,7 +78,7 @@ output:
  
   * [Tuesday's Class](https://appstate.zoom.us/rec/share/fXWx8Fbq6BERzmVOKcI5fPdVIDW0gO-bIHOqNYJRq6-gb4CX8f9QgREofDzZpw.uS6K5SANJ7dSKctF)
   
-* [Thursday's Class](https://appstate.zoom.us/rec/share/SfgKZjDwZBlptlt5sEDpDsYhMP524fR6Yz6gUaCDp-dnz3DVZm32_M51zB1O8Geb.iglJ4lQ9wPbz9QwU)
+  * [Thursday's Class](https://appstate.zoom.us/rec/share/SfgKZjDwZBlptlt5sEDpDsYhMP524fR6Yz6gUaCDp-dnz3DVZm32_M51zB1O8Geb.iglJ4lQ9wPbz9QwU)
 
 ***
 
@@ -88,10 +88,13 @@ output:
     * 5.11  Fitted Values and Residuals
     
 * Chapter 3: Diagnostics and Remedial Measures
-    * 3.1  Diagnostics for Predictor Variable 
-    
-    * ***Quiz 3***
+    * 3.1  Diagnostics for Predictor Variable
+    * 3.2  Residuals
+    * 3.3  Diagnostics for Residuals
+   
     *  ***HW 3 ***
+    
+    
  *Lecture Recordings*
  
   * 
