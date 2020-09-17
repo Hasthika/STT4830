@@ -46,7 +46,7 @@ The dot plot for the lot sizes in the Toluca Company example.
 
 ```{r comment=NA, warning=FALSE, message=FALSE}
 library(ggplot2)
-ggplot(data = tolucaDF, aes(x = lotSize)) + geom_dotplot(color = "red", fill = "orchid4", dotsize = 1) + theme_bw()
+ggplot(data = tolucaDF, aes(x = lotSize)) + geom_dotplot(color = "blue", fill = "orchid4", dotsize = .5) + theme_bw()
 ```
 
 ## Sequence plot
@@ -67,6 +67,42 @@ stem(tolucaDF$lotSize, scale = 3)
 Box plot of the lot sizes for the Toluca Company example.  
 
 ```{r comment=NA, warning=FALSE, message=FALSE}
-ggplot(data = tolucaDF, aes(x = lotSize)) + geom_boxplot(color = "steelblue", fill = "orchid4", dotsize = 1) + theme_bw()
+ggplot(data = tolucaDF, aes(x = lotSize)) + geom_boxplot(color = "steelblue", fill = "orchid4") + theme_bw()
+```
+
+# Diagnostics for Residuals (Section 3.3 in the textbook)
+
+## Create the LS model
+
+```{r comment=NA, warning=FALSE, message=FALSE}
+# Recall from ch1
+toluca_LS_model <- lm(hours ~ lotSize, data = toluca)
+summary(toluca_LS_model)
+```
+
+## Plot of residuals against predictor variable
+
+```{r comment=NA, warning=FALSE, message=FALSE}
+library(ggplot2)
+ggplot(toluca_LS_model, aes(x = lotSize, y = .resid)) + geom_point(color = "blue", dotsize = .5) + theme_bw()
+```
+
+## Plot of residuals against fitted values.
+
+```{r comment=NA, warning=FALSE, message=FALSE}
+ggplot(toluca_LS_model, aes(x = .fitted, y = .resid)) + geom_point(color = "blue", dotsize = .5) + theme_bw()
+```
+
+
+## Box plot of residuals
+
+```{r}
+ggplot(toluca_LS_model, aes(x = .resid)) + geom_boxplot(color = "steelblue", fill = "orchid4") + theme_bw()
+```
+
+## Normal probability plot of residuals.
+
+```{r}
+ggplot(toluca_LS_model, aes(sample = .resid)) + geom_qq(color = "blue", dotsize = .5) + geom_qq_line()+ theme_bw() 
 ```
 
