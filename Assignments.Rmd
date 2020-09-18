@@ -77,7 +77,6 @@ output:
  *Lecture Recordings*
  
   * [Tuesday's Class](https://appstate.zoom.us/rec/share/fXWx8Fbq6BERzmVOKcI5fPdVIDW0gO-bIHOqNYJRq6-gb4CX8f9QgREofDzZpw.uS6K5SANJ7dSKctF)
-  
   * [Thursday's Class](https://appstate.zoom.us/rec/share/SfgKZjDwZBlptlt5sEDpDsYhMP524fR6Yz6gUaCDp-dnz3DVZm32_M51zB1O8Geb.iglJ4lQ9wPbz9QwU)
 
 ***
@@ -98,6 +97,17 @@ output:
  *Lecture Recordings*
  
   * [Tuesday's Class](https://appstate.zoom.us/rec/share/MgmFBafzOOFzXafFYq0E0CC86doZQYokL8y_EOE70qKRdwIhoKZ_Juu3Y-USHQtv.6DBzkBowPCuTiqwn)
+  * [Thursday's Class](https://appstate.zoom.us/rec/share/4ud2Y5Dn466yKIyNma1VZF3AytiO4n5J_wovaGnyVRSqWBtlfYzxTlE10ilmI4c2.hL9rGj_TE_GPpdtz)
 
 ***
 
+**Week 6: (Sep 21  -- Sep 25)**
+
+* Chapter 3: Diagnostics and Remedial Measures
+     * 3.3  Diagnostics for Residuals
+     
+   *  ***Test 1 ***
+
+
+
+***
