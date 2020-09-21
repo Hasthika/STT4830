@@ -105,7 +105,9 @@ output:
 
 * Chapter 3: Diagnostics and Remedial Measures
      * 3.3  Diagnostics for Residuals
+     * 3.4  Overview of Tests Involving Residuals
      * 3.5  Correlation Test for Nonnality
+     * 3.6  Tests for Constancy of Error Variance
      
      *  ***Test 1 ***
 
@@ -117,7 +119,7 @@ output:
 
 * Chapter 3: Diagnostics and Remedial Measures
 
-     * 3.6  Tests for Constancy of Error Variance
+
      * 3.7  F Test for Lack of Fit
      * 3.8  Overview of Remedial Measures
      

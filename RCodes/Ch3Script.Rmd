@@ -84,13 +84,13 @@ summary(toluca_LS_model)
 
 ```{r comment=NA, warning=FALSE, message=FALSE}
 library(ggplot2)
-ggplot(toluca_LS_model, aes(x = lotSize, y = .resid)) + geom_point(color = "blue", dotsize = .5) + theme_bw()
+ggplot(toluca_LS_model, aes(x = lotSize, y = .resid)) + geom_point(color = "blue", dotsize = .5) + theme_bw() #no need to find residual seperately. Just use ".resid"
 ```
 
 ## Plot of residuals against fitted values.
 
 ```{r comment=NA, warning=FALSE, message=FALSE}
-ggplot(toluca_LS_model, aes(x = .fitted, y = .resid)) + geom_point(color = "blue", dotsize = .5) + theme_bw()
+ggplot(toluca_LS_model, aes(x = .fitted, y = .resid)) + geom_point(color = "blue", dotsize = .5) + theme_bw() #Use the model as the data and use ".fitted" to get the fitted values for x axis
 ```
 
 
@@ -103,6 +103,53 @@ ggplot(toluca_LS_model, aes(x = .resid)) + geom_boxplot(color = "steelblue", fil
 ## Normal probability plot of residuals.
 
 ```{r}
-ggplot(toluca_LS_model, aes(sample = .resid)) + geom_qq(color = "blue", dotsize = .5) + geom_qq_line()+ theme_bw() 
+ggplot(toluca_LS_model, aes(sample = .resid)) + geom_qq(color = "blue") + geom_qq_line()+ theme_bw() #No x or y aesthetics. Just use sample =.resid
+```
+
+
+```{r include=FALSE}
+Copier<- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%20%203%20Data%20Sets/CH03PR04.txt", sep ="" , header = FALSE)
+#Copier
+
+colnames(Copier) <- c("minutes", "copiers")
+#Copier
+
+CopierDF <- data.frame(Copier)
+head(CopierDF)
+
+```
+
+
+```{r include=FALSE, comment=NA, warning=FALSE, message=FALSE}
+#Part a)
+library(ggplot2)
+ggplot(data = CopierDF, aes(x = copiers)) + geom_dotplot(color = "blue", fill = "red", dotsize = .5) + theme_bw()
+```
+
+```{r include=FALSE}
+#Make a quick note and answer the rest of the question
+
+#Part b) 
+
+#Part c)
+
+# Recall from ch1
+Copier_LS_model <- lm(minutes ~ copiers, data = Copier)
+summary(Copier_LS_model)
+```
+
+
+
+
+```{r include=FALSE, comment=NA, warning=FALSE, message=FALSE}
+stem(Copier_LS_model$resid, scale = 5)
+```
+
+
+
+```{r include=FALSE, comment=NA, warning=FALSE, message=FALSE}
+#Part d) Residual plot aginst fitted values
+ggplot(Copier_LS_model, aes(x =.fitted , y = .resid)) + geom_point(color = "blue", dotsize = .5) + theme_bw() #no need to find residual seperately. Just use ".resid"
+ggplot(Copier_LS_model, aes(x =copiers , y = .resid)) + geom_point(color = "blue", dotsize = .5) + theme_bw() #no need to find residual seperately. Just use ".resid"
 ```
 
