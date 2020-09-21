@@ -85,11 +85,13 @@ Determine the LS equation for the model $y_i = \beta_0 + \beta_1x_i + \epsilon_i
  
  
 2) Refer to $\textbf{Plastic hardness} Problems 1.22 and 5.7. Using matrix methods, obtain the following: 
-(a) $(X' X)^{-1}$
-(b) $\bf{b}$
-(c) $\bf{\hat{Y}}$
-(d) $\bf{e}$ 
-(e) $\bf{H}$ 
+  (a) $(X' X)^{-1}$
+  (b) $\bf{b}$
+  (c) $\bf{\hat{Y}}$
+  (d) $\bf{e}$ 
+  (e) $\bf{H}$ 
+  
+  
 
 
 

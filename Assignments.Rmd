@@ -105,9 +105,84 @@ output:
 
 * Chapter 3: Diagnostics and Remedial Measures
      * 3.3  Diagnostics for Residuals
+     * 3.5  Correlation Test for Nonnality
      
-   *  ***Test 1 ***
+     *  ***Test 1 ***
 
 
 
 ***
+
+**Week 7: (Sep 28  -- Oct 02)**
+
+* Chapter 3: Diagnostics and Remedial Measures
+
+     * 3.6  Tests for Constancy of Error Variance
+     * 3.7  F Test for Lack of Fit
+     * 3.8  Overview of Remedial Measures
+     
+
+***
+
+**Week 8: (Oct 05  -- Oct 09)**
+
+* Chapter 3: Diagnostics and Remedial Measures
+      * 3.9  Transfonnations
+     * 3.10  Exploration of Shape of Regression Function
+     
+
+     
+***
+
+**Week 9: (Oct 12  -- Oct 16)**
+
+* Chapter 6:  Multiple Regression
+    * 6.1  Multiple Regression Models
+    * 6.2 General Linear Regression Model in Matrix Terms
+    * 6.3 Estimation of Regression Coefficients
+    * 6.4 Fitted Values and Residuals
+    
+    
+***
+
+**Week 10: (Oct 19  -- Oct 23)**
+
+* Chapter 6:  Multiple Regression
+    * 6.5 Analysis of Variance Results
+    * 6.6 Inferences about Regression Parameters
+    * 6.7 Estimation of Mean Response and Prediction of New Observation
+    * 6.8 Diagnostics and Remedial Measures
+    
+
+***
+
+    
+**Week 11: (Oct 26  -- Oct 30)**
+
+ *  ***Test 2 ***
+ 
+ 
+***
+
+**Week 12: (Nov 02  --Nov 06)**
+
+ *  
+
+***
+
+**Week 13: (Nov 09  --Nov 13)**
+
+ *  
+ 
+ ***
+
+**Week 14: (Nov 16  --Nov 20)**
+
+ *  
+ 
+  ***
+
+**Week 15: (Nov 23  --Nov 27)**
+
+ *  
+ 
