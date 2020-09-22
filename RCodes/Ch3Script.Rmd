@@ -53,7 +53,10 @@ ggplot(data = tolucaDF, aes(x = lotSize)) + geom_dotplot(color = "blue", fill = 
 
 The Sequence plot for the lot sizes in the Toluca Company example.
 
-not enough data...
+```{r}
+plot(tolucaDF$lotSize, type = "b", lty = 2, xlab = "Run", ylab = "Lot Size")
+title("Sequence Plot")
+```
 
 ## Stem-and-leaf plot
 
@@ -106,6 +109,45 @@ ggplot(toluca_LS_model, aes(x = .resid)) + geom_boxplot(color = "steelblue", fil
 ggplot(toluca_LS_model, aes(sample = .resid)) + geom_qq(color = "blue") + geom_qq_line()+ theme_bw() #No x or y aesthetics. Just use sample =.resid
 ```
 
+## Nonnormality of Error Terms
+
+$\mbox{Exp. Value under Normality} = \sqrt(MSE)[ z(\frac{k-0.375}{n+0.25})]$
+
+Note that MSE can be calculated below as the `SSE / DF`. Here I am using `deviance(toluca_LS_model)`
+
+```{r comment=NA, warning=FALSE, message=FALSE}
+# Expected value under normality comes from equation (3.6)
+cbind(
+  "Residual"                   = round(resid(toluca_LS_model), 2),
+  "Rank"                       = rank(resid(toluca_LS_model)),
+  "Exp. Value under Normality" = round(sqrt(deviance(toluca_LS_model) / df.residual(toluca_LS_model)) * 
+                                       qnorm((rank(resid(toluca_LS_model)) - 0.375) / (nrow(tolucaDF) + 0.25)), 2))
+```
+
+## Correlation Test for Normality 
+
+```{r comment=NA, warning=FALSE, message=FALSE}
+
+res <- resid(toluca_LS_model)
+expRes <- sqrt(deviance(toluca_LS_model) / df.residual(toluca_LS_model)) * 
+                                       qnorm((rank(resid(toluca_LS_model)) - 0.375) / (nrow(tolucaDF) + 0.25))
+cor(res, expRes)
+```
+
+## Breusch-Pagan Test for Constancy of Error Variance
+
+```{r comment=NA, warning=FALSE, message=FALSE}
+library(lmtest)
+bptest(toluca_LS_model, student = FALSE)
+```
+
+
+
+
+
+
+
+
 
 ```{r include=FALSE}
 Copier<- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%20%203%20Data%20Sets/CH03PR04.txt", sep ="" , header = FALSE)
@@ -137,7 +179,6 @@ ggplot(data = CopierDF, aes(x = copiers)) + geom_dotplot(color = "blue", fill = 
 Copier_LS_model <- lm(minutes ~ copiers, data = Copier)
 summary(Copier_LS_model)
 ```
-
 
 
 
