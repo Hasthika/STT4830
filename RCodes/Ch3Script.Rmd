@@ -118,10 +118,10 @@ Note that MSE can be calculated below as the `SSE / DF`. Here I am using `devian
 ```{r comment=NA, warning=FALSE, message=FALSE}
 # Expected value under normality comes from equation (3.6)
 cbind(
-  "Residual"                   = round(resid(toluca_LS_model), 2),
-  "Rank"                       = rank(resid(toluca_LS_model)),
+  "Residual"                   = round(resid(toluca_LS_model), 2), # rounding upresiduals to 2 decimal places
+  "Rank"                       = rank(resid(toluca_LS_model)), # this is where we find k value
   "Exp. Value under Normality" = round(sqrt(deviance(toluca_LS_model) / df.residual(toluca_LS_model)) * 
-                                       qnorm((rank(resid(toluca_LS_model)) - 0.375) / (nrow(tolucaDF) + 0.25)), 2))
+                                       qnorm((rank(resid(toluca_LS_model)) - 0.375) / (nrow(tolucaDF) + 0.25)), 2)) # deviance funtion finds the SSE and to find MSE we need to divide it by d.f. Then qnorm givres us the z value of (k-.375/n+.25). Again we have use round funtion to get final results in 2 decimal places.
 ```
 
 ## Correlation Test for Normality 
@@ -142,6 +142,148 @@ bptest(toluca_LS_model, student = FALSE)
 ```
 
 
+
+## Bank example section 3.7
+
+```{r comment=NA, warning=FALSE, message=FALSE}
+bankdata <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%20%203%20Data%20Sets/CH03TA04.txt", sep ="" , header = FALSE)
+
+
+#Look at the first 6 entries
+#head(bankdata)
+
+#Rename clumns
+colnames(bankdata) <- c("minDeposit", "NoNewAccs") # minDeposit - Size of minimum deposit, NoNewAccs - Number of new accounts
+
+#Look at the first 6 entries
+(bankdata)
+
+#Model
+bankModel <- lm(NoNewAccs~minDeposit, data = bankdata)
+bankModel
+
+#ANOVA table
+anova(bankModel)
+
+#Scatter Plot
+library(ggplot2)
+library(latex2exp)
+
+ggplot(bankdata, aes(x = minDeposit, y = NoNewAccs)) +
+  geom_point() +
+  labs(x = "Size of minimum deposit", y = "Number of new accounts", title = "Bank example scatter plot") +
+  geom_smooth(method = "lm", se = FALSE) +
+  geom_text(aes(x=120, label="yhat = 50.7 + 0.49x", y=85), colour="steelblue", angle=0, text=element_text(size=11)) +
+  theme_bw()
+
+
+library(dplyr)
+
+dfbank <- bankdata %>%
+  group_by(minDeposit) %>%
+  summarize(NoNewAccs)
+
+dfbank
+
+dfMeanbank <- bankdata %>%
+  group_by(minDeposit) %>%
+  summarize(MeanAccs = mean(NoNewAccs))
+
+dfMeanbank
+```
+
+
+### F test for lack of fit {-}
+
+```{r}
+# F test for lack of fit
+
+Reduced <- lm(NoNewAccs ~ minDeposit, data = bankdata) # This is our usual model
+summary(Reduced)
+
+
+Full <-  lm(NoNewAccs ~ 0 + as.factor(minDeposit), data = bankdata) # This is the full model
+summary(Full)
+```
+
+Testing the hypothesis:
+
+$H_0: \mbox{Reduced model is good}$ $\quad$ $H_a: \mbox{Full model is good}$
+
+```{r}
+
+anova (Reduced, Full)
+
+```
+
+
+### Example on page 129 {-}
+
+```{r comment=NA, warning=FALSE, message=FALSE, include=FALSE}
+salesTrain <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%20%203%20Data%20Sets/CH03TA07.txt", sep ="" , header = FALSE)
+
+#head(salesTrain)
+
+#Rename clumns
+colnames(salesTrain) <- c("daysTrain", "performance") 
+head(salesTrain)
+
+# Create a scatter plot of these data in R
+ggplot(salesTrain, aes(x = daysTrain, y = performance)) +
+  geom_point() +
+  labs(x = "Days", y = "Performance", title = "Sales Training Example scatter plot") +
+  theme_bw()
+
+
+# Do you see a linear relationship?
+    # Clearly the regression relation appears to be'curvilinear, so the simple linear regression model does not seemto be appropriate.
+
+# What transformation might be appropriate for these data?
+    # We shall consider a transformation on X. We shall consider initially the square root transformation
+
+
+# Find the transformed X values
+    salesTrainTrans <- salesTrain %>%
+      mutate(daysTrainSqrt  = sqrt(daysTrain))
+    
+    salesTrainTrans
+  
+
+# Create a new scatter plot of using transformed data in R
+  ggplot(salesTrainTrans, aes(x = daysTrainSqrt, y = performance)) +
+  geom_point(color = "blue") +
+  labs(x = "Square root of Days", y = "Performance", title = "Sales Training Example scatter plot") +
+  theme_bw()
+
+    
+# Fit the linear regression model using transformed data
+  modelTrans <- lm(performance ~ daysTrainSqrt, data = salesTrainTrans)
+  modelTrans
+  
+# Make a NPP and a residual plot. 
+  ggplot(modelTrans, aes(sample = .resid)) + geom_qq(color = "red") + geom_qq_line()+ theme_bw() #No x or y aesthetics. Just use sample =.resid
+  
+  #residual plot
+  ggplot(modelTrans, aes(x = daysTrainSqrt, y = .resid)) + geom_point(color = "orchid4", dotsize = .5) + theme_bw() #Use the model as the data and use ".fitted" to get the fitted values for x axis
+  
+  
+# Perform a correlation test for normality for this data
+  
+  res <- resid(modelTrans)
+  expRes <- sqrt(deviance(modelTrans) / df.residual(modelTrans)) * 
+                                       qnorm((rank(resid(modelTrans)) - 0.375) / (nrow(salesTrainTrans) + 0.25))
+  cor(res, expRes)
+  
+  # Notice the correlation between residuals and expected residulas is 0.9789286.
+  # The critical value when alpha = 0.01, is 0.879. 
+  # Since the correlation > critical value. Theredore, we conclude that the distribution of the error terms does not depart substantially from a normal distribution.
+  
+# Comment on lack of fit or of strong unequal error variances and normality
+  
+  # By looking at the residual plot there is no evidence of lack of fit or of strongly unequal error variances.
+  # By looking at the NPP and above test, No strong indications of substantial departures from normality are indicated.
+  
+```
 
 
 
