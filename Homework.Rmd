@@ -97,7 +97,7 @@ Determine the LS equation for the model $y_i = \beta_0 + \beta_1x_i + \epsilon_i
 
 #### ***Homework 5*: Due Tuesday, October 6th**
 
-Turn in your homework only as a *pdf* created in $R$. No hand written work please!
+Turn in your homework only as a *pdf* created in $R$. No handwritten work please!
 
 1) 3.3 - Note: for part e) conduct the Breusch-Pagan test instead Brown-Forsythe test using $\alpha = 0.01$
 2) 3.4
