@@ -182,7 +182,6 @@ library(dplyr)
 dfbank <- bankdata %>%
   group_by(minDeposit) %>%
   summarize(NoNewAccs)
-
 dfbank
 
 dfMeanbank <- bankdata %>%
@@ -224,7 +223,7 @@ salesTrain <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnote
 
 #head(salesTrain)
 
-#Rename clumns
+#Rename columns
 colnames(salesTrain) <- c("daysTrain", "performance") 
 head(salesTrain)
 
@@ -284,9 +283,6 @@ ggplot(salesTrain, aes(x = daysTrain, y = performance)) +
   # By looking at the NPP and above test, No strong indications of substantial departures from normality are indicated.
   
 ```
-
-
-
 
 
 
