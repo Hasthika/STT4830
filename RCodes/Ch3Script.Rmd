@@ -216,7 +216,7 @@ anova (Reduced, Full)
 ```
 
 
-### Example on page 129 {-}
+### Example on page 129: Sales training example {-}
 
 ```{r comment=NA, warning=FALSE, message=FALSE, include=FALSE}
 salesTrain <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%20%203%20Data%20Sets/CH03TA07.txt", sep ="" , header = FALSE)
@@ -284,6 +284,92 @@ ggplot(salesTrain, aes(x = daysTrain, y = performance)) +
   
 ```
 
+
+### Example on page 132: Plasma Levels Example {-}
+
+```{r comment=NA, warning=FALSE, message=FALSE, include=FALSE}
+
+library(ggplot2)
+library(dplyr)
+plasmaData <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%20%203%20Data%20Sets/CH03TA08.txt", sep ="" , header = FALSE)
+
+plasmaData <- plasmaData[,-3] # Removed the last column of the data for this example. I only took X and Y columns.
+head(plasmaData)
+
+#Rename columns
+colnames(plasmaData) <- c("age", "plasmaLevel") 
+head(plasmaData)
+
+# Create a scatter plot of these data in R
+ggplot(plasmaData, aes(x = age, y = plasmaLevel)) +
+  geom_point() +
+  labs(x = "Age", y = "Plasma Level", title = "Plasma Levels Example scatter plot") +
+  theme_bw()
+
+
+# Do you see a linear relationship?
+    # Clearly the regression relation appears to be curvilinear, as well as the greater variability for younger children than for older ones. so the simple linear regression model does not seem to be appropriate.
+
+# What transformation might be appropriate for these data?
+    # We shall consider a transformation on Y. We shall consider initially the log(Y) transformation
+
+
+# Find the transformed X values
+    plasmaDataTrans <- plasmaData %>%
+      mutate(plasmaLevelLog  = log10(plasmaLevel))
+    
+    plasmaDataTrans
+  
+
+# Create a new scatter plot of using transformed data in R
+  ggplot(plasmaDataTrans, aes(x = age, y = plasmaLevelLog)) +
+  geom_point(color = "blue") +
+  labs(x = "Age", y = "log(Y)", title = "Plasma Levels Example scatter plot with transformed Y") +
+  theme_bw()
+
+    
+# Fit the linear regression model using transformed data
+  modelPlasmaTrans <- lm(plasmaLevelLog ~ age, data = plasmaDataTrans)
+  modelPlasmaTrans
+  
+# Make a NPP and a residual plot. 
+  ggplot(modelPlasmaTrans, aes(sample = .resid)) + geom_qq(color = "red") + geom_qq_line()+ theme_bw() #No x or y aesthetics. Just use sample =.resid
+  
+  #residual plot
+  ggplot(modelPlasmaTrans, aes(x = age, y = .resid)) + geom_point(color = "orchid4", dotsize = .5) + theme_bw() #Use the model as the data and use ".fitted" to get the fitted values for x axis
+  
+  
+# Perform a correlation test for normality for this data
+  
+  res <- resid(modelPlasmaTrans)
+  expRes <- sqrt(deviance(modelPlasmaTrans) / df.residual(modelPlasmaTrans)) * 
+                                       qnorm((rank(resid(modelPlasmaTrans)) - 0.375) / (nrow(plasmaDataTrans) + 0.25))
+  cor(res, expRes)
+  
+  # Notice the correlation between residuals and expected residulas is ______.
+  # The critical value when alpha = 0.01, is _____. 
+  # Since the correlation > critical value. Therefore, we conclude that the distribution of the error terms does not depart substantially from a normal distribution.
+  
+# Comment on lack of fit or of strong unequal error variances and normality
+  
+  # By looking at the residual plot there is no evidence of lack of fit or of strongly unequal error variances.
+  # By looking at the NPP and above test, No strong indications of substantial departures from normality are indicated.
+  
+```
+
+
+
+### Box-Cox transfomations for Plasma Levels Example {-}
+
+```{r comment=NA, warning=FALSE, message=FALSE}
+library(ALSM)
+obj <- boxcox.sse(plasmaData$age, plasmaData$plasmaLevel, l=seq(-2,2,.1))
+obj
+
+
+obj[which.min(obj$SSE),]
+
+```
 
 
 

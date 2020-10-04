@@ -117,9 +117,11 @@ output:
      * 3.4  Overview of Tests Involving Residuals
      * 3.5  Correlation Test for Nonnality
      * 3.6  Tests for Constancy of Error Variance
-     
 
-
+ *Lecture Recordings*
+ 
+  * [Tuesday's Class](https://appstate.zoom.us/rec/share/S8mCuNZyikvJoF80SCo5PotzOwfiMPNy2R8PQNRh8z_pJSlRbVLN7flBsmOYdLD7.b31ArsFjBNtiPGKd)
+  * [Thursday's Class](https://appstate.zoom.us/rec/share/eJ3vR9qWVAGgUtl40yWS_jr2RToAPlikMfB8h1BGKgX_rOb1gUH8JXCqFiLOI0VZ.6HH6SQqQV4Z1TLwJ)
 
 
 
