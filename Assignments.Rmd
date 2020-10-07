@@ -117,6 +117,8 @@ output:
      * 3.4  Overview of Tests Involving Residuals
      * 3.5  Correlation Test for Nonnality
      * 3.6  Tests for Constancy of Error Variance
+     * 3.7  F Test for Lack of Fit
+     * 3.8  Overview of Remedial Measures
 
  *Lecture Recordings*
  
@@ -130,8 +132,7 @@ output:
 **Week 8: (Oct 05  -- Oct 09)**
 
 * Chapter 3: Diagnostics and Remedial Measures
-     * 3.7  F Test for Lack of Fit
-     * 3.8  Overview of Remedial Measures
+    
      * 3.9  Transfonnations
      * 3.10  Exploration of Shape of Regression Function
      
