@@ -218,7 +218,7 @@ anova (Reduced, Full)
 
 ### Example on page 129: Sales training example {-}
 
-```{r comment=NA, warning=FALSE, message=FALSE, include=FALSE}
+```{r comment=NA, warning=FALSE, message=FALSE}
 salesTrain <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%20%203%20Data%20Sets/CH03TA07.txt", sep ="" , header = FALSE)
 
 #head(salesTrain)
@@ -235,12 +235,12 @@ ggplot(salesTrain, aes(x = daysTrain, y = performance)) +
 
 
 # Do you see a linear relationship?
-    # Clearly the regression relation appears to be'curvilinear, so the simple linear regression model does not seemto be appropriate.
+    # Clearly the regression relation appears to be curvilinear, so the simple linear regression model does not seem to be appropriate.
 
 # What transformation might be appropriate for these data?
-    # We shall consider a transformation on X. We shall consider initially the square root transformation
+    # We shall consider a transformation on X. We shall consider initially the square root transformation (or go with the log 10 transformation of X)
 
-
+library(dplyr)
 # Find the transformed X values
     salesTrainTrans <- salesTrain %>%
       mutate(daysTrainSqrt  = sqrt(daysTrain))
@@ -250,7 +250,7 @@ ggplot(salesTrain, aes(x = daysTrain, y = performance)) +
 
 # Create a new scatter plot of using transformed data in R
   ggplot(salesTrainTrans, aes(x = daysTrainSqrt, y = performance)) +
-  geom_point(color = "blue") +
+  geom_point(color = "blue") + geom_smooth(method = "lm", se = FALSE)
   labs(x = "Square root of Days", y = "Performance", title = "Sales Training Example scatter plot") +
   theme_bw()
 
@@ -260,7 +260,9 @@ ggplot(salesTrain, aes(x = daysTrain, y = performance)) +
   modelTrans
   
 # Make a NPP and a residual plot. 
-  ggplot(modelTrans, aes(sample = .resid)) + geom_qq(color = "red") + geom_qq_line()+ theme_bw() #No x or y aesthetics. Just use sample =.resid
+  ggplot(modelTrans, aes(sample = .resid)) + geom_qq(color = "red") + geom_qq_line()+
+    labs(x = "Expected ", y = "Residuals", title = "NPP plot") +
+  theme_bw() #No x or y aesthetics. Just use sample =.resid
   
   #residual plot
   ggplot(modelTrans, aes(x = daysTrainSqrt, y = .resid)) + geom_point(color = "orchid4", dotsize = .5) + theme_bw() #Use the model as the data and use ".fitted" to get the fitted values for x axis
@@ -272,26 +274,29 @@ ggplot(salesTrain, aes(x = daysTrain, y = performance)) +
   expRes <- sqrt(deviance(modelTrans) / df.residual(modelTrans)) * 
                                        qnorm((rank(resid(modelTrans)) - 0.375) / (nrow(salesTrainTrans) + 0.25))
   cor(res, expRes)
-  
-  # Notice the correlation between residuals and expected residulas is 0.9789286.
-  # The critical value when alpha = 0.01, is 0.879. 
-  # Since the correlation > critical value. Theredore, we conclude that the distribution of the error terms does not depart substantially from a normal distribution.
+  nrow(salesTrainTrans)
+  # Notice the correlation between residuals and expected residuals is 0.9789286.
+  # The critical value when alpha = 0.01, is 0.879. (read from the table in the notes)
+  # The correlation > critical value. Therefore, we conclude that the distribution of the error terms does not depart substantially from a normal distribution.
   
 # Comment on lack of fit or of strong unequal error variances and normality
   
   # By looking at the residual plot there is no evidence of lack of fit or of strongly unequal error variances.
-  # By looking at the NPP and above test, No strong indications of substantial departures from normality are indicated.
+  # By looking at the NPP and above test, No strong indications of substantial departures from normality.
   
 ```
 
 
 ### Example on page 132: Plasma Levels Example {-}
 
-```{r comment=NA, warning=FALSE, message=FALSE, include=FALSE}
+```{r comment=NA, warning=FALSE, message=FALSE}
 
 library(ggplot2)
 library(dplyr)
 plasmaData <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%20%203%20Data%20Sets/CH03TA08.txt", sep ="" , header = FALSE)
+
+plasmaData
+
 
 plasmaData <- plasmaData[,-3] # Removed the last column of the data for this example. I only took X and Y columns.
 head(plasmaData)
@@ -313,17 +318,17 @@ ggplot(plasmaData, aes(x = age, y = plasmaLevel)) +
 # What transformation might be appropriate for these data?
     # We shall consider a transformation on Y. We shall consider initially the log(Y) transformation
 
-
-# Find the transformed X values
+library(dplyr)
+# Find the transformed Y values
     plasmaDataTrans <- plasmaData %>%
-      mutate(plasmaLevelLog  = log10(plasmaLevel))
+      mutate(plasmaLevelLog  = log10(plasmaLevel)) # here I am creating a new column of data with logY values
     
     plasmaDataTrans
   
 
 # Create a new scatter plot of using transformed data in R
   ggplot(plasmaDataTrans, aes(x = age, y = plasmaLevelLog)) +
-  geom_point(color = "blue") +
+  geom_point(color = "blue") + geom_smooth(method = "lm", se = FALSE)
   labs(x = "Age", y = "log(Y)", title = "Plasma Levels Example scatter plot with transformed Y") +
   theme_bw()
 
@@ -332,7 +337,7 @@ ggplot(plasmaData, aes(x = age, y = plasmaLevel)) +
   modelPlasmaTrans <- lm(plasmaLevelLog ~ age, data = plasmaDataTrans)
   modelPlasmaTrans
   
-# Make a NPP and a residual plot. 
+# Make a NPP  plot. 
   ggplot(modelPlasmaTrans, aes(sample = .resid)) + geom_qq(color = "red") + geom_qq_line()+ theme_bw() #No x or y aesthetics. Just use sample =.resid
   
   #residual plot
@@ -345,9 +350,9 @@ ggplot(plasmaData, aes(x = age, y = plasmaLevel)) +
   expRes <- sqrt(deviance(modelPlasmaTrans) / df.residual(modelPlasmaTrans)) * 
                                        qnorm((rank(resid(modelPlasmaTrans)) - 0.375) / (nrow(plasmaDataTrans) + 0.25))
   cor(res, expRes)
-  
-  # Notice the correlation between residuals and expected residulas is ______.
-  # The critical value when alpha = 0.01, is _____. 
+  nrow(plasmaDataTrans)
+  # Notice the correlation between residuals and expected residuals is .9807.
+  # The critical value when alpha = 0.01, is .939. 
   # Since the correlation > critical value. Therefore, we conclude that the distribution of the error terms does not depart substantially from a normal distribution.
   
 # Comment on lack of fit or of strong unequal error variances and normality
@@ -383,7 +388,21 @@ colnames(Copier) <- c("minutes", "copiers")
 CopierDF <- data.frame(Copier)
 head(CopierDF)
 
+
+
+library(ggplot2)
+plot(CopierDF$copiers, type = "b", lty = 2, xlab = "Run", ylab = "Lot Size")
+title("Sequence Plot")
+
+CopierDF$rank <-c(1:45)
+
+ggplot(data=CopierDF, aes (x= rank, y= copiers ))+
+  geom_point(color="blue")+geom_line()
+  theme_bw()
+
 ```
+
+
 
 
 ```{r include=FALSE, comment=NA, warning=FALSE, message=FALSE}

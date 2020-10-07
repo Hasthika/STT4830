@@ -136,7 +136,12 @@ output:
      * 3.10  Exploration of Shape of Regression Function
      
  * ***Quiz 3***
-     
+ 
+  *Lecture Recordings*
+ 
+  * [Tuesday's Class](https://appstate.zoom.us/rec/share/I6mIdQpWZzhHz-Mm1zfrGxzcOZ1iwy3LaCkhoIzay8GFaWfbf57DoOzBJXfc0OA.jbz90ZNAXG7QZYIw) 
+  
+  
 ***
 
 **Week 9: (Oct 12  -- Oct 16)**
