@@ -133,7 +133,7 @@ output:
 
 * Chapter 3: Diagnostics and Remedial Measures
     
-     * 3.9  Transfonnations
+     * 3.9  Transformations
      * 3.10  Exploration of Shape of Regression Function
      
  * ***Quiz 3***
