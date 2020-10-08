@@ -377,6 +377,39 @@ obj[which.min(obj$SSE),]
 ```
 
 
+### lowess Method for Toluca example
+
+```{r comment=NA, warning=FALSE, message=FALSE}
+toluca <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%20%201%20Data%20Sets/CH01TA01.txt", sep ="" , header = FALSE)
+
+
+colnames(toluca) <- c("lotSize", "hours")
+
+tolucaDF <- data.frame(toluca)
+head(tolucaDF)
+
+library(cowplot)
+p1 <- ggplot(data = tolucaDF, aes(x = lotSize, y=hours)) + 
+  geom_point(color = "steelblue") + 
+  geom_smooth(method = "loess", se = FALSE)+
+  theme_bw()
+
+p2 <- ggplot(data = tolucaDF, aes(x = lotSize, y=hours)) + 
+  geom_point(color = "steelblue") + 
+  geom_smooth(method = "lm", se = TRUE, level = 0.99, color = "red")+
+    geom_smooth(method = "loess",  se = FALSE)+
+  theme_bw()
+
+plot_grid(p1, p2)
+
+
+
+```
+
+
+
+
+
 
 ```{r include=FALSE}
 Copier<- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%20%203%20Data%20Sets/CH03PR04.txt", sep ="" , header = FALSE)

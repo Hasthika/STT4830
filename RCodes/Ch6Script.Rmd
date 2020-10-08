@@ -1,0 +1,46 @@
+---
+title: "Multiple Regression in $R$"
+author: ""
+date: ""
+output: html_document
+---
+
+```{r setup, include=FALSE, comment=NA, warning=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+We’ll use the `Credit` dataframe from the `ISLR` package to demonstrate multiple regression with:
+
+A numerical outcome variable $y$, in this case credit card balance.
+
+Two explanatory variables:
+
+  1) A first numerical explanatory variable $x_1$. In this case, their credit limit.
+
+  2) A second numerical explanatory variable $x_2$. In this case, their income (in thousands of dollars).
+
+Note: This dataset is not based on actual individuals, it is a simulated dataset used for educational purposes.
+
+Analogous to simple linear regression, where the regression function $E\{Y\} = \beta_0 + \beta_1X_1$ is
+a line, regression function $E\{Y\} = \beta_0 + \beta_1X_1 +\beta_2X_2$ is a plane.
+
+```{r comment=NA, warning=FALSE, message=FALSE}
+library(ISLR)
+library(plotly)
+
+data(Credit)
+head(Credit)
+
+# draw 3D scatterplot
+p <- plot_ly(data = Credit, z = ~Balance, x = ~Income, y = ~Limit, opacity = 0.6, color = Credit$Balance) %>%
+  add_markers() 
+p
+
+#Fit a multiple linear regression model 
+#Syntax: model_name <- lm(y ~ x1 + x2 + ... +xn, data = data_frame_name)
+
+Balance_model <- lm(Balance ~ Limit + Income, data = Credit)
+Balance_model
+
+```
+
