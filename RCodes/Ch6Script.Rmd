@@ -41,6 +41,108 @@ p
 
 Balance_model <- lm(Balance ~ Limit + Income, data = Credit)
 Balance_model
+range(Credit$Limit)
+range(Credit$Income)
+```
+
+## Scatter plot matrix for Dwaine Studios example {-}
+
+
+```{r}
+#DwaineData <- read.table("https://people.stat.sc.edu/Hitchcock/studiodata.txt", sep ="" , header = FALSE)
+
+#DwaineData <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%20%206%20Data%20Sets/CH06FI05.txt", sep ="" , header = FALSE)
+
+DwaineData <- read.table("https://people.stat.sc.edu/Hitchcock/studiodata.txt", sep ="" , header = FALSE)
+
+DwaineData <- data.frame(DwaineData)
+
+
+colnames(DwaineData) <- c("TARGTPOP", "DISPOINC", "SALES")
+head(DwaineData)
+dim(DwaineData)
+
+pairs(DwaineData)
+
+
+
+
+```
+
+
+## Correlation matrix for Dwaine Studios example {-}
+
+```{r}
+cor(DwaineData)
+```
+
+
+```{r}
+# Wanna make it fancy?
+library("GGally")
+ggpairs(DwaineData)
+```
+
+
+## Breusch-Pagan Test for Constancy of Error Variance {-}
+
+```{r comment=NA, warning=FALSE, message=FALSE}
+DwaineModel <- lm(SALES ~ TARGTPOP + DISPOINC, data = DwaineData)
+
+library(lmtest)
+bptest(DwaineModel, student = FALSE)
+```
+
+### F test for lack of fit {-}
+
+```{r}
+# F test for lack of fit
+
+#Reduced <- lm(SALES ~ TARGTPOP + DISPOINC, data = DwaineData) # This is our usual model
+#summary(Reduced)
+
+
+
+#Full <-  lm(SALES ~ factor(TARGTPOP)*factor(DISPOINC), data = DwaineData) # This is the full model
+#summary(Full)
+
+#anova (Reduced, Full)
+
+
+```
+
+
+
+```{r}
+# Problem 5 from exercises
+
+p5 <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%20%206%20Data%20Sets/CH06PR05.txt", sep ="" , header = FALSE)
+
+
+p5Data <- data.frame(p5)
+
+
+colnames(p5Data) <- c("y", "x1", "x2")
+(p5Data)
+dim(p5Data)
+
+
+Reduced <- lm(y ~ x1 + x2, data = p5Data) # This is our usual model
+summary(Reduced)
+
+Full <-  lm(y ~ factor(x1)*factor(x2), data = p5Data) # This is the full model
+summary(Full)
+
+```
+
+Testing the hypothesis:
+
+$H_0: \mbox{Reduced model is good}$ $\quad$ $H_a: \mbox{Full model is good}$
+
+```{r}
+
+anova (Reduced, Full)
+
 
 ```
 
