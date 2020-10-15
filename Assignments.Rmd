@@ -141,6 +141,7 @@ output:
   *Lecture Recordings*
  
   * [Tuesday's Class](https://appstate.zoom.us/rec/share/I6mIdQpWZzhHz-Mm1zfrGxzcOZ1iwy3LaCkhoIzay8GFaWfbf57DoOzBJXfc0OA.jbz90ZNAXG7QZYIw) 
+  * [Thursday's Class](https://appstate.zoom.us/rec/share/JW5InYYXu7kLH2GFjHvrEDiPwXn8qPFrOAfzisIre7SMjcVzJVaUsdGFbJrjzOAO.9dvygZ1RmrCcwE6e)
   
   
 ***
@@ -153,6 +154,11 @@ output:
     * 6.3 Estimation of Regression Coefficients
     * 6.4 Fitted Values and Residuals
     
+   *Lecture Recordings*
+   
+    * [Tuesday's Class](https://appstate.zoom.us/rec/share/NOCRPruQQ7jlFdlbjZFGYXoF3Tbgsva0y0GLdfdBQvAttOiF9WbYkfU4flsUrd4Y.3vPQ5oF4HXLOYTeS)
+     * [Thursday's Class](https://appstate.zoom.us/rec/share/_iyzyX5YwmJEFBbW68igc4lLW8BKnd0n-k3wyfHVBayTEBx1yFz3VAq4Ay32aIvB.2ipT5kNCKA4Zybt1)
+    
     
 ***
 
@@ -163,7 +169,8 @@ output:
     * 6.6 Inferences about Regression Parameters
     * 6.7 Estimation of Mean Response and Prediction of New Observation
     * 6.8 Diagnostics and Remedial Measures
-    
+   
+    * ***Quiz 4*** 
 
 ***
 
