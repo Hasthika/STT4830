@@ -51,9 +51,9 @@ range(Credit$Income)
 ```{r}
 #DwaineData <- read.table("https://people.stat.sc.edu/Hitchcock/studiodata.txt", sep ="" , header = FALSE)
 
-#DwaineData <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%20%206%20Data%20Sets/CH06FI05.txt", sep ="" , header = FALSE)
+DwaineData <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%20%206%20Data%20Sets/CH06FI05.txt", sep ="" , header = FALSE)
 
-DwaineData <- read.table("https://people.stat.sc.edu/Hitchcock/studiodata.txt", sep ="" , header = FALSE)
+#DwaineData <- read.table("https://people.stat.sc.edu/Hitchcock/studiodata.txt", sep ="" , header = FALSE)
 
 DwaineData <- data.frame(DwaineData)
 
@@ -63,8 +63,6 @@ head(DwaineData)
 dim(DwaineData)
 
 pairs(DwaineData)
-
-
 
 
 ```
@@ -82,6 +80,15 @@ cor(DwaineData)
 library("GGally")
 ggpairs(DwaineData)
 ```
+
+
+## Correlation Test for Normality
+
+
+```{r}
+
+```
+
 
 
 ## Breusch-Pagan Test for Constancy of Error Variance {-}
@@ -145,4 +152,146 @@ anova (Reduced, Full)
 
 
 ```
+
+
+### F Test for Regression Relation, Problem 6.6 in the exercises
+
+```{r include=FALSE}
+library(Matrix)
+
+p5 <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%20%206%20Data%20Sets/CH06PR05.txt", sep ="" , header = FALSE)
+
+
+p5Data <- data.frame(p5)
+
+
+colnames(p5Data) <- c("y", "x1", "x2")
+#dim(p5Data)
+
+######
+
+n <- nrow(p5Data)
+
+
+Y <- p5Data$y
+
+Y <- as.matrix(Y) 
+Y                       # This is your Y
+
+
+X <- p5Data[,-1]        # remove y to form X
+X <- as.matrix(X)
+X                       # Not quite the X we need
+
+X <- cbind(rep(1,n), X) # Adding a column of ones to make the X matrix
+X                       # This is your X
+
+
+# Calculating SSTO 
+
+YtY <- t(Y) %*% Y
+YtY
+
+J <- matrix(1, n, n)
+#J
+
+YtJY <- t(Y) %*% J %*% Y
+YtJY
+
+SSTO <- YtY - (1/n) * YtJY
+SSTO
+
+# Calculating SSE
+
+b <- solve(t(X) %*% X) %*% t(X) %*% Y
+
+SSE <- YtY - t(b) %*% t(X) %*% Y
+SSE
+
+# Calculating SSR
+
+SSR <- SSTO - SSE
+SSR
+
+# Calculating F statistic
+
+p <- 3 # number of predictors
+
+MSR <- SSR/(p-1)
+MSE <- SSE/(n-p)
+
+Fstat <- MSR/MSE
+Fstat  
+
+  
+# P-value
+pf(Fstat, p-1, n-p, lower.tail = FALSE)
+
+```
+
+## Varifying the above results
+
+```{r include = FALSE}
+p5model <- lm(y~x1+x2, data = p5Data)
+summary(p5model) # Read the very last line of the output 
+```
+
+## Test for individual $\beta$'s
+
+```{r }
+p5model <- lm(y~x1+x2, data = p5Data)
+summary(p5model) 
+?confint
+
+
+confint(p5model, method = "none")
+
+confint(p5model, method = c("none","bonferroni"))
+
+```
+
+
+
+## Interval Estimation of $\beta_k$
+
+```{r}
+confint(p5model, level = .95)
+```
+
+
+
+## Prediction of New Observation $Y_{h(new)}$
+
+
+```{r}
+p5model <- lm(y~x1+x2, data = p5Data)
+
+#prediction interval for the new observation x1 = 2, x2 = 4
+
+xnew <- t(c(x1 = 2, x2 = 4))
+xnew <- data.frame(xnew)
+xnew
+
+predict(p5model, xnew,interval="pred",level=.95) #prediction interval
+
+```
+
+
+## Prediction of Mean of m New Observations at $X_h$
+
+```{r}
+p5model <- lm(y~x1+x2, data = p5Data)
+
+# prediction interval for the new observation x1 = 2, x2 = 4; x1 = 3, x2 = 3
+
+xnew <- matrix(c(2,4,3,3), nrow = 2, byrow = TRUE)
+xnew <- data.frame(xnew)
+xnew
+
+colnames(xnew) <- c("x1", "x2")
+xnew
+
+predict(p5model, xnew, interval="conf",level=.95) #confidence interval
+```
+
 
