@@ -1,0 +1,98 @@
+---
+title: "Buildrng the Regression Model I: Model Selection and Validation"
+author: ""
+date: ""
+output: html_document
+---
+
+```{r setup, include=FALSE, comment=NA, warning=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Getting data
+
+```{r comment=NA, warning=FALSE, message=FALSE}
+surgicalData <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%20%209%20Data%20Sets/CH09TA01.txt", sep ="" , header = FALSE)
+
+
+#Look at the first 6 entries
+head(surgicalData)
+
+names(surgicalData) <- c(paste("X", 1:8, sep = ""), "Y" , "lnY")
+head(surgicalData)
+```
+
+For simplicity we only use first four explanatory variable and first 54 of the 108 patients.
+
+## Stem and Leaf plots
+
+```{r comment=NA, warning=FALSE, message=FALSE}
+stem(surgicalData$X1, 3)
+
+stem(surgicalData$X2, 3)
+stem(surgicalData$X3, 3)
+stem(surgicalData$X4, 3)
+```
+
+
+## Correlation Matrix
+
+```{r comment=NA, warning=FALSE, message=FALSE}
+cor(surgicalData[1:4])
+
+pairs(surgicalData[1:4])
+```
+
+## First order regression model
+
+```{r comment=NA, warning=FALSE, message=FALSE}
+surgicalModel1 <- lm(Y ~ X1 + X2 + X3 + X4, data = surgicalData)
+
+library(ggplot2)
+library(cowplot)
+rp <- ggplot(surgicalModel1, aes(x = .fitted, y = .resid)) + geom_point(color = "blue", dotsize = .5) + theme_bw() + geom_line(y=0)
+
+npp <- ggplot(surgicalModel1, aes(sample = .resid)) + geom_qq(color = "red") + geom_qq_line()+ theme_bw()
+
+plot_grid(rp, npp)
+```
+
+The plot suggests that both curvature and nonconstant error variance are
+apparent. In addition, some departure from normality is suggested by the normal probability
+plot of residuals.
+
+To make the distribution of the error terms more nearly normal and to see if the same
+transformation would also reduce the apparent curvature, the investigator examined the logarithmic transformation $Y' = ln Y$.
+
+
+## Regression model with transformed Y
+
+```{r comment=NA, warning=FALSE, message=FALSE}
+surgicalModel2 <- lm(lnY ~ X1 + X2 + X3 + X4, data = surgicalData)
+
+library(ggplot2)
+library(cowplot)
+rp <- ggplot(surgicalModel2, aes(x = .fitted, y = .resid)) + geom_point(color = "blue", dotsize = .5) + theme_bw() + geom_line(y=0)
+
+npp <- ggplot(surgicalModel2, aes(sample = .resid)) + geom_qq(color = "red") + geom_qq_line()+ theme_bw()
+
+plot_grid(rp, npp)
+```
+Now the plots look better!
+
+## Scatter Plot Matrix and Correlation Matrix when Response Variable is lnY
+
+```{r comment=NA, warning=FALSE, message=FALSE}
+cor(model.frame(surgicalModel2))
+#cor(surgicalData[c(10, 1:4)])
+
+pairs(model.frame(surgicalModel2), pch = 20, col = "darkgreen")
+```
+All of these plots indicate that each of the predictor variables is __________ associated with __________ , with __________  and __________  showing the highest
+degrees of association and __________  the lowest. 
+
+The scatter plot matrix and the correlation matrix further show intercorrelations among the potential predictor variables. In particular, __________  has
+moderately high pairwise correlations with __________ __________ __________ .
+
+
+

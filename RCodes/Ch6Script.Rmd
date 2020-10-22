@@ -102,7 +102,7 @@ bptest(DwaineModel, student = FALSE)
 
 ### F test for lack of fit {-}
 
-```{r}
+```{r comment=NA, warning=FALSE, message=FALSE}
 # F test for lack of fit
 
 #Reduced <- lm(SALES ~ TARGTPOP + DISPOINC, data = DwaineData) # This is our usual model
@@ -120,7 +120,7 @@ bptest(DwaineModel, student = FALSE)
 
 
 
-```{r}
+```{r comment=NA, warning=FALSE, message=FALSE}
 # Problem 5 from exercises
 
 p5 <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%20%206%20Data%20Sets/CH06PR05.txt", sep ="" , header = FALSE)
@@ -146,7 +146,7 @@ Testing the hypothesis:
 
 $H_0: \mbox{Reduced model is good}$ $\quad$ $H_a: \mbox{Full model is good}$
 
-```{r}
+```{r comment=NA, warning=FALSE, message=FALSE}
 
 anova (Reduced, Full)
 
@@ -156,7 +156,7 @@ anova (Reduced, Full)
 
 ### F Test for Regression Relation, Problem 6.6 in the exercises
 
-```{r include=FALSE}
+```{r comment=NA, warning=FALSE, message=FALSE}
 library(Matrix)
 
 p5 <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%20%206%20Data%20Sets/CH06PR05.txt", sep ="" , header = FALSE)
@@ -231,14 +231,14 @@ pf(Fstat, p-1, n-p, lower.tail = FALSE)
 
 ## Varifying the above results
 
-```{r include = FALSE}
+```{r comment=NA, warning=FALSE, message=FALSE}
 p5model <- lm(y~x1+x2, data = p5Data)
 summary(p5model) # Read the very last line of the output 
 ```
 
 ## Test for individual $\beta$'s
 
-```{r }
+```{r comment=NA, warning=FALSE, message=FALSE}
 p5model <- lm(y~x1+x2, data = p5Data)
 summary(p5model) 
 ?confint
@@ -254,7 +254,7 @@ confint(p5model, method = c("none","bonferroni"))
 
 ## Interval Estimation of $\beta_k$
 
-```{r}
+```{r comment=NA, warning=FALSE, message=FALSE}
 confint(p5model, level = .95)
 ```
 
@@ -263,7 +263,7 @@ confint(p5model, level = .95)
 ## Prediction of New Observation $Y_{h(new)}$
 
 
-```{r}
+```{r comment=NA, warning=FALSE, message=FALSE}
 p5model <- lm(y~x1+x2, data = p5Data)
 
 #prediction interval for the new observation x1 = 2, x2 = 4
@@ -279,7 +279,7 @@ predict(p5model, xnew,interval="pred",level=.95) #prediction interval
 
 ## Prediction of Mean of m New Observations at $X_h$
 
-```{r}
+```{r comment=NA, warning=FALSE, message=FALSE}
 p5model <- lm(y~x1+x2, data = p5Data)
 
 # prediction interval for the new observation x1 = 2, x2 = 4; x1 = 3, x2 = 3
