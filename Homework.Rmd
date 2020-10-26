@@ -115,6 +115,16 @@ Turn in your homework only as a *pdf* created in $R$. No handwritten work please
 3) 6.15
 
 
+#### ***Homework 7*: Due Wednesday, October 28th**
+
+Turn in your homework only as a *pdf* created in $R$. No handwritten work please!
+
+1) 6.7
+2) 6.8
+3) 6.16
+4) 6.17
+
+
 ***
 
 ## **Textbook**
