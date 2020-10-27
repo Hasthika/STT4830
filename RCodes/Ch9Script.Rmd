@@ -24,16 +24,30 @@ head(surgicalData)
 
 For simplicity we only use first four explanatory variable and first 54 of the 108 patients.
 
-## Stem and Leaf plots
+## Stem and Leaf plots for individual X variables
 
 ```{r comment=NA, warning=FALSE, message=FALSE}
-stem(surgicalData$X1, 3)
 
-stem(surgicalData$X2, 3)
-stem(surgicalData$X3, 3)
-stem(surgicalData$X4, 3)
+s1<- stem(surgicalData$X1, 3)
+s2<- stem(surgicalData$X2, 3)
+s3<- stem(surgicalData$X3, 3)
+s4<- stem(surgicalData$X4, 3)
+
+
 ```
 
+## Box plots for individual X variables
+```{r}
+library(ggplot2)
+library(cowplot)
+bp1<- ggplot(surgicalData, aes(x = X1)) + geom_boxplot(color = "steelblue", fill = "orchid4") + theme_bw()+coord_flip()
+bp2<-ggplot(surgicalData, aes(x = X2)) + geom_boxplot(color = "steelblue", fill = "orchid4") + theme_bw()+coord_flip()
+bp3<-ggplot(surgicalData, aes(x = X3)) + geom_boxplot(color = "steelblue", fill = "orchid4") + theme_bw()+coord_flip()
+bp4<-ggplot(surgicalData, aes(x = X4)) + geom_boxplot(color = "steelblue", fill = "orchid4") + theme_bw()+coord_flip()
+
+plot_grid(bp1, bp2,bp3,bp4)
+
+```
 
 ## Correlation Matrix
 
@@ -77,6 +91,7 @@ rp <- ggplot(surgicalModel2, aes(x = .fitted, y = .resid)) + geom_point(color = 
 npp <- ggplot(surgicalModel2, aes(sample = .resid)) + geom_qq(color = "red") + geom_qq_line()+ theme_bw()
 
 plot_grid(rp, npp)
+
 ```
 Now the plots look better!
 
@@ -88,11 +103,154 @@ cor(model.frame(surgicalModel2))
 
 pairs(model.frame(surgicalModel2), pch = 20, col = "darkgreen")
 ```
-All of these plots indicate that each of the predictor variables is __________ associated with __________ , with __________  and __________  showing the highest
-degrees of association and __________  the lowest. 
+All of these plots indicate that each of the predictor variables is Linearly associated with lnY , with X3  and X4 showing the highest
+degrees of association and X1 the lowest. 
 
-The scatter plot matrix and the correlation matrix further show intercorrelations among the potential predictor variables. In particular, __________  has
+The scatter plot matrix and the correlation matrix further show intercorrelations among the potential predictor variables. In particular, X4  has
 moderately high pairwise correlations with __________ __________ __________ .
 
 
+<!---Section 9.3--->
+
+## Plot with $r^2$
+
+```{r comment=NA, warning=FALSE, message=FALSE}
+library(leaps)
+library(dplyr)
+
+?regsubsets
+
+subsets <- regsubsets(x = surgicalData[1:4], y = surgicalData[,10], which = "rsq", nbest = 4) #nbest: number of subsets of each size to record
+
+summary(subsets)
+
+plot(subsets, scale = "r2")
+
+### Using leaps
+
+obj <- leaps(x = surgicalData[1:4], y = surgicalData[,10], method = c( "r2"), nbest = 4) #nbest: number of subsets of each size to record
+
+obj
+
+
+tab <- cbind(obj$size, obj$r2)
+tab
+tab <- data.frame(tab)
+tab
+
+
+names(tab) <- c("p", "r2")
+tab 
+tab 
+
+tabmax <- tab %>%
+  group_by(p) %>%
+  summarize(mr2 = max(r2))
+tabmax
+
+ggplot(data = tab, aes(x=p, y=r2)) + geom_point(color = "red") + 
+   geom_line(data = tabmax, aes(x=p, y=mr2), color = "blue") + theme_bw()
+
+tab2 <- cbind(obj$size, obj$r2, obj$which)
+tab2
+
+tab2[which.max(tab2[,2]),]
+```
+
+
+
+## Plot with $R^2_{adj}$
+
+```{r}
+subsets <- regsubsets(x = surgicalData[1:4], y = surgicalData[,10], which = "adjr2", nbest = 4) #nbest: number of subsets of each size to record
+
+summary(subsets)
+
+plot(subsets, scale = "adjr2")
+
+### Using leaps
+
+obj <- leaps(x = surgicalData[1:4], y = surgicalData[,10], method = c("adjr2"), nbest = 4)
+
+obj
+
+
+tab <- cbind(obj$size, obj$adjr2)
+
+tab <- data.frame(tab)
+tab
+
+names(tab) <- c("p", "adjr2")
+tab 
+
+tabmax <- tab %>%
+  group_by(p) %>%
+  summarize(madjr2 = max(adjr2))
+tabmax
+
+ggplot(data = tab, aes(x=p, y=adjr2)) + geom_point(color = "red") + 
+   geom_line(data = tabmax, aes(x=p, y=madjr2), color = "blue") + theme_bw()
+
+tab2 <- cbind(obj$size, obj$adjr2, obj$which)
+tab2
+
+tab2[which.max(tab2[,2]),]
+```
+
+## Plot with $C_p$
+
+```{r}
+subsets <- regsubsets(x = surgicalData[1:4], y = surgicalData[,10], which = "cp", nbest = 4) #nbest: number of subsets of each size to record
+
+summary(subsets)
+
+plot(subsets, scale = "Cp")
+
+
+### Using leaps
+
+obj <- leaps(x = surgicalData[1:4], y = surgicalData[,10], method = c( "Cp"), nbest = 4)
+
+obj
+
+tab <- cbind(obj$size, obj$Cp)
+
+tab <- data.frame(tab)
+tab
+
+names(tab) <- c("p", "Cp")
+tab 
+
+tabmax <- tab %>%
+  group_by(p) %>%
+  summarize(mCp = min(Cp))
+tabmax
+
+ggplot(data = tab, aes(x=p, y=Cp)) + geom_point(color = "red") + 
+   geom_line(data = tabmax, aes(x=p, y=mCp), color = "blue") + theme_bw()
+
+tab2 <- cbind(obj$size, obj$Cp, obj$which)
+tab2
+
+tab2[which.min(tab2[,2]),]
+```
+
+## Multiple Criterians at once
+
+```{r}
+library(olsrr)
+
+obj2 <- ols_step_all_possible(surgicalModel2)
+obj2 # Default table
+plot(obj2) # Plots
+
+# Custom Tables (Ex: with AIC)
+tabAIC <- cbind(obj2$predictors, obj2$aic)
+tabAIC <- data.frame(tabAIC)
+names(tabAIC) <- c("Predictors", "AIC")
+tabAIC 
+
+
+
+```
 
