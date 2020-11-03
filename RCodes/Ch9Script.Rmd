@@ -118,13 +118,15 @@ moderately high pairwise correlations with __________ __________ __________ .
 library(leaps)
 library(dplyr)
 
-?regsubsets
+?regsubsets #from leaps library
 
+surgicalData
 subsets <- regsubsets(x = surgicalData[1:4], y = surgicalData[,10], which = "rsq", nbest = 4) #nbest: number of subsets of each size to record
 
 summary(subsets)
 
 plot(subsets, scale = "r2")
+
 
 ### Using leaps
 
@@ -141,7 +143,7 @@ tab
 
 names(tab) <- c("p", "r2")
 tab 
-tab 
+
 
 tabmax <- tab %>%
   group_by(p) %>%
@@ -154,7 +156,7 @@ ggplot(data = tab, aes(x=p, y=r2)) + geom_point(color = "red") +
 tab2 <- cbind(obj$size, obj$r2, obj$which)
 tab2
 
-tab2[which.max(tab2[,2]),]
+
 ```
 
 
@@ -168,15 +170,15 @@ summary(subsets)
 
 plot(subsets, scale = "adjr2")
 
+
 ### Using leaps
 
-obj <- leaps(x = surgicalData[1:4], y = surgicalData[,10], method = c("adjr2"), nbest = 4)
+obj <- leaps(x = surgicalData[1:4], y = surgicalData[,10], method = c("adjr2"), nbest = 4) # only change the method from previous criterion
 
 obj
 
 
 tab <- cbind(obj$size, obj$adjr2)
-
 tab <- data.frame(tab)
 tab
 
@@ -194,7 +196,7 @@ ggplot(data = tab, aes(x=p, y=adjr2)) + geom_point(color = "red") +
 tab2 <- cbind(obj$size, obj$adjr2, obj$which)
 tab2
 
-tab2[which.max(tab2[,2]),]
+tab2[which.max(tab2[,2]),] # Anotherway to find the  best subset model using  adjusted r^2 criterion
 ```
 
 ## Plot with $C_p$
@@ -250,7 +252,92 @@ tabAIC <- data.frame(tabAIC)
 names(tabAIC) <- c("Predictors", "AIC")
 tabAIC 
 
-
-
 ```
+
+## Best subsets algorithms
+
+```{r}
+library(olsrr)
+# To obtain the set of plots in page 362 
+surgicalModelAll <- lm(lnY ~ X1 + X2 + X3 + X4 + X5 + X6 + X7 + X8, data = surgicalData)
+summary(surgicalModelAll)
+
+obj3 <- ols_step_all_possible(surgicalModelAll)
+obj3 # Default table
+plot(obj3) # Plots
+
+
+# To get the table 9.3
+library(leaps)
+obj <- regsubsets(x = surgicalData[1:8], y = surgicalData[,10], nbest = 1, which = "adjr2")
+objSummary <- summary(obj)
+objSummary
+objSummary$adjr2
+```
+
+```{r}
+obj <- regsubsets(x = surgicalData[1:8], y = surgicalData[,10], nbest = 1, which = "cp")
+objSummary <- summary(obj)
+objSummary
+objSummary$cp
+```
+
+
+
+```{r}
+obj <- regsubsets(x = surgicalData[1:8], y = surgicalData[,10], nbest = 1, which = "rss")
+objSummary <- summary(obj)
+objSummary
+objSummary$rss
+```
+
+## Forward Stepwise Regression
+
+```{r}
+fit <- lm(lnY ~ X1 + X2 + X3 + X4 + X5 + X6 + X7 + X8, data = surgicalData)  # Full Model
+o <- step(fit, direction = "forward")     
+summary(o)
+```
+```{r}
+# Get the Validation set
+surgicalDataValidation <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%20%209%20Data%20Sets/CH09TA05.txt", sep ="" , header = FALSE)
+
+names(surgicalDataValidation) <- c(paste("X", 1:8, sep = ""), "Y" , "lnY")
+
+dim(surgicalDataValidation)
+
+#------------------------------------------------------------------------------------
+# We selected X1, X2, X3, X6, X8 using Cp criterion in the earlier section 
+lmCpVal <- lm(lnY ~ X1 + X2 + X3 + X6 + X8, data = surgicalDataValidation)
+
+summary(lmCpVal)
+
+MSPR1 <- summary(lmCpVal)$sigma^2 # Getting the MSPR - MSE for the Validation(prediction) set
+MSPR1
+adjRsq1 <- summary(lmCpVal)$adj.r.squared
+adjRsq1
+
+#names(summary(lmCpVal))
+
+#------------------------------------------------------------------------------------
+# We selected X1, X2, X3, X5, X6, X8 using R2adj criterion in the earlier section 
+
+lmRVal <- lm(lnY ~ X1 + X2 + X3 + X5 + X6 + X8, data = surgicalDataValidation)
+
+summary(lmRVal)
+
+MSPR2 <- summary(lmRVal)$sigma^2 # Getting the MSPR - MSE for the Validation(prediction) set
+MSPR2
+adjRsq2 <- summary(lmRVal)$adj.r.squared
+adjRsq2
+
+#------------------------------------------------------------------------------------
+# Making a table so it is easier to compre the models
+
+compare <- data.frame(matrix(c(MSPR1, MSPR2, adjRsq1, adjRsq2), ncol = 2, byrow = TRUE))
+colnames(compare) <- c( "Model 1" , "Model 2")
+rownames(compare) <- c( "MSPR" , "Adj R square")
+compare
+```
+
 

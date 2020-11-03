@@ -220,7 +220,7 @@ output:
  
      *Lecture Recordings*
     
-   * [Tuesday's Class]()
+   * [Tuesday's Class](https://appstate.zoom.us/rec/share/B0LxRJ4kZ4DEaENvxbnHAF6xSLB8unreryg6FQznfLCxRm4V7bkE7pnE8o5wJNcf.rtzRfZ2P_9ulY9KJ)
     
 
 ***
