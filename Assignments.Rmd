@@ -16,6 +16,7 @@ output:
 
 * Go over syllabus.
 * Chapter 1: Linear Regression With One Predictor Variable
+
     * 1.1 Relation between Variables
     * 1.3 Simple Linear Regression Model with Distribution of Error Terms Unspecified
     * 1.4 Data for Regression Analysis
@@ -31,6 +32,7 @@ output:
 **Week 2: (August 24 -- 28)**
 
 * Chapter 1: Linear Regression With One Predictor Variable
+
     * 1.6 Estimation of Regression Function 
     
      * ***HW1***
@@ -44,10 +46,12 @@ output:
 **Week 3: (August 31 -- Sep 4)**
 
 * Chapter 1: Linear Regression With One Predictor Variable
+
     * 1.7 Estimation of Error Terms Variance $\sigma^2$
     * 1.8 Normal Error Regression Model  
     
-* Chapter 5: Matrix Approach to Simple Linear Regression Analysis 
+* Chapter 5: Matrix Approach to Simple Linear Regression Analysis
+
     * 5.1 Matrices
     * 5.2 Matrix Addition and Subtraction
     * 5.3 Matrix Multiplication 
@@ -66,7 +70,8 @@ output:
 
 **Week 4: (Sep 7  -- Sep 11)**
  
-* Chapter 5: Matrix Approach to Simple Linear Regression Analysis 
+* Chapter 5: Matrix Approach to Simple Linear Regression Analysis
+
     * 5.4 Special Types of Matrices
     * 5.6 Inverse of a Matrix (In R)
     * 5.9 Simple Linear Regression Model in Matrix Terms
@@ -87,6 +92,7 @@ output:
     * 5.11  Fitted Values and Residuals
     
 * Chapter 3: Diagnostics and Remedial Measures
+
     * 3.1  Diagnostics for Predictor Variable
     * 3.2  Residuals
     * 3.3  Diagnostics for Residuals
@@ -113,6 +119,7 @@ output:
 **Week 7: (Sep 28  -- Oct 02)**
 
 * Chapter 3: Diagnostics and Remedial Measures
+
      * 3.3  Diagnostics for Residuals
      * 3.4  Overview of Tests Involving Residuals
      * 3.5  Correlation Test for Nonnality
@@ -149,6 +156,7 @@ output:
 **Week 9: (Oct 12  -- Oct 16)**
 
 * Chapter 6:  Multiple Regression
+
     * 6.1  Multiple Regression Models
     * 6.2 General Linear Regression Model in Matrix Terms
     * 6.3 Estimation of Regression Coefficients
@@ -165,26 +173,55 @@ output:
 **Week 10: (Oct 19  -- Oct 23)**
 
 * Chapter 6:  Multiple Regression
+
     * 6.5 Analysis of Variance Results
     * 6.6 Inferences about Regression Parameters
     * 6.7 Estimation of Mean Response and Prediction of New Observation
     * 6.8 Diagnostics and Remedial Measures
    
-    * ***Quiz 4*** 
-
+  * ***Quiz 4*** 
+  
+    *Lecture Recordings*
+    
+   * [Tuesday's Class](https://appstate.zoom.us/rec/share/ieLKNeupd4A3J3RPIrB_JQMkFWKlyeS9wmNVeHMc7MRveJ_W9il5C8wqU-fzW6mI._Y3BGxOOQAG8dLP7)
+    * [Thursday's Class](https://appstate.zoom.us/rec/share/UG2TzSmTlNs4Tu0zpiktmPSU0RBJ6kN72sQicxQ0QerXd4QJBF7PZWH17Ugv6kq2.4pwHVT8nyZCrEODU)
+   
 ***
 
     
 **Week 11: (Oct 26  -- Oct 30)**
 
- *  ***Test 2 ***
+* Chapter 9:  Building the Regression Model I: Model Selection and Validation
+
+    * 9.1 Overview of Model-Building Process 
+    * 9.2 Surgical Unit Example
+    * 9.3 Criteria for Model Selection 
+   
+   
+  * ***Quiz 5*** 
+
+    *Lecture Recordings*
+    
+   * [Tuesday's Class](https://appstate.zoom.us/rec/share/fwkdnvsQjpd-Wo7JOtdmw3CyNUw6gRLHc7T6LIIzzMqblQY42XOwnwTh6TQY87PH.3IQk6fjCxXkMuxMO)
+   
  
  
 ***
 
 **Week 12: (Nov 02  --Nov 06)**
 
- *  
+* Chapter 9:  Building the Regression Model I: Model Selection and Validation
+
+     * 9.4 Automatic Search Procedures for Model Selection
+     * 9.6 Model Validation
+    
+    
+ *  ***Test 2 ***
+ 
+     *Lecture Recordings*
+    
+   * [Tuesday's Class]()
+    
 
 ***
 
