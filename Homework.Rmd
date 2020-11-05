@@ -127,11 +127,14 @@ Turn in your homework only as a *pdf* created in $R$. No handwritten work please
 
 ***
 
-#### ***Homework 8*: Due Wednesday, November 9th**
+#### ***Homework 8*: Due Tuesday, November 10th**
 
 Turn in your homework only as a *pdf* created in $R$. No handwritten work please!
 
-Ch 9 TBA
+1) 9.10
+2) 9.11
+3) 9.18 (Ignore the second half of the part a))
+
 
 
 
@@ -141,7 +144,11 @@ Ch 9 TBA
 
 Turn in your homework only as a *pdf* created in $R$. No handwritten work please!
 
-TBA 
+1) 9.22
+2) 14.
+3) 14.
+4) 14.
+
 
 
 ***
