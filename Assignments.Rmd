@@ -227,11 +227,24 @@ output:
 
 **Week 13: (Nov 09  --Nov 13)**
 
+  * 9.6 Model Validation
+  * 14.1 Regression Models with Binary Response Variable
+  * 14.2 Sigmoidal Response Functions for Binary Responses
+  * 14.3 Simple Logistic Regression
+  * 14.4 Multiple Logistic Regression
+  
  *   * ***Quiz 6***
+ * [Tuesday's Class](https://appstate.zoom.us/rec/share/Hrx-3NOn5JsfjGanO3jBIzDM2U_CM4mISruCdJ7WzRuoHP4JGBNzJu6fqYFTx_7Y.6Y4czqE_c6kiols2)
+ * [Thursday's Class]()
  
  ***
 
 **Week 14: (Nov 16  --Nov 20)**
+  * 14.5 Regression Models with Binary Response Variable
+  * 14.6 Sigmoidal Response Functions for Binary Responses
+  * 14.7 Simple Logistic Regression
+  * 14.8 Multiple Logistic Regression
+
 
  *   * ***Quiz 7***
  
