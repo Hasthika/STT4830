@@ -298,6 +298,10 @@ fit <- lm(lnY ~ X1 + X2 + X3 + X4 + X5 + X6 + X7 + X8, data = surgicalData)  # F
 o <- step(fit, direction = "forward")     
 summary(o)
 ```
+
+## Model Validation
+
+
 ```{r}
 # Get the Validation set
 surgicalDataValidation <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%20%209%20Data%20Sets/CH09TA05.txt", sep ="" , header = FALSE)
