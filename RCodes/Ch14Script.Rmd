@@ -71,6 +71,7 @@ summary(logitfit)
 
 # Fitted values
 
+progTaskData
 logitfit$fitted.values # This gives fitted values from the model for each case
 cbind(progTaskData, 'fitted' = logitfit$fitted.values) # Table to make it easier to read
 
@@ -108,7 +109,9 @@ head(CouponData)
 
 ```{r comment=NA, warning=FALSE, message=FALSE}
 y <- c(rep(1, sum(CouponData$Y)), rep(0, 1000 - sum(CouponData$Y)))
+y
 x <- c(rep(CouponData$X, CouponData$Y), rep(CouponData$X, 200 - CouponData$Y))
+x
 
 newCouponData <- data.frame(y, x)
 head(newCouponData)
@@ -199,17 +202,190 @@ cbind(DiseaseData, 'fitted' = DiseaseModel$fitted.values) # Table to make it eas
 
 
 
+## Test Concerning a Single $\beta_k$: Wald Test
+### Example 7 in the lecture note
+
+Consider Programming Task Example
+
+```{r}
+summary(logitfit)
+```
+
+### Example 8 in the lecture note
+```{r}
+
+confint.default(logitfit, level = 0.95 )
+
+#exp(logitfit$coefficients)         # exponentiated coefficients (odds ratio)
+exp(confint.default(logitfit))     # 95% CI for exponentiated coefficients (odds ratio)
+
+
+```
+
+
+## Example 9 -Ltikelihood Ratio test
+
+```{r}
+library(lmtest)
+DiseaseModelFull <- glm(y ~ x1 + x2 + x3 + x4, data = DiseaseData, family = binomial(link = 'logit')) # We got this model earlier
+
+DiseaseModelReduced <- glm(y ~ x2 + x3 + x4, data = DiseaseData, family = binomial(link = 'logit'))
+
+lrtest(DiseaseModelFull, DiseaseModelReduced)
+```
+
+## Example 10 (Best subsets procedures)
+
+
+```{r}
+library(olsrr)
+# To obtain the set of plots in page 362 
+DiseaseModelAll <- lm(y ~ x1 + x2 + x3 + x4, data = DiseaseData)
+
+obj2 <- ols_step_all_possible(DiseaseModelAll)
+obj2 # Default table
+plot(obj2) # Plots
+
+# Custom Tables (Ex: with AIC and SBC)
+tabAIC_SBC <- cbind(obj2$predictors, obj2$aic, obj2$sbc)
+tabAIC_SBC <- data.frame(tabAIC_SBC)
+names(tabAIC_SBC) <- c("Predictors", "AIC", "SBC")
+as.data.frame(tabAIC_SBC) 
+
+#Find best four models for each criteria
+
+# Sort by AIC
+tabAIC_SBC[order(tabAIC_SBC$AIC),]
+
+# Sort by SBC
+tabAIC_SBC[order(tabAIC_SBC$SBC),]
+```
 
 
 
+## Pearson Chi-Square Goodness of Fit Test
+
+
+```{r comment=NA, warning=FALSE, message=FALSE}
+CouponData <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%2014%20Data%20Sets/CH14TA02.txt", sep ="" , header = FALSE)
+head(CouponData)
+
+CouponData <- CouponData[,1:3] # Remove the last column to make the data set more practical
+
+#Look at the first 6 entries
+head(CouponData)
+
+names(CouponData) <- c( "X", "n" , "Y")
+head(CouponData)
+
+y <- c(rep(1, sum(CouponData$Y)), rep(0, 1000 - sum(CouponData$Y)))
+y
+x <- c(rep(CouponData$X, CouponData$Y), rep(CouponData$X, 200 - CouponData$Y))
+x
+
+newCouponData <- data.frame(y, x)
+head(newCouponData)
+
+modelRep <- glm(y ~ x, family = binomial(link = 'logit'), data = newCouponData)
+summary(modelRep)
+
+obs_exp <- data.frame(fits = modelRep$fitted.values, xlevels = newCouponData$x, yvals = newCouponData$y)
+obs_exp
+
+
+# For y = 1
+obs_exp_group_cou_red <- obs_exp %>%
+   group_by(xlevels) %>%
+  summarize(ni = n(), Pjhat = mean(fits), Obs_cou_red = sum(yvals), Exp_cou_red = ni*Pjhat)
+
+obs_exp_group_cou_red
+
+# For y = 0
+obs_exp_group_cou_not_red <- obs_exp %>%
+   group_by(xlevels) %>%
+  summarize(ni = n(), Pjhat = mean(fits), Obs_cou_not_red = 200-sum(yvals), Exp_cou_not_red = ni*(1-Pjhat))
+
+obs_exp_group_cou_not_red
+
+
+chiSq1 <- (obs_exp_group_cou_red$Obs_cou_red - obs_exp_group_cou_red$Exp_cou_red)^2/obs_exp_group_cou_red$Exp_cou_red 
+chiSq1
+chiSq2 <- (obs_exp_group_cou_not_red$Obs_cou_not_red - obs_exp_group_cou_not_red$Exp_cou_not_red)^2/obs_exp_group_cou_not_red$Exp_cou_not_red
+chiSq2
+
+ChiSquareTestStat <- sum(chiSq1) + sum(chiSq2)
+ChiSquareTestStat
+
+df <- 5 - 2 # df = number of classes - number of parameters in the model
+p_value <- 1-pchisq(ChiSquareTestStat, 3)
+p_value
+```
+
+## Prediction of a New Observation
+
+```{r comment=NA, warning=FALSE, message=FALSE}
+DiseaseData <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%2014%20Data%20Sets/CH14TA03.txt", sep ="" , header = FALSE)
+head(DiseaseData)
+dim(DiseaseData)
+
+DiseaseData <- DiseaseData[,-1] # Remove the 'case' column
+
+#Look at the first 6 entries
+head(DiseaseData)
+
+# Rename columns
+names(DiseaseData) <- c( "x1", "x2" , "x3", "x4", "y")
+head(DiseaseData)
+
+# Fitting the logistic model
+DiseaseModel <- glm(y ~ x1 + x2 + x3 + x4, data = DiseaseData, family = binomial(link = 'logit'))
+summary(DiseaseModel)
+
+obs_Pi <- data.frame(Pi = DiseaseModel$fitted.values, disease_status = DiseaseModel$y)
+obs_Pi
+
+# Zeros #################################
+correct0 <- obs_Pi %>%
+  filter(Pi < .316) %>%
+  filter(disease_status == 0)
+
+n_correct0 <- nrow(correct0)
+n_correct0
+
+incorrect0 <- obs_Pi %>%
+  filter(Pi < .316) %>%
+  filter(disease_status == 1)
+
+n_incorrect0 <- nrow(incorrect0)
+n_incorrect0
+
+# Ones #################################
+correct1 <- obs_Pi %>%
+  filter(Pi >= .316) %>%
+  filter(disease_status == 1)
+
+n_correct1 <- nrow(correct1)
+n_correct1
+
+incorrect1 <- obs_Pi %>%
+  filter(Pi >= .316) %>%
+  filter(disease_status == 0)
+
+n_incorrect1 <- nrow(incorrect1)
+n_incorrect1
+
+# Making a classification table  #################################
+classifi_table <- matrix(c(n_correct0, n_incorrect0, n_incorrect1 , n_correct1), nrow = 2)
+#classifi_table
+
+rownames(classifi_table) <- c("Y = 0", "Y = 1")
+colnames(classifi_table) <- c("Yhat = 0", "Yhat = 1")
+
+as.data.frame(classifi_table)
 
 
 
-
-
-
-
-
+```
 
 
 

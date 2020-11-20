@@ -216,7 +216,7 @@ output:
      * 9.6 Model Validation
     
     
- *  ***Test 2 ***
+   *  ***Test 2 ***
  
      *Lecture Recordings*
     
@@ -234,8 +234,9 @@ output:
   * 14.4 Multiple Logistic Regression
   
  *   * ***Quiz 6***
+ 
  * [Tuesday's Class](https://appstate.zoom.us/rec/share/Hrx-3NOn5JsfjGanO3jBIzDM2U_CM4mISruCdJ7WzRuoHP4JGBNzJu6fqYFTx_7Y.6Y4czqE_c6kiols2)
- * [Thursday's Class]()
+ * [Thursday's Class](https://appstate.zoom.us/rec/share/GmfVxqDJbpyDuFVYXzsZThem8AUwz9kom58l1SMhRDnFFbxLiT4IaHvg0QmlepqF.nd5NHLcx82sbNBYQ)
  
  ***
 
@@ -245,8 +246,12 @@ output:
   * 14.7 Simple Logistic Regression
   * 14.8 Multiple Logistic Regression
 
+ *    ***Quiz 7***
 
- *   * ***Quiz 7***
+ * [Tuesday's Class](https://appstate.zoom.us/rec/share/s9TM8hhpBAyCwt3cvxUPa_tdeFhVQU6mqygtnEhEpk2anGe3p3wtyIeNd732vci-.T5bfrHKn2mJwYibL)
+ * [Thursday's Class]()
+ 
+
  
   ***
 
