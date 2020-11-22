@@ -153,11 +153,16 @@ Turn in your homework only as a *pdf* created in $R$. No handwritten work please
 
 ***
 
-#### ***Homework 10*: Due Wednesday, November 23th**
+#### ***Homework 10*: Due Tuesday, November 24th**
 
 Turn in your homework only as a *pdf* created in $R$. No handwritten work please!
 
-TBA
+1) 14.12
+2) 14.18
+3) 14.14
+4) 14.20
+5) 14.22
+
 
 
 ***
