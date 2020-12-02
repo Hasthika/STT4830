@@ -258,12 +258,14 @@ output:
 
 **Week 15: (Nov 23  --Nov 27)**
 
- *   * ***Quiz 8***
+ * ***Quiz 8***
 
   ***
   
 **Final Exam (December 3rd)**
  
   * [Data set for question 1](question1.txt)
-
+  * [Data set for question 2](question2.txt)
+  * [Data set for question 3](question3.txt)
+  
   ***
