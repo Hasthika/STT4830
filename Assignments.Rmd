@@ -264,8 +264,8 @@ output:
   
 **Final Exam (December 3rd)**
  
-  * [Data set for question 1](question1.txt)
-  * [Data set for question 2](question2.txt)
-  * [Data set for question 3](question3.txt)
+  * [Data set for question 1](question1_.txt)
+  * [Data set for question 2](question2_.txt)
+  * [Data set for question 3](question3_.txt)
   
   ***
