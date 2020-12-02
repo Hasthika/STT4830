@@ -241,10 +241,11 @@ output:
  ***
 
 **Week 14: (Nov 16  --Nov 20)**
-  * 14.5 Regression Models with Binary Response Variable
-  * 14.6 Sigmoidal Response Functions for Binary Responses
-  * 14.7 Simple Logistic Regression
-  * 14.8 Multiple Logistic Regression
+
+  * 14.5 Inferences about Regression Parameters
+  * 14.6 Automatic Model Selection Methods
+  * 14.7 Tests for Goodness of Fit
+  * 14.8 Logistic Regression Diagnostics
 
  *    ***Quiz 7***
 
@@ -258,4 +259,11 @@ output:
 **Week 15: (Nov 23  --Nov 27)**
 
  *   * ***Quiz 8***
+
+  ***
+  
+**Final Exam (December 3rd)**
  
+  * [Data set for question 1](question1.txt)
+
+  ***
