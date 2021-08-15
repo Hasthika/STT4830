@@ -12,7 +12,7 @@ output:
 
 ***
 
-#### ***Homework 1*: Due Thursday, August 27th**
+#### ***Homework 1*: Due Thursday, August 26th**
 
 1) (1.2)
 2) (1.5 Give reason for your answer)
