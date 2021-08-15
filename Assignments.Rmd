@@ -1,5 +1,5 @@
 ---
-title: "Schedule for STT 4830 - Fall 2020"
+title: "Schedule for STT 4830 - Fall 2021"
 author: "Dr. Lasanthi Watagoda"
 date: 'Last Updated on: `r format(Sys.time(), "%b %d, %Y at %X")`'
 output: 
@@ -12,7 +12,7 @@ output:
 
 ***
 
-**Week 1: (August 17 -- 21)**
+**Week 1: (August 17 -- 20)**
 
 * Go over syllabus.
 * Chapter 1: Linear Regression With One Predictor Variable
@@ -22,28 +22,19 @@ output:
     * 1.4 Data for Regression Analysis
     * 1.5 Overview of Steps in Regression Analysis
 
-  *Lecture Recordings*
-  
-  * [Tuesday's Class](https://appstate.zoom.us/rec/share/68F4BenTsVFOabOQ90uBXIQTBZ_kT6a81SEfrvYNyBnFHFJgvGB89Or4l6_on43n)
-  * [Thursday's Class](https://appstate.zoom.us/rec/share/tdJKE5Pszj1JaYnHz17EXLwrO7rKaaa81XBP_PIEz0mjXXpw44VMHowZ81f7JLes)
-
 ***
 
-**Week 2: (August 24 -- 28)**
+**Week 2: (August 23 -- 27)**
 
 * Chapter 1: Linear Regression With One Predictor Variable
 
     * 1.6 Estimation of Regression Function 
     
-     * ***HW1***
+* [***HW1***](Homework.html)
     
-  *Lecture Recordings*
-  
-  * [Tuesday's Class](https://appstate.zoom.us/rec/share/7PN1fuCuz0FOW43ox3r2Z694Atq1aaa80yRNrKAPy0s7eaoyib87HPDRJaGyyhUr)
-
 ***
 
-**Week 3: (August 31 -- Sep 4)**
+**Week 3: (August 30 -- Sep 3)**
 
 * Chapter 1: Linear Regression With One Predictor Variable
 
@@ -57,18 +48,12 @@ output:
     * 5.3 Matrix Multiplication 
     
     
-    * ***Quiz 1***
-    *  ***HW 2***
+* ***Quiz 1***
+* [***HW 2***](Homework.html)
     
- *Lecture Recordings*
- 
-  * [Tuesday's Class](https://appstate.zoom.us/rec/share/4_R5Ma37yCRLZ9aSwnDvSKoGHYLdX6a81Hcd__dfnUu8lhTik7JQnaMWmu1-uloq)
-  * [Thursday's Class](https://appstate.zoom.us/rec/share/OIC7NUaWzWC6jDzRmshWRNUhqemXUiI_PlDrYKaz1BwUV8A6vskvrA8ka78azLyv.WYS75k1kzvmA6Pnl)
-
-
 ***
 
-**Week 4: (Sep 7  -- Sep 11)**
+**Week 4: (Sep 6  -- Sep 10)**
  
 * Chapter 5: Matrix Approach to Simple Linear Regression Analysis
 
@@ -77,16 +62,11 @@ output:
     * 5.9 Simple Linear Regression Model in Matrix Terms
     * 5.10  Least Squares Estimation of Regression Parameters
     
-    * ***Quiz 2***
+* ***Quiz 2***
     
- *Lecture Recordings*
- 
-  * [Tuesday's Class](https://appstate.zoom.us/rec/share/fXWx8Fbq6BERzmVOKcI5fPdVIDW0gO-bIHOqNYJRq6-gb4CX8f9QgREofDzZpw.uS6K5SANJ7dSKctF)
-  * [Thursday's Class](https://appstate.zoom.us/rec/share/SfgKZjDwZBlptlt5sEDpDsYhMP524fR6Yz6gUaCDp-dnz3DVZm32_M51zB1O8Geb.iglJ4lQ9wPbz9QwU)
-
 ***
 
-**Week 5: (Sep 14  -- Sep 18)**
+**Week 5: (Sep 13  -- Sep 17)**
  
 * Chapter 5: Matrix Approach to Simple Linear Regression Analysis  
     * 5.11  Fitted Values and Residuals
@@ -97,26 +77,20 @@ output:
     * 3.2  Residuals
     * 3.3  Diagnostics for Residuals
    
-    *  ***HW 3 ***
+*  [***HW 3 ***](Homework.html)
     
-    
- *Lecture Recordings*
- 
-  * [Tuesday's Class](https://appstate.zoom.us/rec/share/MgmFBafzOOFzXafFYq0E0CC86doZQYokL8y_EOE70qKRdwIhoKZ_Juu3Y-USHQtv.6DBzkBowPCuTiqwn)
-  * [Thursday's Class](https://appstate.zoom.us/rec/share/4ud2Y5Dn466yKIyNma1VZF3AytiO4n5J_wovaGnyVRSqWBtlfYzxTlE10ilmI4c2.hL9rGj_TE_GPpdtz)
-
 ***
 
-**Week 6: (Sep 21  -- Sep 25)**
+**Week 6: (Sep 20  -- Sep 24)**
 
 
-     *  ***Test 1 ***
+  *  ***Test 1 ***
 
 
 
 ***
 
-**Week 7: (Sep 28  -- Oct 02)**
+**Week 7: (Sep 27  -- Oct 01)**
 
 * Chapter 3: Diagnostics and Remedial Measures
 
@@ -127,33 +101,21 @@ output:
      * 3.7  F Test for Lack of Fit
      * 3.8  Overview of Remedial Measures
 
- *Lecture Recordings*
- 
-  * [Tuesday's Class](https://appstate.zoom.us/rec/share/S8mCuNZyikvJoF80SCo5PotzOwfiMPNy2R8PQNRh8z_pJSlRbVLN7flBsmOYdLD7.b31ArsFjBNtiPGKd)
-  * [Thursday's Class](https://appstate.zoom.us/rec/share/eJ3vR9qWVAGgUtl40yWS_jr2RToAPlikMfB8h1BGKgX_rOb1gUH8JXCqFiLOI0VZ.6HH6SQqQV4Z1TLwJ)
-
-
 
 ***
 
-**Week 8: (Oct 05  -- Oct 09)**
+**Week 8: (Oct 04  -- Oct 08)**
 
 * Chapter 3: Diagnostics and Remedial Measures
     
      * 3.9  Transformations
      * 3.10  Exploration of Shape of Regression Function
      
- * ***Quiz 3***
+* ***Quiz 3***
  
-  *Lecture Recordings*
- 
-  * [Tuesday's Class](https://appstate.zoom.us/rec/share/I6mIdQpWZzhHz-Mm1zfrGxzcOZ1iwy3LaCkhoIzay8GFaWfbf57DoOzBJXfc0OA.jbz90ZNAXG7QZYIw) 
-  * [Thursday's Class](https://appstate.zoom.us/rec/share/JW5InYYXu7kLH2GFjHvrEDiPwXn8qPFrOAfzisIre7SMjcVzJVaUsdGFbJrjzOAO.9dvygZ1RmrCcwE6e)
-  
-  
 ***
 
-**Week 9: (Oct 12  -- Oct 16)**
+**Week 9: (Oct 11  -- Oct 15)**
 
 * Chapter 6:  Multiple Regression
 
@@ -162,15 +124,10 @@ output:
     * 6.3 Estimation of Regression Coefficients
     * 6.4 Fitted Values and Residuals
     
-   *Lecture Recordings*
    
-    * [Tuesday's Class](https://appstate.zoom.us/rec/share/NOCRPruQQ7jlFdlbjZFGYXoF3Tbgsva0y0GLdfdBQvAttOiF9WbYkfU4flsUrd4Y.3vPQ5oF4HXLOYTeS)
-     * [Thursday's Class](https://appstate.zoom.us/rec/share/_iyzyX5YwmJEFBbW68igc4lLW8BKnd0n-k3wyfHVBayTEBx1yFz3VAq4Ay32aIvB.2ipT5kNCKA4Zybt1)
-    
-    
 ***
 
-**Week 10: (Oct 19  -- Oct 23)**
+**Week 10: (Oct 18  -- Oct 22)**
 
 * Chapter 6:  Multiple Regression
 
@@ -179,17 +136,13 @@ output:
     * 6.7 Estimation of Mean Response and Prediction of New Observation
     * 6.8 Diagnostics and Remedial Measures
    
-  * ***Quiz 4*** 
+* ***Quiz 4*** 
   
-    *Lecture Recordings*
-    
-   * [Tuesday's Class](https://appstate.zoom.us/rec/share/ieLKNeupd4A3J3RPIrB_JQMkFWKlyeS9wmNVeHMc7MRveJ_W9il5C8wqU-fzW6mI._Y3BGxOOQAG8dLP7)
-    * [Thursday's Class](https://appstate.zoom.us/rec/share/UG2TzSmTlNs4Tu0zpiktmPSU0RBJ6kN72sQicxQ0QerXd4QJBF7PZWH17Ugv6kq2.4pwHVT8nyZCrEODU)
-   
+
 ***
 
     
-**Week 11: (Oct 26  -- Oct 30)**
+**Week 11: (Oct 25  -- Oct 29)**
 
 * Chapter 9:  Building the Regression Model I: Model Selection and Validation
 
@@ -198,17 +151,12 @@ output:
     * 9.3 Criteria for Model Selection 
    
    
-  * ***Quiz 5*** 
+* ***Quiz 5*** 
 
-    *Lecture Recordings*
-    
-   * [Tuesday's Class](https://appstate.zoom.us/rec/share/fwkdnvsQjpd-Wo7JOtdmw3CyNUw6gRLHc7T6LIIzzMqblQY42XOwnwTh6TQY87PH.3IQk6fjCxXkMuxMO)
-   
- 
- 
+
 ***
 
-**Week 12: (Nov 02  --Nov 06)**
+**Week 12: (Nov 01  --Nov 05)**
 
 * Chapter 9:  Building the Regression Model I: Model Selection and Validation
 
@@ -216,16 +164,12 @@ output:
      * 9.6 Model Validation
     
     
-   *  ***Test 2 ***
+*  ***Test 2 ***
  
-     *Lecture Recordings*
-    
-   * [Tuesday's Class](https://appstate.zoom.us/rec/share/B0LxRJ4kZ4DEaENvxbnHAF6xSLB8unreryg6FQznfLCxRm4V7bkE7pnE8o5wJNcf.rtzRfZ2P_9ulY9KJ)
-    
 
 ***
 
-**Week 13: (Nov 09  --Nov 13)**
+**Week 13: (Nov 08  --Nov 12)**
 
   * 9.6 Model Validation
   * 14.1 Regression Models with Binary Response Variable
@@ -233,39 +177,34 @@ output:
   * 14.3 Simple Logistic Regression
   * 14.4 Multiple Logistic Regression
   
- *   * ***Quiz 6***
+*   * ***Quiz 6***
  
- * [Tuesday's Class](https://appstate.zoom.us/rec/share/Hrx-3NOn5JsfjGanO3jBIzDM2U_CM4mISruCdJ7WzRuoHP4JGBNzJu6fqYFTx_7Y.6Y4czqE_c6kiols2)
- * [Thursday's Class](https://appstate.zoom.us/rec/share/GmfVxqDJbpyDuFVYXzsZThem8AUwz9kom58l1SMhRDnFFbxLiT4IaHvg0QmlepqF.nd5NHLcx82sbNBYQ)
- 
+
  ***
 
-**Week 14: (Nov 16  --Nov 20)**
+**Week 14: (Nov 15  --Nov 19)**
 
   * 14.5 Inferences about Regression Parameters
   * 14.6 Automatic Model Selection Methods
   * 14.7 Tests for Goodness of Fit
   * 14.8 Logistic Regression Diagnostics
 
- *    ***Quiz 7***
+*    ***Quiz 7***
 
- * [Tuesday's Class](https://appstate.zoom.us/rec/share/s9TM8hhpBAyCwt3cvxUPa_tdeFhVQU6mqygtnEhEpk2anGe3p3wtyIeNd732vci-.T5bfrHKn2mJwYibL)
- * [Thursday's Class]()
- 
 
- 
   ***
 
-**Week 15: (Nov 23  --Nov 27)**
+**Week 15: (Nov 22  --Nov 26)**
 
- * ***Quiz 8***
+* ***Quiz 8***
 
   ***
   
-**Final Exam (December 3rd)**
- 
+**Final Exam (TBA)**
+<!--
   * [Data set for question 1](question1.txt)
   * [Data set for question 2](question2.txt)
   * [Data set for question 3](question3.txt)
-  
+-->
+
   ***
