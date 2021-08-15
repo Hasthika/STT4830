@@ -296,20 +296,21 @@ obs_exp
 # For y = 1
 obs_exp_group_cou_red <- obs_exp %>%
    group_by(xlevels) %>%
-  summarize(ni = n(), Pjhat = mean(fits), Obs_cou_red = sum(yvals), Exp_cou_red = ni*Pjhat)
+  summarize(ni = n(), Pihat = mean(fits), Obs_cou_red = sum(yvals), Exp_cou_red = ni*Pihat)
 
 obs_exp_group_cou_red
 
 # For y = 0
 obs_exp_group_cou_not_red <- obs_exp %>%
    group_by(xlevels) %>%
-  summarize(ni = n(), Pjhat = mean(fits), Obs_cou_not_red = 200-sum(yvals), Exp_cou_not_red = ni*(1-Pjhat))
+  summarize(ni = n(), Pihat = mean(fits), Obs_cou_not_red = 200-sum(yvals), Exp_cou_not_red = ni*(1-Pihat))
 
 obs_exp_group_cou_not_red
 
 
 chiSq1 <- (obs_exp_group_cou_red$Obs_cou_red - obs_exp_group_cou_red$Exp_cou_red)^2/obs_exp_group_cou_red$Exp_cou_red 
 chiSq1
+
 chiSq2 <- (obs_exp_group_cou_not_red$Obs_cou_not_red - obs_exp_group_cou_not_red$Exp_cou_not_red)^2/obs_exp_group_cou_not_red$Exp_cou_not_red
 chiSq2
 
@@ -340,6 +341,7 @@ head(DiseaseData)
 # Fitting the logistic model
 DiseaseModel <- glm(y ~ x1 + x2 + x3 + x4, data = DiseaseData, family = binomial(link = 'logit'))
 summary(DiseaseModel)
+
 
 obs_Pi <- data.frame(Pi = DiseaseModel$fitted.values, disease_status = DiseaseModel$y)
 obs_Pi
@@ -384,10 +386,27 @@ colnames(classifi_table) <- c("Yhat = 0", "Yhat = 1")
 as.data.frame(classifi_table)
 
 
-
 ```
 
 
+# Poisson Regression
+
+## Miller Lumber Company Example.
+
+```{r comment=NA, warning=FALSE, message=FALSE, include=FALSE}
+LumberData <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%2014%20Data%20Sets/CH14TA14.txt", sep ="" , header = FALSE)
+head(LumberData)
+dim(LumberData)
 
 
+# Rename columns
+names(LumberData) <- c( "y", "x1", "x2" , "x3", "x4", "x5")
+head(LumberData)
+
+# Fitting the poisson regression model
+options(scipen = 999) # You can turn off the Scientific notation with options(scipen = 999) and back on again with options(scipen = 0)
+
+LumberModel <- glm(y ~ x1 + x2 + x3 + x4 + x5, data = LumberData, family = poisson(link = 'log'))
+summary(LumberModel)
+```
 
