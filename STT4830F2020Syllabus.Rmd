@@ -1,7 +1,7 @@
 ---
 title: "Syllabus: STT 4830 - Linear Regression Models"
 
-author: "Syllabus - Fall 2020"
+author: "Syllabus - Fall 2021"
 date: ""
 output:
   html_document:
@@ -12,11 +12,11 @@ output:
 
 **Instructor:**  Dr. Lasanthi Watagoda
 
-**Class meeting:** TR 12:30pm - 1:45pm, Via zoom
+**Class meeting:** TR 02:00pm - 3:15pm, Via zoom
 
 **Office:** Virtual  
 
-**Office Hours:** Virtual,  Tuesday and Thursday 9.30am - 11.30am
+**Office Hours:** Virtual, Tuesday and Thursday 11.30am - 1.00pm, Wednesday 11.00am - 12.30pm
 
 
 <!--Questions related to the class should be addressed with the [piazza account for STT 3851](https://piazza.com/appstate/spring2018/stat3851/home).-->
@@ -57,6 +57,8 @@ material that is covered in the course.
 
 **Attendance:** Attendance will be taken  at the end of each class. Students are expected to attend every class. A detailed description of the ASU attendance policy can be found at the following link,
 [https://academicaffairs.appstate.edu/resources/syllabi-policy-and-statement-information]
+
+As we are trying to make this experience as close to a regular class as possible, interactivity is important. Therefore you are required to have your video on and actively participate in all the class discussions. — There may be some extra credit allocated for participation and attendance.
 
 **Course Grading:**
 

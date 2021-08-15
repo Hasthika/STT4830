@@ -1,5 +1,5 @@
 ---
-title: "Homework for STT 4830 - Fall 2020"
+title: "Homework for STT 4830 - Fall 2021"
 author: "Dr. Lasanthi Pelawa-Watagoda"
 date: 'Last Updated on: `r format(Sys.time(), "%b %d, %Y at %X")`'
 output: 
@@ -50,6 +50,7 @@ Determine the LS equation for the model $y_i = \beta_0 + \beta_1x_i + \epsilon_i
 
 ***
 
+<!--
 #### ***Homework 2*: Due Sunday, September 6th**
 
 1) 1.19
@@ -166,6 +167,7 @@ Turn in your homework only as a *pdf* created in $R$. No handwritten work please
 
 
 ***
+-->
 
 ## **Textbook**
 [Download PFD textbook here](4830_Textbook.pdf)

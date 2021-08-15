@@ -12,19 +12,27 @@
 <meta name="author" content="Dr. Lasanthi Pelawa-Watagoda" />
 
 
-<title>Homework for STT 4830 - Fall 2020</title>
+<title>Homework for STT 4830 - Fall 2021</title>
 
+<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
@@ -38,11 +46,6 @@
     </style>
 
 <style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -55,32 +58,7 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
+
 
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
@@ -91,10 +69,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -111,40 +85,13 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 45px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
-.section h2 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
-.section h3 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
-.section h4 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
-.section h5 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
-.section h6 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -172,7 +119,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -184,7 +131,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -195,10 +142,23 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -210,7 +170,6 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -308,13 +267,13 @@ $(document).ready(function () {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
-<h1 class="title toc-ignore">Homework for STT 4830 - Fall 2020</h1>
+<h1 class="title toc-ignore">Homework for STT 4830 - Fall 2021</h1>
 <h4 class="author">Dr. Lasanthi Pelawa-Watagoda</h4>
-<h4 class="date">Last Updated on: Nov 21, 2020 at 10:00:44 PM</h4>
+<h4 class="date">Last Updated on: Aug 14, 2021 at 10:22:56 PM</h4>
 
 </div>
 
@@ -344,115 +303,124 @@ $(document).ready(function () {
 </ol>
 <p><span class="math display">\[\sum y_i = 1742,\quad \sum x_i = 144,\quad \sum x_i^2 = 2300,\quad \sum x_iy_i = 26696,\quad \sum y_i^2 = 312674 \quad n = 12\]</span> Determine the LS equation for the model <span class="math inline">\(y_i = \beta_0 + \beta_1x_i + \epsilon_i\)</span>.</p>
 <hr />
-</div>
-<div id="homework-2-due-sunday-september-6th" class="section level4">
-<h4><strong><em>Homework 2</em>: Due Sunday, September 6th</strong></h4>
-<ol style="list-style-type: decimal">
-<li>1.19</li>
-<li>1.23</li>
-<li>1.20</li>
-<li>1.24</li>
-<li>1.27</li>
-</ol>
-<hr />
-</div>
-<div id="homework-3-due-tuesday-september-15th" class="section level4">
-<h4><strong><em>Homework 3</em>: Due Tuesday, September 15th</strong></h4>
-<ol style="list-style-type: decimal">
-<li>5.1</li>
-<li>5.3</li>
-<li>5.4</li>
-<li>5.6</li>
-<li>5.10 (To check the resulting matrix is indeed the inverse, <span class="math inline">\(AA^{-1} =I\)</span>)</li>
-<li>5.12</li>
-<li>5.14</li>
-</ol>
-<hr />
-</div>
-<div id="homework-4-due-tuesday-september-22nd" class="section level4">
-<h4><strong><em>Homework 4</em>: Due Tuesday, September 22nd</strong></h4>
-<ol style="list-style-type: decimal">
-<li>Refer to <span class="math inline">\(\textbf{consumer finance}\)</span> problems 5.5 and 5.13 in the text book.</li>
-</ol>
-<ol style="list-style-type: lower-alpha">
-<li>Using matrix methods, obtain the vector of estimated regression coefficients and vector of residuals.</li>
-<li>Find the hat matrix <span class="math inline">\(\bf{H}\)</span>.</li>
-<li>Find <span class="math inline">\(s^2(e)\)</span>.</li>
-</ol>
-<ol start="2" style="list-style-type: decimal">
-<li>Refer to $ Problems 1.22 and 5.7. Using matrix methods, obtain the following:</li>
-</ol>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\((X&#39; X)^{-1}\)</span></li>
-<li><span class="math inline">\(\bf{b}\)</span></li>
-<li><span class="math inline">\(\bf{\hat{Y}}\)</span></li>
-<li><span class="math inline">\(\bf{e}\)</span></li>
-<li><span class="math inline">\(\bf{H}\)</span></li>
-</ol>
-<hr />
-</div>
-<div id="homework-5-due-tuesday-october-6th" class="section level4">
-<h4><strong><em>Homework 5</em>: Due Tuesday, October 6th</strong></h4>
-<p>Turn in your homework only as a <em>pdf</em> created in <span class="math inline">\(R\)</span>. No handwritten work please!</p>
-<ol style="list-style-type: decimal">
-<li>3.3 - Note: for part e) conduct the Breusch-Pagan test instead Brown-Forsythe test using <span class="math inline">\(\alpha = 0.01\)</span></li>
-<li>3.4</li>
-<li>3.10</li>
-<li>3.11</li>
-<li>3.15</li>
-</ol>
-</div>
-<div id="homework-6-due-sunday-october-18th" class="section level4">
-<h4><strong><em>Homework 6</em>: Due Sunday, October 18th</strong></h4>
-<p>Turn in your homework only as a <em>pdf</em> created in <span class="math inline">\(R\)</span>. No handwritten work please!</p>
-<ol style="list-style-type: decimal">
-<li>3.17</li>
-<li>6.5 (except part f)</li>
-<li>6.15</li>
-</ol>
-</div>
-<div id="homework-7-due-wednesday-october-28th" class="section level4">
-<h4><strong><em>Homework 7</em>: Due Wednesday, October 28th</strong></h4>
-<p>Turn in your homework only as a <em>pdf</em> created in <span class="math inline">\(R\)</span>. No handwritten work please!</p>
-<ol style="list-style-type: decimal">
-<li>6.7</li>
-<li>6.8</li>
-<li>6.16</li>
-<li>6.17</li>
-</ol>
-<hr />
-</div>
-<div id="homework-8-due-monday-november-9th" class="section level4">
-<h4><strong><em>Homework 8</em>: Due Monday, November 9th</strong></h4>
-<p>Turn in your homework only as a <em>pdf</em> created in <span class="math inline">\(R\)</span>. No handwritten work please!</p>
-<ol style="list-style-type: decimal">
-<li>9.10</li>
-<li>9.11</li>
-<li>9.18 (Ignore the second half of the part a))</li>
-</ol>
-<hr />
-</div>
-<div id="homework-9-due-wednesday-november-16th" class="section level4">
-<h4><strong><em>Homework 9</em>: Due Wednesday, November 16th</strong></h4>
-<p>Turn in your homework only as a <em>pdf</em> created in <span class="math inline">\(R\)</span>. No handwritten work please!</p>
-<ol style="list-style-type: decimal">
-<li>9.22</li>
-<li>14.7</li>
-<li>14.11</li>
-</ol>
-<hr />
-</div>
-<div id="homework-10-due-tuesday-november-24th" class="section level4">
-<h4><strong><em>Homework 10</em>: Due Tuesday, November 24th</strong></h4>
-<p>Turn in your homework only as a <em>pdf</em> created in <span class="math inline">\(R\)</span>. No handwritten work please!</p>
-<ol style="list-style-type: decimal">
-<li>14.12</li>
-<li>14.18</li>
-<li>14.14</li>
-<li>14.20</li>
-<li>14.22</li>
-</ol>
-<hr />
+<!--
+#### ***Homework 2*: Due Sunday, September 6th**
+
+1) 1.19
+2) 1.23
+3) 1.20
+4) 1.24
+5) 1.27
+
+
+***
+
+
+#### ***Homework 3*: Due Tuesday, September 15th**
+
+1) 5.1
+2) 5.3
+3) 5.4
+4) 5.6
+5) 5.10 (To check the resulting matrix is indeed the inverse, $AA^{-1} =I$)
+6) 5.12
+7) 5.14
+
+
+
+***
+
+#### ***Homework 4*: Due Tuesday, September 22nd**
+
+1) Refer to $\textbf{consumer finance}$ problems 5.5 and 5.13 in the text book.
+ a) Using matrix methods, obtain the vector of estimated regression coefficients and vector of residuals. 
+ b) Find the hat matrix $\bf{H}$.
+ c) Find $s^2(e)$.
+ 
+ 
+2) Refer to $\textbf{Plastic hardness} Problems 1.22 and 5.7. Using matrix methods, obtain the following: 
+  (a) $(X' X)^{-1}$
+  (b) $\bf{b}$
+  (c) $\bf{\hat{Y}}$
+  (d) $\bf{e}$ 
+  (e) $\bf{H}$ 
+  
+  
+
+***
+
+#### ***Homework 5*: Due Tuesday, October 6th**
+
+Turn in your homework only as a *pdf* created in $R$. No handwritten work please!
+
+1) 3.3 - Note: for part e) conduct the Breusch-Pagan test instead Brown-Forsythe test using $\alpha = 0.01$
+2) 3.4
+3) 3.10
+4) 3.11
+5) 3.15
+
+
+#### ***Homework 6*: Due Sunday, October 18th**
+
+Turn in your homework only as a *pdf* created in $R$. No handwritten work please!
+
+1) 3.17
+2) 6.5 (except part f)
+3) 6.15
+
+
+#### ***Homework 7*: Due Wednesday, October 28th**
+
+Turn in your homework only as a *pdf* created in $R$. No handwritten work please!
+
+1) 6.7
+2) 6.8
+3) 6.16
+4) 6.17
+
+
+***
+
+#### ***Homework 8*: Due Monday, November 9th**
+
+Turn in your homework only as a *pdf* created in $R$. No handwritten work please!
+
+1) 9.10
+2) 9.11
+3) 9.18 (Ignore the second half of the part a))
+
+
+
+
+***
+
+#### ***Homework 9*: Due Wednesday, November 16th**
+
+Turn in your homework only as a *pdf* created in $R$. No handwritten work please!
+
+1) 9.22
+2) 14.7
+3) 14.11
+
+
+
+
+***
+
+#### ***Homework 10*: Due Tuesday, November 24th**
+
+Turn in your homework only as a *pdf* created in $R$. No handwritten work please!
+
+1) 14.12
+2) 14.18
+3) 14.14
+4) 14.20
+5) 14.22
+
+
+
+***
+-->
 </div>
 <div id="textbook" class="section level2">
 <h2><strong>Textbook</strong></h2>
@@ -490,6 +458,7 @@ $(document).ready(function () {
 
 
 
+
 </div>
 
 <script>
@@ -514,7 +483,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>
