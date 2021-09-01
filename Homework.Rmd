@@ -48,18 +48,20 @@ Determine the LS equation for the model $y_i = \beta_0 + \beta_1x_i + \epsilon_i
 
 ***
 
-<!--
-#### ***Homework 2*: Due Sunday, September 6th**
 
-1) 1.19
-2) 1.23
-3) 1.20
+#### ***Homework 2*: Due Tuesday, September 7th**
+
+*Note: In order to receive full credit, please explain your answers well. Simple yes/no answers will not be given credit.*
+
+1) 1.19 (For part b., use $R$)
+2) 1.20 (For part b., use $R$)
+3) 1.23
 4) 1.24
-5) 1.27
+
 
 
 ***
-
+<!--
 
 #### ***Homework 3*: Due Tuesday, September 15th**
 

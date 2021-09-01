@@ -1,7 +1,7 @@
 ---
 title: "Finding LS estimates in $R$"
-author: ""
-date: ""
+author: " Dr. Lasanthi Watagoda"
+date: "August 24th 2021"
 output: html_document
 ---
 
@@ -12,6 +12,16 @@ knitr::opts_chunk$set(echo = TRUE)
 ### Read data from an URL
 
 ```{r comment=NA, warning=FALSE, message=FALSE}
+toluca <- read.table ("http://www.cnachtsheim-text.csom.umn.edu/Kutner/Chapter%20%201%20Data%20Sets/CH01TA01.txt", sep ="" , header = FALSE)
+toluca
+
+```
+
+
+
+
+
+```{r comment=NA, warning=FALSE, message=FALSE}
 toluca <- read.table("http://www.cnachtsheim-text.csom.umn.edu/Kutner/Chapter%20%201%20Data%20Sets/CH01TA01.txt", sep ="" , header = FALSE)
 
 
@@ -20,7 +30,8 @@ head(toluca)
 ```
 
 
-### Rename columns
+### Rename columns 
+<!-- This is how I should rename my x and y variables in the dataset-->
 
 ```{r comment=NA, warning=FALSE, message=FALSE}
 colnames(toluca) <- c("lotSize", "hours")
@@ -30,7 +41,11 @@ head(toluca)
 ```
 
 
-### Creating a scatter plot
+
+
+
+### Creating a scatter plot 
+<!--  Make sure x and y variables are quantitative--> 
 
 ```{r comment=NA, warning=FALSE, message=FALSE}
 library(ggplot2)
@@ -38,7 +53,10 @@ ggplot(toluca, aes(x = lotSize, y = hours)) +
   geom_point() +
   labs(x = "Lot Size", y = "Work Hours", title = "Toluca example scatter plot") +
   theme_bw()
+
+# within the ggplot function, first give the name of the data set then... since we need a scatterplot use geom_point-->
 ```
+Note: Lot Size and Work hours has a strong, linear, positive association
 
 
 
@@ -58,13 +76,11 @@ toluca_LS_model <- lm(hours ~ lotSize, data = toluca)
 summary(toluca_LS_model)
 ```
 
-
 ### Finding fitted values $\hat{y_i}$, and residuals $e_i =(y_i-\hat{y_i})$
 ```{r comment=NA, warning=FALSE, message=FALSE}
 library(moderndive)
 Fittedandresiduals <-get_regression_points(toluca_LS_model)
 Fittedandresiduals
-
 ```
 
 ### Calculating $SSE = \sum (y_i-\hat{y_i})^2$
