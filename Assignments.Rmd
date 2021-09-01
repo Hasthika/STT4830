@@ -31,7 +31,7 @@ output:
     * 1.5 Overview of Steps in Regression Analysis
     * 1.6 Estimation of Regression Function 
     
-* [***HW1***](Homework.html)
+* [***Homework 01***](Homework.html)
     
 ***
 
@@ -50,7 +50,7 @@ output:
     
     
 * ***Quiz 1***
-* [***HW 2***](Homework.html)
+* [***Homework 02 (Due Tuesday the 7th)***](Homework.html)
     
 ***
 
