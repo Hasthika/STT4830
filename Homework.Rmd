@@ -61,21 +61,22 @@ Determine the LS equation for the model $y_i = \beta_0 + \beta_1x_i + \epsilon_i
 
 
 ***
-<!--
 
-#### ***Homework 3*: Due Tuesday, September 15th**
+#### ***Homework 3*: Due Thursday, September 16th**
 
-1) 5.1
-2) 5.3
-3) 5.4
-4) 5.6
-5) 5.10 (To check the resulting matrix is indeed the inverse, $AA^{-1} =I$)
-6) 5.12
-7) 5.14
+1) *5.1*  (Show work by hand calculations. Use R to check your answers)
+2) *5.3*  (Hand calculations only)
+3) *5.4*  (Show work by hand calculations. Use R to check your answers)
+4) *5.6*  (Show work by hand calculations. Use R to check your answers)
+5) *5.10* (Hand calculations are fine but using R would be easier. I will accept the answer either way)
+6) *5.12* (Hand calculations are fine but using R would be easier. I will accept the answer either way)
+7) *5.14* (Hand calculations are fine but using R would be easier. I will accept the answer either way)
 
 
 
 ***
+
+<!--
 
 #### ***Homework 4*: Due Tuesday, September 22nd**
 
