@@ -79,6 +79,7 @@ output:
     * 3.3  Diagnostics for Residuals
    
 *  [***HW 3 ***](Homework.html)
+* ***Quiz 3***
     
 ***
 
