@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 # Read data from an URL {-}
 
 ```{r comment=NA, warning=FALSE, message=FALSE}
-toluca <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%20%201%20Data%20Sets/CH01TA01.txt", sep ="" , header = FALSE)
+toluca <- read.table("http://www.cnachtsheim-text.csom.umn.edu/Kutner/Chapter%20%201%20Data%20Sets/CH01TA01.txt", sep ="" , header = FALSE)
 
 
 #Look at the first 6 entries
@@ -146,7 +146,7 @@ bptest(toluca_LS_model, student = FALSE)
 ## Bank example section 3.7
 
 ```{r comment=NA, warning=FALSE, message=FALSE}
-bankdata <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%20%203%20Data%20Sets/CH03TA04.txt", sep ="" , header = FALSE)
+bankdata <- read.table("http://www.cnachtsheim-text.csom.umn.edu/Kutner/Chapter%20%203%20Data%20Sets/CH03TA04.txt", sep ="" , header = FALSE)
 
 
 #Look at the first 6 entries
@@ -219,7 +219,7 @@ anova (Reduced, Full)
 ### Example on page 129: Sales training example {-}
 
 ```{r comment=NA, warning=FALSE, message=FALSE}
-salesTrain <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%20%203%20Data%20Sets/CH03TA07.txt", sep ="" , header = FALSE)
+salesTrain <- read.table("http://www.cnachtsheim-text.csom.umn.edu/Kutner/Chapter%20%203%20Data%20Sets/CH03TA07.txt", sep ="" , header = FALSE)
 
 #head(salesTrain)
 
@@ -293,7 +293,7 @@ library(dplyr)
 
 library(ggplot2)
 library(dplyr)
-plasmaData <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%20%203%20Data%20Sets/CH03TA08.txt", sep ="" , header = FALSE)
+plasmaData <- read.table("http://www.cnachtsheim-text.csom.umn.edu/Kutner/Chapter%20%203%20Data%20Sets/CH03TA08.txt", sep ="" , header = FALSE)
 
 plasmaData
 
@@ -380,7 +380,7 @@ obj[which.min(obj$SSE),]
 ### lowess Method for Toluca example
 
 ```{r comment=NA, warning=FALSE, message=FALSE}
-toluca <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%20%201%20Data%20Sets/CH01TA01.txt", sep ="" , header = FALSE)
+toluca <- read.table("http://www.cnachtsheim-text.csom.umn.edu/Kutner/Chapter%20%201%20Data%20Sets/CH01TA01.txt", sep ="" , header = FALSE)
 
 
 colnames(toluca) <- c("lotSize", "hours")
@@ -412,7 +412,7 @@ plot_grid(p1, p2)
 
 
 ```{r include=FALSE}
-Copier<- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%20%203%20Data%20Sets/CH03PR04.txt", sep ="" , header = FALSE)
+Copier<- read.table("http://www.cnachtsheim-text.csom.umn.edu/Kutner/Chapter%20%203%20Data%20Sets/CH03PR04.txt", sep ="" , header = FALSE)
 #Copier
 
 colnames(Copier) <- c("minutes", "copiers")

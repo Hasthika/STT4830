@@ -2,7 +2,7 @@
 title: "Finding LS estimates in $R$"
 author: " Dr. Lasanthi Watagoda"
 date: "August 24th 2021"
-output: html_document
+output: pdf_document
 ---
 
 ```{r setup, include=FALSE, comment=NA, warning=FALSE, message=FALSE}
