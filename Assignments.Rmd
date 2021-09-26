@@ -85,6 +85,9 @@ output:
 
 **Week 6: (Sep 20  -- Sep 24)**
 
+* Chapter 3: Diagnostics and Remedial Measures
+ * 3.3  Diagnostics for Residuals
+
 
   *  ***Test 1 ***
 
@@ -96,7 +99,6 @@ output:
 
 * Chapter 3: Diagnostics and Remedial Measures
 
-     * 3.3  Diagnostics for Residuals
      * 3.4  Overview of Tests Involving Residuals
      * 3.5  Correlation Test for Nonnality
      * 3.6  Tests for Constancy of Error Variance
@@ -113,7 +115,7 @@ output:
      * 3.9  Transformations
      * 3.10  Exploration of Shape of Regression Function
      
-* ***Quiz 3***
+* ***Quiz 4***
  
 ***
 
@@ -138,7 +140,7 @@ output:
     * 6.7 Estimation of Mean Response and Prediction of New Observation
     * 6.8 Diagnostics and Remedial Measures
    
-* ***Quiz 4*** 
+* ***Quiz 5*** 
   
 
 ***
@@ -153,7 +155,7 @@ output:
     * 9.3 Criteria for Model Selection 
    
    
-* ***Quiz 5*** 
+* ***Quiz 6*** 
 
 
 ***
@@ -179,7 +181,7 @@ output:
   * 14.3 Simple Logistic Regression
   * 14.4 Multiple Logistic Regression
   
-*   * ***Quiz 6***
+*   * ***Quiz 7***
  
 
  ***
@@ -191,14 +193,14 @@ output:
   * 14.7 Tests for Goodness of Fit
   * 14.8 Logistic Regression Diagnostics
 
-*    ***Quiz 7***
+*    ***Quiz 8***
 
 
   ***
 
 **Week 15: (Nov 22  --Nov 26)**
 
-* ***Quiz 8***
+* ***Quiz 9***
 
   ***
   
