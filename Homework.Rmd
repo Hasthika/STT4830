@@ -114,8 +114,8 @@ Turn in your homework only as a *pdf* created in $R$. No handwritten work please
 2) 6.5 (except part f)
 3) 6.15
 
-<!--
-#### ***Homework 7*: Due Wednesday, October 28th**
+
+#### ***Homework 7*: Due Thursday, November 4th**
 
 Turn in your homework only as a *pdf* created in $R$. No handwritten work please!
 
@@ -127,6 +127,7 @@ Turn in your homework only as a *pdf* created in $R$. No handwritten work please
 
 ***
 
+<!--
 #### ***Homework 8*: Due Monday, November 9th**
 
 Turn in your homework only as a *pdf* created in $R$. No handwritten work please!

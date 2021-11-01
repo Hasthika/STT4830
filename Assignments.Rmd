@@ -141,7 +141,7 @@ output:
     * 6.7 Estimation of Mean Response and Prediction of New Observation
     * 6.8 Diagnostics and Remedial Measures
    
-* ***Quiz 5*** 
+
   
 
 ***
@@ -156,7 +156,7 @@ output:
     * 9.3 Criteria for Model Selection 
    
    
-* ***Quiz 6*** 
+* ***Quiz 5*** 
 
 
 ***
@@ -168,8 +168,8 @@ output:
      * 9.4 Automatic Search Procedures for Model Selection
      * 9.6 Model Validation
     
-    
-*  ***Test 2 ***
+* ***Quiz 6***     
+
  
 
 ***
@@ -181,8 +181,9 @@ output:
   * 14.2 Sigmoidal Response Functions for Binary Responses
   * 14.3 Simple Logistic Regression
   * 14.4 Multiple Logistic Regression
-  
-*   * ***Quiz 7***
+
+*  ***Test 2 ***  
+
  
 
  ***
@@ -194,14 +195,15 @@ output:
   * 14.7 Tests for Goodness of Fit
   * 14.8 Logistic Regression Diagnostics
 
-*    ***Quiz 8***
+*   * ***Quiz 7***
+
 
 
   ***
 
 **Week 15: (Nov 22  --Nov 26)**
 
-* ***Quiz 9***
+* ***Quiz 8***
 
   ***
   
