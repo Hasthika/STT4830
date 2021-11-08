@@ -176,20 +176,34 @@ output:
 
 **Week 13: (Nov 08  --Nov 12)**
 
-  * 9.6 Model Validation
-  * 14.1 Regression Models with Binary Response Variable
-  * 14.2 Sigmoidal Response Functions for Binary Responses
-  * 14.3 Simple Logistic Regression
-  * 14.4 Multiple Logistic Regression
+**Tuesday:**
 
-*  ***Test 2 ***  
+  * Watch [9.3 and 9.4 lecture](https://youtu.be/NoR2mXcMxas) and complete the note
+  * Watch [9.6 lecture](https://youtu.be/wbCNuuN7i-A) and complete the note
 
- 
+**Thursday:**
+
+  *  ***Test 2 ***  (Please read the instructions below)
+  
+      * Log into the class zoom meeting at 2PM
+      * You should get an email with Exam 2 attached at 2.00PM
+      * Exam has 6 pages
+      * Stay on the zoom meeting and finish the exam in an RMarkdown file (Ends at 3.15PM + 30 min extra if needed)
+      * Email me the exam once finished
+    
 
  ***
 
 **Week 14: (Nov 15  --Nov 19)**
 
+**Tuesday:**
+
+  * Watch [14.1 Regression Models with Binary Response Variable
+  and 14.2 Sigmoidal Response Functions for Binary Responses](https://youtu.be/yqdTYICcBF4)
+  
+  
+  * 14.3 Simple Logistic Regression
+  * 14.4 Multiple Logistic Regression
   * 14.5 Inferences about Regression Parameters
   * 14.6 Automatic Model Selection Methods
   * 14.7 Tests for Goodness of Fit
