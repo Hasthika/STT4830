@@ -127,20 +127,19 @@ Turn in your homework only as a *pdf* created in $R$. No handwritten work please
 
 ***
 
-<!--
-#### ***Homework 8*: Due Monday, November 9th**
+
+#### ***Homework 8*: Due Sunday, November 21 st**
 
 Turn in your homework only as a *pdf* created in $R$. No handwritten work please!
 
 1) 9.10
 2) 9.11
 3) 9.18 (Ignore the second half of the part a))
+4) 9.22
 
 
-
-
+<!--
 ***
-
 #### ***Homework 9*: Due Wednesday, November 16th**
 
 Turn in your homework only as a *pdf* created in $R$. No handwritten work please!
@@ -149,25 +148,27 @@ Turn in your homework only as a *pdf* created in $R$. No handwritten work please
 2) 14.7
 3) 14.11
 
-
+-->
 
 
 ***
 
-#### ***Homework 10*: Due Tuesday, November 24th**
+#### ***Homework 9*: Due Tuesday, November 30th**
 
 Turn in your homework only as a *pdf* created in $R$. No handwritten work please!
 
-1) 14.12
-2) 14.18
-3) 14.14
-4) 14.20
-5) 14.22
+1) 14.7
+2) 14.11
+3) 14.12
+4) 14.18
+5) 14.14
+6) 14.20
+7) 14.22
 
 
 
 ***
--->
+
 
 ## **Textbook**
 [Download PFD textbook here](4830_Textbook.pdf)
