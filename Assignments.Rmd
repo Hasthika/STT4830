@@ -31,7 +31,6 @@ output:
     * 1.5 Overview of Steps in Regression Analysis
     * 1.6 Estimation of Regression Function 
     
-* [***Homework 01***](Homework.html)
     
 ***
 
@@ -50,7 +49,7 @@ output:
     
     
 * ***Quiz 1***
-* [***Homework 02***](Homework.html)
+
     
 ***
 
@@ -78,7 +77,6 @@ output:
     * 3.2  Residuals
     * 3.3  Diagnostics for Residuals
    
-*  [***HW 3 ***](Homework.html)
 * ***Quiz 3***
     
 ***
@@ -208,21 +206,23 @@ output:
   * 14.3 Simple Logistic Regression
   * 14.4 Multiple Logistic Regression
   * 14.5 Inferences about Regression Parameters
-  * 14.6 Automatic Model Selection Methods
-  * 14.7 Tests for Goodness of Fit
-  * 14.8 Logistic Regression Diagnostics
+
 
 *   * ***Quiz 7***
 
 **Thursday:**
 
-* No Class Thursday
+* No Class Thursday - state holiday
 
 
   ***
 
 **Week 15: (Nov 28  --Dec 02)**
 
+  * 14.6 Automatic Model Selection Methods
+  * 14.7 Tests for Goodness of Fit
+  * 14.8 Logistic Regression Diagnostics
+  
 * ***Quiz 8***
 
   ***
