@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r comment=NA, warning=FALSE, message=FALSE}
 toluca <- read.table ("http://www.cnachtsheim-text.csom.umn.edu/Kutner/Chapter%20%201%20Data%20Sets/CH01TA01.txt", sep ="" , header = FALSE)
-toluca
+#toluca
 
 ```
 
@@ -37,12 +37,8 @@ head(toluca)
 colnames(toluca) <- c("lotSize", "hours")
 
 #Look at the first 6 entries
-head(toluca)
+#head(toluca)
 ```
-
-
-
-
 
 ### Creating a scatter plot 
 <!--  Make sure x and y variables are quantitative--> 

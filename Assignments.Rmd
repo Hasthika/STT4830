@@ -1,5 +1,5 @@
 ---
-title: "Schedule for STT 4830 - Fall 2021"
+title: "Schedule for STT 4830 - Fall 2022"
 author: "Dr. Lasanthi Watagoda"
 date: 'Last Updated on: `r format(Sys.time(), "%b %d, %Y at %X")`'
 output: 
@@ -12,7 +12,7 @@ output:
 
 ***
 
-**Week 1: (August 17 -- 20)**
+**Week 1: (August 22 -- 26)**
 
 * Go over syllabus.
 * Chapter 1: Linear Regression With One Predictor Variable
@@ -24,7 +24,7 @@ output:
 
 ***
 
-**Week 2: (August 23 -- 27)**
+**Week 2: (August 29 -- September 2)**
 
 * Chapter 1: Linear Regression With One Predictor Variable
 
@@ -35,7 +35,7 @@ output:
     
 ***
 
-**Week 3: (August 30 -- Sep 3)**
+**Week 3: (September 5 -- Sep 9)**
 
 * Chapter 1: Linear Regression With One Predictor Variable
 
@@ -50,11 +50,11 @@ output:
     
     
 * ***Quiz 1***
-* [***Homework 02 (Due Tuesday the 7th)***](Homework.html)
+* [***Homework 02***](Homework.html)
     
 ***
 
-**Week 4: (Sep 6  -- Sep 10)**
+**Week 4: (Sep 12  -- Sep 16)**
  
 * Chapter 5: Matrix Approach to Simple Linear Regression Analysis
 
@@ -67,7 +67,7 @@ output:
     
 ***
 
-**Week 5: (Sep 13  -- Sep 17)**
+**Week 5: (Sep 19  -- Sep 23)**
  
 * Chapter 5: Matrix Approach to Simple Linear Regression Analysis  
     * 5.11  Fitted Values and Residuals
@@ -83,7 +83,7 @@ output:
     
 ***
 
-**Week 6: (Sep 20  -- Sep 24)**
+**Week 6: (Sep 26  -- Sep 30)**
 
 * Chapter 3: Diagnostics and Remedial Measures
  * 3.3  Diagnostics for Residuals
@@ -95,7 +95,7 @@ output:
 
 ***
 
-**Week 7: (Sep 27  -- Oct 01)**
+**Week 7: (Oct 03  -- Oct 07)**
 
 * Chapter 3: Diagnostics and Remedial Measures
 
@@ -108,7 +108,7 @@ output:
 
 ***
 
-**Week 8: (Oct 04  -- Oct 08)**
+**Week 8: (Oct 10  -- Oct 14)**
 
 * Chapter 3: Diagnostics and Remedial Measures
     
@@ -119,7 +119,9 @@ output:
  
 ***
 
-**Week 9: (Oct 11  -- Oct 15)**
+**Week 9: (Oct 17  -- Oct 21)**
+
+* No Class Tuesday (Fall Break)
 
 * Chapter 6:  Multiple Regression
 
@@ -132,7 +134,7 @@ output:
    
 ***
 
-**Week 10: (Oct 18  -- Oct 22)**
+**Week 10: (Oct 24  -- Oct 28)**
 
 * Chapter 6:  Multiple Regression
 
@@ -147,7 +149,7 @@ output:
 ***
 
     
-**Week 11: (Oct 25  -- Oct 29)**
+**Week 11: (Oct 31  -- Nov 04)**
 
 * Chapter 9:  Building the Regression Model I: Model Selection and Validation
 
@@ -161,7 +163,7 @@ output:
 
 ***
 
-**Week 12: (Nov 01  --Nov 05)**
+**Week 12: (Nov 07  --Nov 11)**
 
 * Chapter 9:  Building the Regression Model I: Model Selection and Validation
 
@@ -174,7 +176,7 @@ output:
 
 ***
 
-**Week 13: (Nov 08  --Nov 12)**
+**Week 13: (Nov 14  --Nov 18)**
 
 **Tuesday:**
 
@@ -185,16 +187,17 @@ output:
 
   *  ***Test 2 ***  (Please read the instructions below)
   
+  <!--
       * Log into the class zoom meeting at 2PM
       * You should get an email with Exam 2 attached at 2.00PM
       * Exam has 6 pages
       * Stay on the zoom meeting and finish the exam in an RMarkdown file (Ends at 3.15PM + 30 min extra if needed)
       * Email me the exam once finished
-    
+   --> 
 
  ***
 
-**Week 14: (Nov 15  --Nov 19)**
+**Week 14: (Nov 21  --Nov 25)**
 
 **Tuesday:**
 
@@ -211,15 +214,25 @@ output:
 
 *   * ***Quiz 7***
 
+**Thursday:**
+
+* No Class Thursday
 
 
   ***
 
-**Week 15: (Nov 22  --Nov 26)**
+**Week 15: (Nov 28  --Dec 02)**
 
 * ***Quiz 8***
 
   ***
+
+**Week 16: (Dec 5  --Dec 06)**
+
+* Dec 06 is Last day of class
+
+  ***  
+
   
 **Final Exam (TBA)**
 <!--

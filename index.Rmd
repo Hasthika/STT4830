@@ -6,9 +6,10 @@ title: "Welcome"
 
 ## **Class Meetings**
 
-* [Click here to go to class](https://appstate.zoom.us/j/97594031987?pwd=SkxrZC9LcDBMSlR4akdYODRuampaZz09) - password: 813199
-* [Click here to go to Office Hours (TR 11.30am - 1.00pm, W 11.00am - 12.30pm)](https://appstate.zoom.us/j/97048056162?pwd=L0tBWlIyZDlKVXJjeUtSMjk4alNtdz09) - password: 398237
-
+* TR 12:30pm - 1:45pm, WA 209B
+* [Click here to go to Office Hours (Tuesday 10am-11am, Thursday 10:30am-11am)](
+ https://appstate.zoom.us/j/98552357647?pwd=UUdIVXNTT2ZSNWpTQktkeW5ZSmsyZz09) - password: 416707
+ 
 ***
 
 * The course syllabus  [`Syllabus`](STT4830F2020Syllabus.html) 

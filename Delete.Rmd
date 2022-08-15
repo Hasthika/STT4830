@@ -1,0 +1,331 @@
+---
+title: "Exam 2"
+author: "Sean Melia"
+date: "11/11/2021"
+output: pdf_document
+---
+
+1) (a) A student stated: “Adding predictor variables to a regression model can never reduce R2, so we should include all available predictor variables in the model.” Comment:
+
+The student's statement about $R^2$ increasing as the number of predictor variables in a model increases is correct, yet, erroneously assumes that a high $R^2$ alone is indicative of a good model. Some predictor variables are not significant to the model, and when included in the Adjusted $R^2$ statistic, for example, may yield a lower value than with fewer significant variables.
+
+(b) Distinguish between:
+
+
+i. residual and semistudentized residual,
+
+The residuals and semi studentized residuals are both the terms errors between predicted values and the observed actual values, yet the semistudentized residuals are calculated specifically to identify outliers in the data and delete them.
+
+ii. $E_{\epsilon}i = 0$ and $\bar{e} = 0$,
+
+$E_{\epsilon}i = 0$ is the expected mean of the errors equal to 0, while $\bar{e} = 0$ is the actual observed mean of errors
+
+iii. Error term and residual.
+
+Error terms represent the way observed data differs from the actual population. Residuals represent the way observed data differs from sample population data
+
+
+(c) Set up the X matrix and β vector for each of the following regression models
+(assume i = 1 . . . 4):
+
+
+i. $Yi = β0 + β1Xi1 + β2Xi1Xi2 + \epsilon_i$
+
+$$X = \begin{bmatrix} 1 & X_{11} & X_{11}X_{12} \\ 1 & X_{21} & X_{21}X_{22} \\ 1 & X_{31} & X_{31}X_{32} \\ 1 & X_{41} & X_{41}X_{42} \end{bmatrix}$$
+$$\beta = \begin{bmatrix} \beta_0 \\ \beta_1 \\ \beta_2 \end{bmatrix}$$
+
+
+ii. $logYi = β0 + β1Xi1 + β2Xi2 + \epsilon_i$
+
+$$X = \begin{bmatrix} 1 & X_{11} & X_{12} \\ 1 & X_{21} & X_{22} \\ 1 & X_{31} & X_{32} \\ 1 & X_{41} & X_{42} \end{bmatrix}$$
+
+$$\beta = \begin{bmatrix} \beta_0 \\ \beta_1 \\ \beta_2 \end{bmatrix}$$
+
+
+2) The following data were obtained in a study of the relation between diastolic blood pressure (Y) and age (X) for boys 5 to 13 years old.
+
+
+(a) Assuming normal error regression model is appropriate, obtain the estimated
+regression function.
+
+```{r}
+xi <- c(5, 8, 11, 7, 13, 12, 12, 6)
+yi <- c(63, 67, 74, 64, 75, 69, 90, 60)
+bp <- data.frame(xi,yi)
+colnames(bp) <- c("Age", "DBP")
+bp
+
+library(Matrix)
+n <- nrow(bp)
+
+```
+
+```{r}
+X <- bp$Age
+Y <- bp$DBP
+Y <- as.matrix(Y)
+Y
+
+X <- as.matrix(X)
+X <- cbind(rep(1,n), X)
+X
+```
+
+
+```{r}
+bp_lm <- lm(DBP ~ Age, data = bp)
+summary(bp_lm)
+
+library(ggplot2)
+
+ggplot(bp, aes(x = Age, y = DBP)) +
+  geom_point() +
+  labs(x = "Age", y = "Diastolic Blood Pressure", title = "BP") +
+  geom_smooth(method = lm)
+
+```
+The estimated regressio function is Y = 48.6667 + 2.3333(Age)
+
+
+
+(b) Plot the residuals ei against Xi. What does your residual plot show?
+
+```{r}
+ggplot(bp_lm, aes(x = Age, y = .resid)) + geom_point(color = "blue", dotsize = .5) + theme_bw()
+
+```
+The plot shows that case 7 is an outlier, having a residual of nearly 15, while all of the other points appear to line up  much closer to their expected values.
+
+(c) Omit case 7 from the data and obtain the estimated regression function based on the remaining seven cases.
+
+```{r}
+xi2 <- c(5, 8, 11, 7, 13, 12, 6)
+yi2 <- c(63, 67, 74, 64, 75, 69, 60)
+bp2 <- data.frame(xi2,yi2)
+colnames(bp2) <- c("Age", "DBP")
+bp2
+n <- nrow(bp2)
+
+X <- bp2$Age
+Y <- bp2$DBP
+Y <- as.matrix(Y)
+Y
+
+X <- as.matrix(X)
+X <- cbind(rep(1,n), X)
+X
+```
+```{r}
+bp2_lm <- lm(DBP ~ Age, data = bp2)
+summary(bp2_lm)
+
+library(ggplot2)
+
+ggplot(bp2, aes(x = Age, y = DBP)) +
+  geom_point() +
+  labs(x = "Age", y = "Diastolic Blood Pressure", title = "BP") +
+  geom_smooth(method = lm)
+
+```
+
+
+(d) Compare this estimated regression function to that obtained in part (a). What can you conclude about the effect of case 7?
+
+The model without case 7 is much more nicely fit to the expected data, so we conclude that case 7 was a large outlier.
+
+(e) Using your fitted regression function in part (c), obtain a 99 percent predictioninterval for a new Y observation at X = 12. Does observation Y7 fall outside this prediction interval? What is the significance of this?
+
+```{r}
+xnew <- t(c(Age = 12, DBP = 72.525))
+xnew <- data.frame(xnew)
+xnew
+
+predict(bp2_lm, xnew, interval = "pred",level = .99)
+```
+
+Observation Y7 falls outside of the 99% prediction interval, which indcates that this obervation is much higher than in should be based on the estimated regresion function.
+
+
+
+3) A chemist studied the concentration of a solution (Y) over time (X). Fifteen identical solutions were prepared. The 15 solutions were randomly divided into five sets of three, and the five sets were measured, respectively, after 1, 3, 5, 7, and 9 hours. The results follow.
+
+
+```{r}
+xi <- c(9, 9, 9, 7, 7, 7, 5, 5, 5, 3, 3, 3, 1, 1, 1)
+yi <- c(0.07, 0.09, 0.08, 0.16, 0.17, 0.21, 0.49, 0.58, 0.53, 1.22, 1.15, 1.07, 2.84, 2.57, 3.10)
+solution <- data.frame(xi,yi)
+colnames(solution) <- c("Time", "Concentration")
+solution
+
+n <- nrow(solution)
+
+```
+
+```{r}
+X <- solution$Time
+Y <- solution$Concentration
+Y <- as.matrix(Y)
+Y
+
+X <- as.matrix(X)
+X <- cbind(rep(1,n), X)
+X
+```
+
+
+(a) Prepare a scatter plot of the data. What transformation of Y might you try, usingthe prototype patterns learned in class to achieve constant variance and linearity?
+
+```{r}
+solution_lm <- lm(Concentration ~ Time, data = solution)
+summary(solution_lm)
+
+ggplot(solution, aes(x = Time, y = Concentration)) +
+  geom_point() +
+  labs(x = "Time", y = "Concentration", title = "Solution") +
+  geom_smooth(method = lm)
+
+```
+The data appears to have a logarithmic or negative exponential relationship, so such a transformation seems most appropriate.
+
+(b) Use the Box-Cox procedure and standardization to find an appropriate power
+transformation. Evaluate SSE for λ = −0.2, −0.1, 0, 0.1, 0.2 What transformation
+of Y is suggested?
+
+```{r}
+
+library(ALSM)
+obj <- boxcox.sse(solution$Time, solution$Concentration, l=seq(-0.2, 0.5, 0.1))
+obj
+```
+We would select $\lambda = 0.0$ since $\lambda_{0.0} = 0.03897303$ the minimum value.
+
+(c) Use the transformation Y0 = log10Y and obtain the estimated linear regression function for the transformed data.
+
+```{r}
+library(dplyr)
+
+solution <- solution %>%
+ mutate(log10Y = log10(Y))
+log_lm <- lm(log10Y ~ X, solution)
+log_lm
+```
+
+
+(d) Plot the estimated regression line and the transformed data.
+
+```{r}
+#ggplot(solution, aes(X, log10Y)) + geom_point() + labs(x= "Time", y = "Concentration") + geom_smooth(method = "lm", se = FALSE)
+
+```
+
+
+(e) Does the regression line appear to be a good fit to the transformed data (Hint:perform a test to confirm your answer)?
+
+Yes, yet the code in the above problem no longer runs.
+
+(f) Obtain the residuals and plot them against the fitted values.
+
+```{r}
+ggplot(solution_lm, aes(x = .fitted, y = .resid)) + geom_point(color = "blue", dotsize = .5) + theme_bw()
+
+```
+
+
+(g) Prepare a normal probability plot. What do your plots show?
+
+```{r}
+ggplot(solution_lm, aes(sample = .resid)) + geom_qq(color = "blue") + geom_qq_line()+ theme_bw()
+```
+
+
+(h) Express the estimated regression function in the original units.
+
+Concentration = 2.5753 - 0.3240(Hours)
+
+
+http://www.cnachtsheim-text.csom.umn.edu/Kutner/Chapter%20%206%20Data%20Sets/CH06PR18.txt
+
+4)
+
+
+
+```{r}
+exam2 <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%20%206%20Data%20Sets/CH06PR18.txt", sep="", header = FALSE)
+
+colnames(exam2) <- c("Y", "X1", "X2", "X3", "X4")
+
+exam2_df <- data.frame(exam2)
+exam2
+```
+
+```{r}
+exam2_lm <- lm(Y ~ X1 + X2 + X3 + X4, data = exam2)
+summary(exam2_lm)
+```
+
+
+(a) Prepare a box plot for each predictor variable and prepare a grid of plot using the plot grid() function in the cowplot library.
+
+```{r}
+
+library(cowplot)
+X_1 <- ggplot(exam2_lm, aes(x = X1)) + geom_boxplot(color = "steelblue", fill = "orchid4") + theme_bw()
+X_2 <- ggplot(exam2_lm, aes(x = X2)) + geom_boxplot(color = "steelblue", fill = "orchid4") + theme_bw()
+X_3 <- ggplot(exam2_lm, aes(x = X3)) + geom_boxplot(color = "steelblue", fill = "orchid4") + theme_bw()
+X_4 <- ggplot(exam2_lm, aes(x = X4)) + geom_boxplot(color = "steelblue", fill = "orchid4") + theme_bw()
+
+plot_grid(X_1, X_2, X_3, X_4)
+```
+
+
+(b) What information do these plots provide?
+
+These plots show us the symmetry of the data per predictor variable, whether or not it's skewed, if any potential outliers exist, the median, and the interquartile range.
+
+(c) Obtain the scatter plot matrix and the correlation matrix.
+
+```{r}
+colnames(exam2_df) <- c("Y", "X1", "X2", "X3", "X4")
+pairs(exam2_df)
+cor(exam2_df)
+```
+
+
+(d) Interpret these and state your principal findings in detail.
+
+The relationship between Y and X4 was the strongest of the 4, though still only with a correlation coefficient of 0.53526237. The next strongest relationship was Y and X2 with a correlation coefficient of 0.41378716. Y had very weak correlation to X3, and a weak negative correlation with X1  
+
+(e) Fit regression model for four predictor variables to the data. State the estimated regression function.
+
+```{r}
+exam2_lm <- lm(Y ~ X1 + X2 + X3 + X4, data = exam2)
+summary(exam2_lm)
+```
+
+Y = 1.220e+01 - -1.420e-01(X1) + 2.820e-01(X2) + 6.193e-01(X3) + 7.924e-06(X4)
+
+(f) Obtain the residuals and prepare a box plot of the residuals.
+
+```{r}
+ggplot(exam2_lm, aes(x = .fitted, y = .resid)) + geom_point(color = "blue", dotsize = .5) + theme_bw()
+
+ggplot(exam2_lm, aes(x = .resid)) + geom_boxplot(color = "steelblue", fill = "orchid4") + theme_bw()
+```
+
+
+(g) Does the distribution appear to be fairly symmetrical?
+
+The distribution appears to be fairly symmetrical.
+
+(h) Plot the residuals against Yˆ , each predictor variable, and each two-factor interaction term on a grid of plot using the plot grid() function in the cowplot library.
+
+```{r}
+X_1r <- ggplot(exam2_lm, aes(x = X1, y = .resid)) + geom_point() + theme_bw()
+X_2r <- ggplot(exam2_lm, aes(x = X2, y = .resid)) + geom_point() + theme_bw()
+X_3r <- ggplot(exam2_lm, aes(x = X3, y = .resid)) + geom_point() + theme_bw()
+X_4r <- ggplot(exam2_lm, aes(x = X4, y = .resid)) + geom_point() + theme_bw()
+
+plot_grid(X_1r, X_2r, X_3r, X_4r)
+```
+
+

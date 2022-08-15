@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Sean Melia" />
+
+<meta name="date" content="2021-11-11" />
+
+<title>Exam 2</title>
+
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">STT 4830</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="https://lasanthiwatagoda.github.io/resources.html">Resources</a>
+</li>
+<li>
+  <a href="https://lasanthiwatagoda.github.io/for-students.html">For Students</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://lasanthiwatagoda.github.io">Lasanthi Watagoda</a>
+</li>
+<li>
+  <a href="https://github.com/Lasanthi-ASU/STT4830SP2020ClassRepo/">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Exam 2</h1>
+<h4 class="author">Sean Melia</h4>
+<h4 class="date">11/11/2021</h4>
+
+</div>
+
+
+<ol style="list-style-type: decimal">
+<li><ol style="list-style-type: lower-alpha">
+<li>A student stated: “Adding predictor variables to a regression model can never reduce R2, so we should include all available predictor variables in the model.” Comment:</li>
+</ol></li>
+</ol>
+<p>The student’s statement about <span class="math inline">\(R^2\)</span> increasing as the number of predictor variables in a model increases is correct, yet, erroneously assumes that a high <span class="math inline">\(R^2\)</span> alone is indicative of a good model. Some predictor variables are not significant to the model, and when included in the Adjusted <span class="math inline">\(R^2\)</span> statistic, for example, may yield a lower value than with fewer significant variables.</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Distinguish between:</li>
+</ol>
+<ol style="list-style-type: lower-roman">
+<li>residual and semistudentized residual,</li>
+</ol>
+<p>The residuals and semi studentized residuals are both the terms errors between predicted values and the observed actual values, yet the semistudentized residuals are calculated specifically to identify outliers in the data and delete them.</p>
+<ol start="2" style="list-style-type: lower-roman">
+<li><span class="math inline">\(E_{\epsilon}i = 0\)</span> and <span class="math inline">\(\bar{e} = 0\)</span>,</li>
+</ol>
+<p><span class="math inline">\(E_{\epsilon}i = 0\)</span> is the expected mean of the errors equal to 0, while <span class="math inline">\(\bar{e} = 0\)</span> is the actual observed mean of errors</p>
+<ol start="3" style="list-style-type: lower-roman">
+<li>Error term and residual.</li>
+</ol>
+<p>Error terms represent the way observed data differs from the actual population. Residuals represent the way observed data differs from sample population data</p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Set up the X matrix and β vector for each of the following regression models (assume i = 1 . . . 4):</li>
+</ol>
+<ol style="list-style-type: lower-roman">
+<li><span class="math inline">\(Yi = β0 + β1Xi1 + β2Xi1Xi2 + \epsilon_i\)</span></li>
+</ol>
+<p><span class="math display">\[X = \begin{bmatrix} 1 &amp; X_{11} &amp; X_{11}X_{12} \\ 1 &amp; X_{21} &amp; X_{21}X_{22} \\ 1 &amp; X_{31} &amp; X_{31}X_{32} \\ 1 &amp; X_{41} &amp; X_{41}X_{42} \end{bmatrix}\]</span> <span class="math display">\[\beta = \begin{bmatrix} \beta_0 \\ \beta_1 \\ \beta_2 \end{bmatrix}\]</span></p>
+<ol start="2" style="list-style-type: lower-roman">
+<li><span class="math inline">\(logYi = β0 + β1Xi1 + β2Xi2 + \epsilon_i\)</span></li>
+</ol>
+<p><span class="math display">\[X = \begin{bmatrix} 1 &amp; X_{11} &amp; X_{12} \\ 1 &amp; X_{21} &amp; X_{22} \\ 1 &amp; X_{31} &amp; X_{32} \\ 1 &amp; X_{41} &amp; X_{42} \end{bmatrix}\]</span></p>
+<p><span class="math display">\[\beta = \begin{bmatrix} \beta_0 \\ \beta_1 \\ \beta_2 \end{bmatrix}\]</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li>The following data were obtained in a study of the relation between diastolic blood pressure (Y) and age (X) for boys 5 to 13 years old.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>Assuming normal error regression model is appropriate, obtain the estimated regression function.</li>
+</ol>
+<pre class="r"><code>xi &lt;- c(5, 8, 11, 7, 13, 12, 12, 6)
+yi &lt;- c(63, 67, 74, 64, 75, 69, 90, 60)
+bp &lt;- data.frame(xi,yi)
+colnames(bp) &lt;- c(&quot;Age&quot;, &quot;DBP&quot;)
+bp</code></pre>
+<pre><code>##   Age DBP
+## 1   5  63
+## 2   8  67
+## 3  11  74
+## 4   7  64
+## 5  13  75
+## 6  12  69
+## 7  12  90
+## 8   6  60</code></pre>
+<pre class="r"><code>library(Matrix)
+n &lt;- nrow(bp)</code></pre>
+<pre class="r"><code>X &lt;- bp$Age
+Y &lt;- bp$DBP
+Y &lt;- as.matrix(Y)
+Y</code></pre>
+<pre><code>##      [,1]
+## [1,]   63
+## [2,]   67
+## [3,]   74
+## [4,]   64
+## [5,]   75
+## [6,]   69
+## [7,]   90
+## [8,]   60</code></pre>
+<pre class="r"><code>X &lt;- as.matrix(X)
+X &lt;- cbind(rep(1,n), X)
+X</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,]    1    5
+## [2,]    1    8
+## [3,]    1   11
+## [4,]    1    7
+## [5,]    1   13
+## [6,]    1   12
+## [7,]    1   12
+## [8,]    1    6</code></pre>
+<pre class="r"><code>bp_lm &lt;- lm(DBP ~ Age, data = bp)
+summary(bp_lm)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = DBP ~ Age, data = bp)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -7.6667 -3.0000 -0.6667  0.4167 13.3333 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  48.6667     7.8869   6.171 0.000832 ***
+## Age           2.3333     0.8135   2.868 0.028487 *  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 6.683 on 6 degrees of freedom
+## Multiple R-squared:  0.5783, Adjusted R-squared:  0.508 
+## F-statistic: 8.228 on 1 and 6 DF,  p-value: 0.02849</code></pre>
+<pre class="r"><code>library(ggplot2)
+
+ggplot(bp, aes(x = Age, y = DBP)) +
+  geom_point() +
+  labs(x = &quot;Age&quot;, y = &quot;Diastolic Blood Pressure&quot;, title = &quot;BP&quot;) +
+  geom_smooth(method = lm)</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="Delete_files/figure-html/unnamed-chunk-3-1.png" width="672" /> The estimated regressio function is Y = 48.6667 + 2.3333(Age)</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Plot the residuals ei against Xi. What does your residual plot show?</li>
+</ol>
+<pre class="r"><code>ggplot(bp_lm, aes(x = Age, y = .resid)) + geom_point(color = &quot;blue&quot;, dotsize = .5) + theme_bw()</code></pre>
+<pre><code>## Warning: Ignoring unknown parameters: dotsize</code></pre>
+<p><img src="Delete_files/figure-html/unnamed-chunk-4-1.png" width="672" /> The plot shows that case 7 is an outlier, having a residual of nearly 15, while all of the other points appear to line up much closer to their expected values.</p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Omit case 7 from the data and obtain the estimated regression function based on the remaining seven cases.</li>
+</ol>
+<pre class="r"><code>xi2 &lt;- c(5, 8, 11, 7, 13, 12, 6)
+yi2 &lt;- c(63, 67, 74, 64, 75, 69, 60)
+bp2 &lt;- data.frame(xi2,yi2)
+colnames(bp2) &lt;- c(&quot;Age&quot;, &quot;DBP&quot;)
+bp2</code></pre>
+<pre><code>##   Age DBP
+## 1   5  63
+## 2   8  67
+## 3  11  74
+## 4   7  64
+## 5  13  75
+## 6  12  69
+## 7   6  60</code></pre>
+<pre class="r"><code>n &lt;- nrow(bp2)
+
+X &lt;- bp2$Age
+Y &lt;- bp2$DBP
+Y &lt;- as.matrix(Y)
+Y</code></pre>
+<pre><code>##      [,1]
+## [1,]   63
+## [2,]   67
+## [3,]   74
+## [4,]   64
+## [5,]   75
+## [6,]   69
+## [7,]   60</code></pre>
+<pre class="r"><code>X &lt;- as.matrix(X)
+X &lt;- cbind(rep(1,n), X)
+X</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,]    1    5
+## [2,]    1    8
+## [3,]    1   11
+## [4,]    1    7
+## [5,]    1   13
+## [6,]    1   12
+## [7,]    1    6</code></pre>
+<pre class="r"><code>bp2_lm &lt;- lm(DBP ~ Age, data = bp2)
+summary(bp2_lm)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = DBP ~ Age, data = bp2)
+## 
+## Residuals:
+##       1       2       3       4       5       6       7 
+##  1.8252  0.9612  3.0971 -0.4175  0.8544 -3.5243 -2.7961 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  53.0680     3.2136  16.514 1.49e-05 ***
+## Age           1.6214     0.3448   4.702  0.00533 ** 
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 2.645 on 5 degrees of freedom
+## Multiple R-squared:  0.8156, Adjusted R-squared:  0.7787 
+## F-statistic: 22.11 on 1 and 5 DF,  p-value: 0.005327</code></pre>
+<pre class="r"><code>library(ggplot2)
+
+ggplot(bp2, aes(x = Age, y = DBP)) +
+  geom_point() +
+  labs(x = &quot;Age&quot;, y = &quot;Diastolic Blood Pressure&quot;, title = &quot;BP&quot;) +
+  geom_smooth(method = lm)</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="Delete_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>Compare this estimated regression function to that obtained in part (a). What can you conclude about the effect of case 7?</li>
+</ol>
+<p>The model without case 7 is much more nicely fit to the expected data, so we conclude that case 7 was a large outlier.</p>
+<ol start="5" style="list-style-type: lower-alpha">
+<li>Using your fitted regression function in part (c), obtain a 99 percent predictioninterval for a new Y observation at X = 12. Does observation Y7 fall outside this prediction interval? What is the significance of this?</li>
+</ol>
+<pre class="r"><code>xnew &lt;- t(c(Age = 12, DBP = 72.525))
+xnew &lt;- data.frame(xnew)
+xnew</code></pre>
+<pre><code>##   Age    DBP
+## 1  12 72.525</code></pre>
+<pre class="r"><code>predict(bp2_lm, xnew, interval = &quot;pred&quot;,level = .99)</code></pre>
+<pre><code>##        fit      lwr      upr
+## 1 72.52427 60.31266 84.73588</code></pre>
+<p>Observation Y7 falls outside of the 99% prediction interval, which indcates that this obervation is much higher than in should be based on the estimated regresion function.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>A chemist studied the concentration of a solution (Y) over time (X). Fifteen identical solutions were prepared. The 15 solutions were randomly divided into five sets of three, and the five sets were measured, respectively, after 1, 3, 5, 7, and 9 hours. The results follow.</li>
+</ol>
+<pre class="r"><code>xi &lt;- c(9, 9, 9, 7, 7, 7, 5, 5, 5, 3, 3, 3, 1, 1, 1)
+yi &lt;- c(0.07, 0.09, 0.08, 0.16, 0.17, 0.21, 0.49, 0.58, 0.53, 1.22, 1.15, 1.07, 2.84, 2.57, 3.10)
+solution &lt;- data.frame(xi,yi)
+colnames(solution) &lt;- c(&quot;Time&quot;, &quot;Concentration&quot;)
+solution</code></pre>
+<pre><code>##    Time Concentration
+## 1     9          0.07
+## 2     9          0.09
+## 3     9          0.08
+## 4     7          0.16
+## 5     7          0.17
+## 6     7          0.21
+## 7     5          0.49
+## 8     5          0.58
+## 9     5          0.53
+## 10    3          1.22
+## 11    3          1.15
+## 12    3          1.07
+## 13    1          2.84
+## 14    1          2.57
+## 15    1          3.10</code></pre>
+<pre class="r"><code>n &lt;- nrow(solution)</code></pre>
+<pre class="r"><code>X &lt;- solution$Time
+Y &lt;- solution$Concentration
+Y &lt;- as.matrix(Y)
+Y</code></pre>
+<pre><code>##       [,1]
+##  [1,] 0.07
+##  [2,] 0.09
+##  [3,] 0.08
+##  [4,] 0.16
+##  [5,] 0.17
+##  [6,] 0.21
+##  [7,] 0.49
+##  [8,] 0.58
+##  [9,] 0.53
+## [10,] 1.22
+## [11,] 1.15
+## [12,] 1.07
+## [13,] 2.84
+## [14,] 2.57
+## [15,] 3.10</code></pre>
+<pre class="r"><code>X &lt;- as.matrix(X)
+X &lt;- cbind(rep(1,n), X)
+X</code></pre>
+<pre><code>##       [,1] [,2]
+##  [1,]    1    9
+##  [2,]    1    9
+##  [3,]    1    9
+##  [4,]    1    7
+##  [5,]    1    7
+##  [6,]    1    7
+##  [7,]    1    5
+##  [8,]    1    5
+##  [9,]    1    5
+## [10,]    1    3
+## [11,]    1    3
+## [12,]    1    3
+## [13,]    1    1
+## [14,]    1    1
+## [15,]    1    1</code></pre>
+<ol style="list-style-type: lower-alpha">
+<li>Prepare a scatter plot of the data. What transformation of Y might you try, usingthe prototype patterns learned in class to achieve constant variance and linearity?</li>
+</ol>
+<pre class="r"><code>solution_lm &lt;- lm(Concentration ~ Time, data = solution)
+summary(solution_lm)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = Concentration ~ Time, data = solution)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -0.5333 -0.4043 -0.1373  0.4157  0.8487 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)   2.5753     0.2487  10.354 1.20e-07 ***
+## Time         -0.3240     0.0433  -7.483 4.61e-06 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.4743 on 13 degrees of freedom
+## Multiple R-squared:  0.8116, Adjusted R-squared:  0.7971 
+## F-statistic: 55.99 on 1 and 13 DF,  p-value: 4.611e-06</code></pre>
+<pre class="r"><code>ggplot(solution, aes(x = Time, y = Concentration)) +
+  geom_point() +
+  labs(x = &quot;Time&quot;, y = &quot;Concentration&quot;, title = &quot;Solution&quot;) +
+  geom_smooth(method = lm)</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="Delete_files/figure-html/unnamed-chunk-10-1.png" width="672" /> The data appears to have a logarithmic or negative exponential relationship, so such a transformation seems most appropriate.</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Use the Box-Cox procedure and standardization to find an appropriate power transformation. Evaluate SSE for λ = −0.2, −0.1, 0, 0.1, 0.2 What transformation of Y is suggested?</li>
+</ol>
+<pre class="r"><code>library(ALSM)</code></pre>
+<pre><code>## Loading required package: leaps</code></pre>
+<pre><code>## Loading required package: SuppDists</code></pre>
+<pre><code>## Loading required package: car</code></pre>
+<pre><code>## Loading required package: carData</code></pre>
+<pre class="r"><code>obj &lt;- boxcox.sse(solution$Time, solution$Concentration, l=seq(-0.2, 0.5, 0.1))</code></pre>
+<p><img src="Delete_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<pre class="r"><code>obj</code></pre>
+<pre><code>##   lambda        SSE
+## 1   -0.2 0.12353047
+## 2   -0.1 0.06505067
+## 8    0.0 0.03897303
+## 3    0.1 0.04396062
+## 4    0.2 0.08131793
+## 5    0.3 0.15509932
+## 6    0.4 0.27246179
+## 7    0.5 0.44429368</code></pre>
+<p>We would select <span class="math inline">\(\lambda = 0.0\)</span> since <span class="math inline">\(\lambda_{0.0} = 0.03897303\)</span> the minimum value.</p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Use the transformation Y0 = log10Y and obtain the estimated linear regression function for the transformed data.</li>
+</ol>
+<pre class="r"><code>library(dplyr)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:car&#39;:
+## 
+##     recode</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<pre class="r"><code>solution &lt;- solution %&gt;%
+ mutate(log10Y = log10(Y))
+log_lm &lt;- lm(log10Y ~ X, solution)
+log_lm</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = log10Y ~ X, data = solution)
+## 
+## Coefficients:
+## (Intercept)           X1           X2  
+##      0.6549           NA      -0.1954</code></pre>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>Plot the estimated regression line and the transformed data.</li>
+</ol>
+<pre class="r"><code>#ggplot(solution, aes(X, log10Y)) + geom_point() + labs(x= &quot;Time&quot;, y = &quot;Concentration&quot;) + geom_smooth(method = &quot;lm&quot;, se = FALSE)</code></pre>
+<ol start="5" style="list-style-type: lower-alpha">
+<li>Does the regression line appear to be a good fit to the transformed data (Hint:perform a test to confirm your answer)?</li>
+</ol>
+<p>Yes, yet the code in the above problem no longer runs.</p>
+<ol start="6" style="list-style-type: lower-alpha">
+<li>Obtain the residuals and plot them against the fitted values.</li>
+</ol>
+<pre class="r"><code>ggplot(solution_lm, aes(x = .fitted, y = .resid)) + geom_point(color = &quot;blue&quot;, dotsize = .5) + theme_bw()</code></pre>
+<pre><code>## Warning: Ignoring unknown parameters: dotsize</code></pre>
+<p><img src="Delete_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<ol start="7" style="list-style-type: lower-alpha">
+<li>Prepare a normal probability plot. What do your plots show?</li>
+</ol>
+<pre class="r"><code>ggplot(solution_lm, aes(sample = .resid)) + geom_qq(color = &quot;blue&quot;) + geom_qq_line()+ theme_bw()</code></pre>
+<p><img src="Delete_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<ol start="8" style="list-style-type: lower-alpha">
+<li>Express the estimated regression function in the original units.</li>
+</ol>
+<p>Concentration = 2.5753 - 0.3240(Hours)</p>
+<p><a href="http://www.cnachtsheim-text.csom.umn.edu/Kutner/Chapter%20%206%20Data%20Sets/CH06PR18.txt" class="uri">http://www.cnachtsheim-text.csom.umn.edu/Kutner/Chapter%20%206%20Data%20Sets/CH06PR18.txt</a></p>
+<ol start="4" style="list-style-type: decimal">
+<li></li>
+</ol>
+<pre class="r"><code>exam2 &lt;- read.table(&quot;http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%20%206%20Data%20Sets/CH06PR18.txt&quot;, sep=&quot;&quot;, header = FALSE)
+
+colnames(exam2) &lt;- c(&quot;Y&quot;, &quot;X1&quot;, &quot;X2&quot;, &quot;X3&quot;, &quot;X4&quot;)
+
+exam2_df &lt;- data.frame(exam2)
+exam2</code></pre>
+<pre><code>##         Y X1    X2   X3     X4
+## 1  13.500  1  5.02 0.14 123000
+## 2  12.000 14  8.19 0.27 104079
+## 3  10.500 16  3.00 0.00  39998
+## 4  15.000  4 10.70 0.05  57112
+## 5  14.000 11  8.97 0.07  60000
+## 6  10.500 15  9.45 0.24 101385
+## 7  14.000  2  8.00 0.19  31300
+## 8  16.500  1  6.62 0.60 248172
+## 9  17.500  1  6.20 0.00 215000
+## 10 16.500  8 11.78 0.03 251015
+## 11 17.000 12 14.62 0.08 291264
+## 12 16.500  2 11.55 0.03 207549
+## 13 16.000  2  9.63 0.00  82000
+## 14 16.500 13 12.99 0.04 359665
+## 15 17.225  2 12.01 0.03 265500
+## 16 17.000  1 12.01 0.00 299000
+## 17 16.000  1  7.99 0.14 189258
+## 18 14.625 12 10.33 0.12 366013
+## 19 14.500 16 10.67 0.00 349930
+## 20 14.500  3  9.45 0.03  85335
+## 21 16.500  6 12.65 0.13 235932
+## 22 16.500  3 12.08 0.00 130000
+## 23 15.000  3 10.52 0.05  40500
+## 24 15.000  3  9.47 0.00  40500
+## 25 13.000 14 11.62 0.00  45959
+## 26 12.500  1  5.00 0.33 120000
+## 27 14.000 15  9.89 0.05  81243
+## 28 13.750 16 11.13 0.06 153947
+## 29 14.000  2  7.96 0.22  97321
+## 30 15.000 16 10.73 0.09 276099
+## 31 13.750  2  7.95 0.00  90000
+## 32 15.625  3  9.10 0.00 184000
+## 33 15.625  3 12.05 0.03 184718
+## 34 13.000 16  8.43 0.04  96000
+## 35 14.000 16 10.60 0.04 106350
+## 36 15.250 13 10.55 0.10 135512
+## 37 16.250  1  5.50 0.21 180000
+## 38 13.000 14  8.53 0.03 315000
+## 39 14.500  3  9.04 0.04  42500
+## 40 11.500 15  8.20 0.00  30005
+## 41 14.250  1  6.13 0.00  60000
+## 42 15.500 15  8.32 0.00  73521
+## 43 12.000  1  4.00 0.00  50000
+## 44 14.250 15 10.10 0.00  50724
+## 45 14.000  3  5.25 0.16  31750
+## 46 16.500  3 11.62 0.00 168000
+## 47 14.500  4  5.31 0.00  70000
+## 48 15.500  1  5.75 0.00  27000
+## 49 16.750  4 12.46 0.03 129614
+## 50 16.750  4 12.75 0.00 129614
+## 51 16.750  2 12.75 0.00 130000
+## 52 16.750  2 11.38 0.00 209000
+## 53 17.000  1  5.99 0.57 220000
+## 54 16.000  2 11.37 0.27  60000
+## 55 14.500  3 10.38 0.00 110000
+## 56 15.000 15 10.77 0.05 101206
+## 57 15.000 17 11.30 0.00 288847
+## 58 16.000  1  7.06 0.14 105000
+## 59 15.500 14 12.10 0.05 276425
+## 60 15.250  2 10.04 0.06  33000
+## 61 16.500  1  4.99 0.73 210000
+## 62 19.250  0  7.33 0.22 240000
+## 63 17.750 18 12.11 0.00 281552
+## 64 18.750 16 12.86 0.00 421000
+## 65 19.250 13 12.70 0.04 484290
+## 66 14.000 20 11.58 0.00 234493
+## 67 14.000 18 11.58 0.03 230675
+## 68 18.000 16 12.97 0.08 296966
+## 69 13.750  1  4.82 0.00  32000
+## 70 15.000  2  9.75 0.03  38533
+## 71 15.500 16 10.36 0.02 109912
+## 72 15.900  1  8.13 0.23 236000
+## 73 15.250 15 13.23 0.05 243338
+## 74 15.500  4 10.57 0.04 122183
+## 75 14.750 20 11.22 0.00 128268
+## 76 15.000  3 10.34 0.00  72000
+## 77 14.500  3 10.67 0.00  43404
+## 78 13.500 18  8.60 0.08  59443
+## 79 15.000 15 11.97 0.14 254700
+## 80 15.250 11 11.27 0.03 434746
+## 81 14.500 14 12.68 0.03 201930</code></pre>
+<pre class="r"><code>exam2_lm &lt;- lm(Y ~ X1 + X2 + X3 + X4, data = exam2)
+summary(exam2_lm)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = Y ~ X1 + X2 + X3 + X4, data = exam2)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -3.1872 -0.5911 -0.0910  0.5579  2.9441 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  1.220e+01  5.780e-01  21.110  &lt; 2e-16 ***
+## X1          -1.420e-01  2.134e-02  -6.655 3.89e-09 ***
+## X2           2.820e-01  6.317e-02   4.464 2.75e-05 ***
+## X3           6.193e-01  1.087e+00   0.570     0.57    
+## X4           7.924e-06  1.385e-06   5.722 1.98e-07 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 1.137 on 76 degrees of freedom
+## Multiple R-squared:  0.5847, Adjusted R-squared:  0.5629 
+## F-statistic: 26.76 on 4 and 76 DF,  p-value: 7.272e-14</code></pre>
+<ol style="list-style-type: lower-alpha">
+<li>Prepare a box plot for each predictor variable and prepare a grid of plot using the plot grid() function in the cowplot library.</li>
+</ol>
+<pre class="r"><code>library(cowplot)
+X_1 &lt;- ggplot(exam2_lm, aes(x = X1)) + geom_boxplot(color = &quot;steelblue&quot;, fill = &quot;orchid4&quot;) + theme_bw()
+X_2 &lt;- ggplot(exam2_lm, aes(x = X2)) + geom_boxplot(color = &quot;steelblue&quot;, fill = &quot;orchid4&quot;) + theme_bw()
+X_3 &lt;- ggplot(exam2_lm, aes(x = X3)) + geom_boxplot(color = &quot;steelblue&quot;, fill = &quot;orchid4&quot;) + theme_bw()
+X_4 &lt;- ggplot(exam2_lm, aes(x = X4)) + geom_boxplot(color = &quot;steelblue&quot;, fill = &quot;orchid4&quot;) + theme_bw()
+
+plot_grid(X_1, X_2, X_3, X_4)</code></pre>
+<p><img src="Delete_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>What information do these plots provide?</li>
+</ol>
+<p>These plots show us the symmetry of the data per predictor variable, whether or not it’s skewed, if any potential outliers exist, the median, and the interquartile range.</p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Obtain the scatter plot matrix and the correlation matrix.</li>
+</ol>
+<pre class="r"><code>colnames(exam2_df) &lt;- c(&quot;Y&quot;, &quot;X1&quot;, &quot;X2&quot;, &quot;X3&quot;, &quot;X4&quot;)
+pairs(exam2_df)</code></pre>
+<p><img src="Delete_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+<pre class="r"><code>cor(exam2_df)</code></pre>
+<pre><code>##              Y         X1         X2          X3         X4
+## Y   1.00000000 -0.2502846  0.4137872  0.06652647 0.53526237
+## X1 -0.25028456  1.0000000  0.3888264 -0.25266347 0.28858350
+## X2  0.41378716  0.3888264  1.0000000 -0.37976174 0.44069713
+## X3  0.06652647 -0.2526635 -0.3797617  1.00000000 0.08061073
+## X4  0.53526237  0.2885835  0.4406971  0.08061073 1.00000000</code></pre>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>Interpret these and state your principal findings in detail.</li>
+</ol>
+<p>The relationship between Y and X4 was the strongest of the 4, though still only with a correlation coefficient of 0.53526237. The next strongest relationship was Y and X2 with a correlation coefficient of 0.41378716. Y had very weak correlation to X3, and a weak negative correlation with X1</p>
+<ol start="5" style="list-style-type: lower-alpha">
+<li>Fit regression model for four predictor variables to the data. State the estimated regression function.</li>
+</ol>
+<pre class="r"><code>exam2_lm &lt;- lm(Y ~ X1 + X2 + X3 + X4, data = exam2)
+summary(exam2_lm)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = Y ~ X1 + X2 + X3 + X4, data = exam2)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -3.1872 -0.5911 -0.0910  0.5579  2.9441 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  1.220e+01  5.780e-01  21.110  &lt; 2e-16 ***
+## X1          -1.420e-01  2.134e-02  -6.655 3.89e-09 ***
+## X2           2.820e-01  6.317e-02   4.464 2.75e-05 ***
+## X3           6.193e-01  1.087e+00   0.570     0.57    
+## X4           7.924e-06  1.385e-06   5.722 1.98e-07 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 1.137 on 76 degrees of freedom
+## Multiple R-squared:  0.5847, Adjusted R-squared:  0.5629 
+## F-statistic: 26.76 on 4 and 76 DF,  p-value: 7.272e-14</code></pre>
+<p>Y = 1.220e+01 - -1.420e-01(X1) + 2.820e-01(X2) + 6.193e-01(X3) + 7.924e-06(X4)</p>
+<ol start="6" style="list-style-type: lower-alpha">
+<li>Obtain the residuals and prepare a box plot of the residuals.</li>
+</ol>
+<pre class="r"><code>ggplot(exam2_lm, aes(x = .fitted, y = .resid)) + geom_point(color = &quot;blue&quot;, dotsize = .5) + theme_bw()</code></pre>
+<pre><code>## Warning: Ignoring unknown parameters: dotsize</code></pre>
+<p><img src="Delete_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(exam2_lm, aes(x = .resid)) + geom_boxplot(color = &quot;steelblue&quot;, fill = &quot;orchid4&quot;) + theme_bw()</code></pre>
+<p><img src="Delete_files/figure-html/unnamed-chunk-21-2.png" width="672" /></p>
+<ol start="7" style="list-style-type: lower-alpha">
+<li>Does the distribution appear to be fairly symmetrical?</li>
+</ol>
+<p>The distribution appears to be fairly symmetrical.</p>
+<ol start="8" style="list-style-type: lower-alpha">
+<li>Plot the residuals against Yˆ , each predictor variable, and each two-factor interaction term on a grid of plot using the plot grid() function in the cowplot library.</li>
+</ol>
+<pre class="r"><code>X_1r &lt;- ggplot(exam2_lm, aes(x = X1, y = .resid)) + geom_point() + theme_bw()
+X_2r &lt;- ggplot(exam2_lm, aes(x = X2, y = .resid)) + geom_point() + theme_bw()
+X_3r &lt;- ggplot(exam2_lm, aes(x = X3, y = .resid)) + geom_point() + theme_bw()
+X_4r &lt;- ggplot(exam2_lm, aes(x = X4, y = .resid)) + geom_point() + theme_bw()
+
+plot_grid(X_1r, X_2r, X_3r, X_4r)</code></pre>
+<p><img src="Delete_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+
+<div id="footer">
+     <p><strong>Lasanthi Watagoda</strong> </br>
+			Assistant Professor of Statistics </br>
+      <a href="mailto:lasanthi@appstate.edu"> lasanthi@appstate.edu</a>  </br>
+      <img src="images/asu-logo-white-600.png" style="background-color:black; width:180px; float:left;" width =  /> 
+</p>
+        
+        <p><a href="https://lasanthi.youcanbook.me/" data-ycbm-modal="true"><img src="https://youcanbook.me/resources/pics/ycbm-button.png" style="border-style:none;"/></a>
+        </p>
+      
+        
+        <p>
+    <strong>Mailing Address</strong><br />      
+    <a href = "http://www.appstate.edu/"> Appalachian State University</a><br />
+		<a href= "https://mathsci.appstate.edu/"> Department of Mathematical Sciences</a><br />
+		Walker Hall 340<br />
+		121 Bodenheimer Dr<br />
+		Boone, NC 28608
+		</p> 
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
