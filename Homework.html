@@ -9,12 +9,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="Dr. Lasanthi Pelawa-Watagoda" />
+<meta name="author" content="Dr. Lasanthi Watagoda" />
 
 
-<title>Homework for STT 4830 - Fall 2021</title>
+<title>Homework for STT 4830 - Fall 2022</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
@@ -60,6 +60,7 @@ if (window.hljs) {
 
 
 
+
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
 
@@ -84,6 +85,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -236,7 +240,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -271,42 +275,88 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Homework for STT 4830 - Fall 2021</h1>
-<h4 class="author">Dr. Lasanthi Pelawa-Watagoda</h4>
-<h4 class="date">Last Updated on: Nov 17, 2021 at 04:50:15 PM</h4>
+<h1 class="title toc-ignore">Homework for STT 4830 - Fall 2022</h1>
+<h4 class="author">Dr. Lasanthi Watagoda</h4>
+<h4 class="date">Last Updated on: Aug 15, 2022 at 02:28:41 PM</h4>
 
 </div>
 
 
 <hr />
-<div id="homework-1-due-thursday-august-26th" class="section level4">
-<h4><strong><em>Homework 1</em>: Due Thursday, August 26th</strong></h4>
+<div id="homework-1-due-thursday-august-25th" class="section level4">
+<h4><strong><em>Homework 1</em>: Due Thursday, August 25th</strong></h4>
 <ol style="list-style-type: decimal">
 <li><p>(1.2)</p></li>
 <li><p>(1.5 Give reason for your answer)</p></li>
 <li><p>(1.12)</p></li>
-<li><p>A regression model is <span class="math inline">\(y = \beta_0 + \beta_1x + \epsilon\)</span>. There are six observations. The summary statistics are:</p></li>
+<li><p>A regression model is <span class="math inline">\(y = \beta_0 +
+\beta_1x + \epsilon\)</span>. There are six observations. The summary
+statistics are:</p></li>
 </ol>
-<p><span class="math display">\[\sum y_i = 8.5,\quad \sum x_i = 6,\quad \sum x_i^2 = 16,\quad \sum x_iy_i = 15.5,\quad \sum y_i^2 = 17.25\]</span> Calculate the LS estimate of <span class="math inline">\(\beta_1\)</span></p>
+<p><span class="math display">\[\sum y_i = 8.5,\quad \sum x_i = 6,\quad
+\sum x_i^2 = 16,\quad \sum x_iy_i = 15.5,\quad \sum y_i^2 =
+17.25\]</span> Calculate the LS estimate of <span
+class="math inline">\(\beta_1\)</span></p>
 <ol start="5" style="list-style-type: decimal">
-<li>You are fitting a linear regression model <span class="math inline">\(y_i = \beta_0 + \beta_1x_i + \epsilon_i\)</span> to 18 observations. You are given the followings:</li>
+<li>You are fitting a linear regression model <span
+class="math inline">\(y_i = \beta_0 + \beta_1x_i + \epsilon_i\)</span>
+to 18 observations. You are given the followings:</li>
 </ol>
-<p><span class="math display">\[\sum y_i = 252,\quad \sum x_i = 216,\quad \sum x_i^2 = 3092,\quad \sum x_iy_i = 3364,\quad \sum y_i^2 = 4528\]</span> Calculate the LS estimate of <span class="math inline">\(\beta_1\)</span></p>
+<p><span class="math display">\[\sum y_i = 252,\quad \sum x_i =
+216,\quad \sum x_i^2 = 3092,\quad \sum x_iy_i = 3364,\quad \sum y_i^2 =
+4528\]</span> Calculate the LS estimate of <span
+class="math inline">\(\beta_1\)</span></p>
 <ol start="6" style="list-style-type: decimal">
-<li>You are fitting a linear regression model <span class="math inline">\(y_i = \beta_0 + \beta_1x_i + \epsilon_i\)</span> to the following data:</li>
+<li>You are fitting a linear regression model <span
+class="math inline">\(y_i = \beta_0 + \beta_1x_i + \epsilon_i\)</span>
+to the following data:</li>
 </ol>
-<div class="line-block">x | 2 | 5 | 8 | 11 | 13 | 15 | 16 | 18 |<br />
-y | -10 | -9 | -4 | 0 | 4 | 5 | 6 | 8 |</div>
-<p>Calculate the LS estimate of <span class="math inline">\(\beta_1\)</span> using <span class="math inline">\(R\)</span></p>
+<table>
+<thead>
+<tr class="header">
+<th>x</th>
+<th>2</th>
+<th>5</th>
+<th>8</th>
+<th>11</th>
+<th>13</th>
+<th>15</th>
+<th>16</th>
+<th>18</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>y</td>
+<td>-10</td>
+<td>-9</td>
+<td>-4</td>
+<td>0</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+<p>Calculate the LS estimate of <span
+class="math inline">\(\beta_1\)</span> using <span
+class="math inline">\(R\)</span></p>
 <ol start="7" style="list-style-type: decimal">
 <li>Given the following information</li>
 </ol>
-<p><span class="math display">\[\sum y_i = 1742,\quad \sum x_i = 144,\quad \sum x_i^2 = 2300,\quad \sum x_iy_i = 26696,\quad \sum y_i^2 = 312674 \quad n = 12\]</span> Determine the LS equation for the model <span class="math inline">\(y_i = \beta_0 + \beta_1x_i + \epsilon_i\)</span>.</p>
+<p><span class="math display">\[\sum y_i = 1742,\quad \sum x_i =
+144,\quad \sum x_i^2 = 2300,\quad \sum x_iy_i = 26696,\quad \sum y_i^2 =
+312674 \quad n = 12\]</span> Determine the LS equation for the model
+<span class="math inline">\(y_i = \beta_0 + \beta_1x_i +
+\epsilon_i\)</span>.</p>
 <hr />
 </div>
-<div id="homework-2-due-tuesday-september-7th" class="section level4">
-<h4><strong><em>Homework 2</em>: Due Tuesday, September 7th</strong></h4>
-<p><em>Note: In order to receive full credit, please explain your answers well. Simple yes/no answers will not be given credit.</em></p>
+<div id="homework-2-due-tuesday-september-1st" class="section level4">
+<h4><strong><em>Homework 2</em>: Due Tuesday, September
+1st</strong></h4>
+<p><em>Note: In order to receive full credit, please explain your
+answers well. Simple yes/no answers will not be given credit.</em></p>
 <ol style="list-style-type: decimal">
 <li>1.19 (For part b., use <span class="math inline">\(R\)</span>)</li>
 <li>1.20 (For part b., use <span class="math inline">\(R\)</span>)</li>
@@ -315,33 +365,48 @@ y | -10 | -9 | -4 | 0 | 4 | 5 | 6 | 8 |</div>
 </ol>
 <hr />
 </div>
-<div id="homework-3-due-thursday-september-16th" class="section level4">
-<h4><strong><em>Homework 3</em>: Due Thursday, September 16th</strong></h4>
-<p>You are turning in two files. 1. Hand written work. 2. A pdf created by Rmarkdown for the problems where it says “Use R to check your answers”.</p>
+<div id="homework-3-due-thursday-september-8th" class="section level4">
+<h4><strong><em>Homework 3</em>: Due Thursday, September
+8th</strong></h4>
+<p>You are turning in two files. 1. Hand written work. 2. A pdf created
+by Rmarkdown for the problems where it says “Use R to check your
+answers”.</p>
 <ol style="list-style-type: decimal">
-<li><em>5.1</em> (Show work by hand calculations. Use R to check your answers)</li>
+<li><em>5.1</em> (Show work by hand calculations. Use R to check your
+answers)</li>
 <li><em>5.3</em> (Hand calculations only)</li>
-<li><em>5.4</em> (Show work by hand calculations. Use R to check your answers)</li>
-<li><em>5.6</em> (Show work by hand calculations. Use R to check your answers)</li>
-<li><em>5.10</em> (Hand calculations are fine but using R would be easier. I will accept the answer either way)</li>
-<li><em>5.12</em> (Hand calculations are fine but using R would be easier. I will accept the answer either way)</li>
-<li><em>5.14</em> (Hand calculations are fine but using R would be easier. I will accept the answer either way)</li>
+<li><em>5.4</em> (Show work by hand calculations. Use R to check your
+answers)</li>
+<li><em>5.6</em> (Show work by hand calculations. Use R to check your
+answers)</li>
+<li><em>5.10</em> (Hand calculations are fine but using R would be
+easier. I will accept the answer either way)</li>
+<li><em>5.12</em> (Hand calculations are fine but using R would be
+easier. I will accept the answer either way)</li>
+<li><em>5.14</em> (Hand calculations are fine but using R would be
+easier. I will accept the answer either way)</li>
 </ol>
 <hr />
 </div>
-<div id="homework-4-due-thursday-september-30th" class="section level4">
-<h4><strong><em>Homework 4</em>: Due Thursday, September 30th</strong></h4>
-<p>Turn in your homework only as a <em>pdf</em> created in <span class="math inline">\(R\)</span>. No handwritten work please!</p>
+<div id="homework-4-due-thursday-september-22nd" class="section level4">
+<h4><strong><em>Homework 4</em>: Due Thursday, September
+22nd</strong></h4>
+<p>Turn in your homework only as a <em>pdf</em> created in <span
+class="math inline">\(R\)</span>. No handwritten work please!</p>
 <ol style="list-style-type: decimal">
-<li>Refer to <span class="math inline">\(\textbf{consumer finance}\)</span> problems 5.5 and 5.13 in the text book.</li>
+<li>Refer to <span class="math inline">\(\textbf{consumer
+finance}\)</span> problems 5.5 and 5.13 in the text book.</li>
 </ol>
 <ol style="list-style-type: lower-alpha">
-<li>Using matrix methods, obtain the vector of estimated regression coefficients and vector of residuals.</li>
-<li>Find the hat matrix <span class="math inline">\(\bf{H}\)</span>.</li>
+<li>Using matrix methods, obtain the vector of estimated regression
+coefficients and vector of residuals.</li>
+<li>Find the hat matrix <span
+class="math inline">\(\bf{H}\)</span>.</li>
 <li>Find <span class="math inline">\(s^2(e)\)</span>.</li>
 </ol>
 <ol start="2" style="list-style-type: decimal">
-<li>Refer to $ Problems 1.22 and 5.7. Using matrix methods, obtain the following:</li>
+<li>Refer to $ Problems 1.22 and 5.7. Using matrix methods, obtain the
+following:</li>
 </ol>
 <ol style="list-style-type: lower-alpha">
 <li><span class="math inline">\((X&#39; X)^{-1}\)</span></li>
@@ -351,28 +416,35 @@ y | -10 | -9 | -4 | 0 | 4 | 5 | 6 | 8 |</div>
 <li><span class="math inline">\(\bf{H}\)</span></li>
 </ol>
 </div>
-<div id="homework-5-due-friday-october-8th" class="section level4">
-<h4><strong><em>Homework 5</em>: Due Friday, October 8th</strong></h4>
-<p>Turn in your homework only as a <em>pdf</em> created in <span class="math inline">\(R\)</span>. No handwritten work please!</p>
+<div id="homework-5-due-thursday-september-29th" class="section level4">
+<h4><strong><em>Homework 5</em>: Due Thursday, September
+29th</strong></h4>
+<p>Turn in your homework only as a <em>pdf</em> created in <span
+class="math inline">\(R\)</span>. No handwritten work please!</p>
 <ol style="list-style-type: decimal">
-<li>3.3 - Note: for part e) conduct the Breusch-Pagan test instead Brown-Forsythe test using <span class="math inline">\(\alpha = 0.01\)</span></li>
+<li>3.3 - Note: for part e) conduct the Breusch-Pagan test instead
+Brown-Forsythe test using <span class="math inline">\(\alpha =
+0.01\)</span></li>
 <li>3.4</li>
 <li>3.11</li>
 <li>3.15</li>
 </ol>
 </div>
-<div id="homework-6-due-sunday-october-24th" class="section level4">
-<h4><strong><em>Homework 6</em>: Due Sunday, October 24th</strong></h4>
-<p>Turn in your homework only as a <em>pdf</em> created in <span class="math inline">\(R\)</span>. No handwritten work please!</p>
+<div id="homework-6-due-thursday-october-6th" class="section level4">
+<h4><strong><em>Homework 6</em>: Due Thursday, October 6th</strong></h4>
+<p>Turn in your homework only as a <em>pdf</em> created in <span
+class="math inline">\(R\)</span>. No handwritten work please!</p>
 <ol style="list-style-type: decimal">
 <li>3.17</li>
 <li>6.5 (except part f)</li>
 <li>6.15</li>
 </ol>
 </div>
-<div id="homework-7-due-thursday-november-4th" class="section level4">
-<h4><strong><em>Homework 7</em>: Due Thursday, November 4th</strong></h4>
-<p>Turn in your homework only as a <em>pdf</em> created in <span class="math inline">\(R\)</span>. No handwritten work please!</p>
+<div id="homework-7-due-thursday-october-13th" class="section level4">
+<h4><strong><em>Homework 7</em>: Due Thursday, October
+13th</strong></h4>
+<p>Turn in your homework only as a <em>pdf</em> created in <span
+class="math inline">\(R\)</span>. No handwritten work please!</p>
 <ol style="list-style-type: decimal">
 <li>6.7</li>
 <li>6.8</li>
@@ -381,9 +453,11 @@ y | -10 | -9 | -4 | 0 | 4 | 5 | 6 | 8 |</div>
 </ol>
 <hr />
 </div>
-<div id="homework-8-due-sunday-november-21-st" class="section level4">
-<h4><strong><em>Homework 8</em>: Due Sunday, November 21 st</strong></h4>
-<p>Turn in your homework only as a <em>pdf</em> created in <span class="math inline">\(R\)</span>. No handwritten work please!</p>
+<div id="homework-8-due-thursday-october-27th" class="section level4">
+<h4><strong><em>Homework 8</em>: Due Thursday, October
+27th</strong></h4>
+<p>Turn in your homework only as a <em>pdf</em> created in <span
+class="math inline">\(R\)</span>. No handwritten work please!</p>
 <ol style="list-style-type: decimal">
 <li>9.10</li>
 <li>9.11</li>
@@ -403,14 +477,25 @@ Turn in your homework only as a *pdf* created in $R$. No handwritten work please
 -->
 <hr />
 </div>
-<div id="homework-9-due-tuesday-november-30th" class="section level4">
-<h4><strong><em>Homework 9</em>: Due Tuesday, November 30th</strong></h4>
-<p>Turn in your homework only as a <em>pdf</em> created in <span class="math inline">\(R\)</span>. No handwritten work please!</p>
+<div id="homework-9-due-thursday-november-3rd" class="section level4">
+<h4><strong><em>Homework 9</em>: Due Thursday, November
+3rd</strong></h4>
+<p>Turn in your homework only as a <em>pdf</em> created in <span
+class="math inline">\(R\)</span>. No handwritten work please!</p>
 <ol style="list-style-type: decimal">
 <li>14.7</li>
 <li>14.11</li>
 <li>14.12</li>
 <li>14.18</li>
+</ol>
+<hr />
+</div>
+<div id="homework-10-due-thursday-november-10th" class="section level4">
+<h4><strong><em>Homework 10</em>: Due Thursday, November
+10th</strong></h4>
+<p>Turn in your homework only as a <em>pdf</em> created in <span
+class="math inline">\(R\)</span>. No handwritten work please!</p>
+<ol start="5" style="list-style-type: decimal">
 <li>14.14</li>
 <li>14.20</li>
 <li>14.22</li>
@@ -424,8 +509,11 @@ Turn in your homework only as a *pdf* created in $R$. No handwritten work please
 </div>
 <div id="data-sets" class="section level2">
 <h2><strong>Data sets</strong></h2>
-<div id="click-here-to-get-data-sets-to-use-in-the-assignments" class="section level4">
-<h4><a href="http://www.cnachtsheim-text.csom.umn.edu/About%20This%20CD.html">Click here</a> to get Data sets to use in the assignments</h4>
+<div id="click-here-to-get-data-sets-to-use-in-the-assignments"
+class="section level4">
+<h4><a
+href="http://www.cnachtsheim-text.csom.umn.edu/About%20This%20CD.html">Click
+here</a> to get Data sets to use in the assignments</h4>
 <hr />
 </div>
 </div>
