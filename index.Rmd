@@ -12,7 +12,7 @@ title: "Welcome"
  
 ***
 
-* The course syllabus  [`Syllabus`](STT4830F2020Syllabus.html) 
+* The course syllabus  [`Syllabus`](STT4830F2022Syllabus.html) 
 
 *  [`Course Pacing`](Assignments.html) 
 
