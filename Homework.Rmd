@@ -12,7 +12,7 @@ output:
 
 ***
 
-#### ***Homework 1*: Due Thursday, August 25th**
+#### ***Homework 1*: Due Thursday, September 1st**
 
 1) (1.2)
 2) (1.5 Give reason for your answer)
@@ -50,7 +50,7 @@ Determine the LS equation for the model $y_i = \beta_0 + \beta_1x_i + \epsilon_i
 ***
 
 
-#### ***Homework 2*: Due Tuesday, September 1st**
+#### ***Homework 2*: Due Thursday, September 8th**
 
 *Note: In order to receive full credit, please explain your answers well. Simple yes/no answers will not be given credit.*
 
@@ -63,7 +63,7 @@ Determine the LS equation for the model $y_i = \beta_0 + \beta_1x_i + \epsilon_i
 
 ***
 
-#### ***Homework 3*: Due Thursday, September 8th**
+#### ***Homework 3*: Due Thursday, September 14th**
 
 You are turning in two files. 1. Hand written work. 2. A pdf created by Rmarkdown for the problems where it says "Use R to check your answers".
 
@@ -81,7 +81,7 @@ You are turning in two files. 1. Hand written work. 2. A pdf created by Rmarkdow
 
 
 
-#### ***Homework 4*: Due Thursday, September 22nd**
+#### ***Homework 4*: Due Thursday, September 28th**
 Turn in your homework only as a *pdf* created in $R$. No handwritten work please!
 
 1) Refer to $\textbf{consumer finance}$ problems 5.5 and 5.13 in the text book.
@@ -98,7 +98,7 @@ Turn in your homework only as a *pdf* created in $R$. No handwritten work please
   (e) $\bf{H}$ 
   
 
-#### ***Homework 5*: Due Thursday, September 29th**
+#### ***Homework 5*: Due Thursday, October 12th**
 Turn in your homework only as a *pdf* created in $R$. No handwritten work please!
 
 1) 3.3 - Note: for part e) conduct the Breusch-Pagan test instead Brown-Forsythe test using $\alpha = 0.01$
@@ -106,7 +106,7 @@ Turn in your homework only as a *pdf* created in $R$. No handwritten work please
 3) 3.11
 4) 3.15
 
-#### ***Homework 6*: Due Thursday, October 6th**
+#### ***Homework 6*: Due Thursday, October 19th**
 
 Turn in your homework only as a *pdf* created in $R$. No handwritten work please!
 
@@ -115,7 +115,7 @@ Turn in your homework only as a *pdf* created in $R$. No handwritten work please
 3) 6.15
 
 
-#### ***Homework 7*: Due Thursday, October 13th**
+#### ***Homework 7*: Due Thursday, October 26th**
 
 Turn in your homework only as a *pdf* created in $R$. No handwritten work please!
 
@@ -128,7 +128,7 @@ Turn in your homework only as a *pdf* created in $R$. No handwritten work please
 ***
 
 
-#### ***Homework 8*: Due Thursday, October 27th**
+#### ***Homework 8*: Due Thursday, November 9th**
 
 Turn in your homework only as a *pdf* created in $R$. No handwritten work please!
 
@@ -153,7 +153,7 @@ Turn in your homework only as a *pdf* created in $R$. No handwritten work please
 
 ***
 
-#### ***Homework 9*: Due Thursday, November 3rd**
+#### ***Homework 9*: Due Thursday, November 16th**
 
 Turn in your homework only as a *pdf* created in $R$. No handwritten work please!
 
@@ -164,7 +164,7 @@ Turn in your homework only as a *pdf* created in $R$. No handwritten work please
 
 ***
 
-#### ***Homework 10*: Due Thursday, November 10th**
+#### ***Homework 10*: Due Thursday, November 30th**
 
 Turn in your homework only as a *pdf* created in $R$. No handwritten work please!
 

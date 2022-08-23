@@ -14,7 +14,7 @@
 
 <title>Homework for STT 4830 - Fall 2022</title>
 
-<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.15/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
@@ -145,11 +145,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -277,14 +281,15 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">Homework for STT 4830 - Fall 2022</h1>
 <h4 class="author">Dr. Lasanthi Watagoda</h4>
-<h4 class="date">Last Updated on: Aug 15, 2022 at 02:28:41 PM</h4>
+<h4 class="date">Last Updated on: Aug 22, 2022 at 10:17:32 PM</h4>
 
 </div>
 
 
 <hr />
-<div id="homework-1-due-thursday-august-25th" class="section level4">
-<h4><strong><em>Homework 1</em>: Due Thursday, August 25th</strong></h4>
+<div id="homework-1-due-thursday-september-1st" class="section level4">
+<h4><strong><em>Homework 1</em>: Due Thursday, September
+1st</strong></h4>
 <ol style="list-style-type: decimal">
 <li><p>(1.2)</p></li>
 <li><p>(1.5 Give reason for your answer)</p></li>
@@ -352,9 +357,9 @@ class="math inline">\(R\)</span></p>
 \epsilon_i\)</span>.</p>
 <hr />
 </div>
-<div id="homework-2-due-tuesday-september-1st" class="section level4">
-<h4><strong><em>Homework 2</em>: Due Tuesday, September
-1st</strong></h4>
+<div id="homework-2-due-thursday-september-8th" class="section level4">
+<h4><strong><em>Homework 2</em>: Due Thursday, September
+8th</strong></h4>
 <p><em>Note: In order to receive full credit, please explain your
 answers well. Simple yes/no answers will not be given credit.</em></p>
 <ol style="list-style-type: decimal">
@@ -365,9 +370,9 @@ answers well. Simple yes/no answers will not be given credit.</em></p>
 </ol>
 <hr />
 </div>
-<div id="homework-3-due-thursday-september-8th" class="section level4">
+<div id="homework-3-due-thursday-september-14th" class="section level4">
 <h4><strong><em>Homework 3</em>: Due Thursday, September
-8th</strong></h4>
+14th</strong></h4>
 <p>You are turning in two files. 1. Hand written work. 2. A pdf created
 by Rmarkdown for the problems where it says “Use R to check your
 answers”.</p>
@@ -388,9 +393,9 @@ easier. I will accept the answer either way)</li>
 </ol>
 <hr />
 </div>
-<div id="homework-4-due-thursday-september-22nd" class="section level4">
+<div id="homework-4-due-thursday-september-28th" class="section level4">
 <h4><strong><em>Homework 4</em>: Due Thursday, September
-22nd</strong></h4>
+28th</strong></h4>
 <p>Turn in your homework only as a <em>pdf</em> created in <span
 class="math inline">\(R\)</span>. No handwritten work please!</p>
 <ol style="list-style-type: decimal">
@@ -416,9 +421,9 @@ following:</li>
 <li><span class="math inline">\(\bf{H}\)</span></li>
 </ol>
 </div>
-<div id="homework-5-due-thursday-september-29th" class="section level4">
-<h4><strong><em>Homework 5</em>: Due Thursday, September
-29th</strong></h4>
+<div id="homework-5-due-thursday-october-12th" class="section level4">
+<h4><strong><em>Homework 5</em>: Due Thursday, October
+12th</strong></h4>
 <p>Turn in your homework only as a <em>pdf</em> created in <span
 class="math inline">\(R\)</span>. No handwritten work please!</p>
 <ol style="list-style-type: decimal">
@@ -430,8 +435,9 @@ Brown-Forsythe test using <span class="math inline">\(\alpha =
 <li>3.15</li>
 </ol>
 </div>
-<div id="homework-6-due-thursday-october-6th" class="section level4">
-<h4><strong><em>Homework 6</em>: Due Thursday, October 6th</strong></h4>
+<div id="homework-6-due-thursday-october-19th" class="section level4">
+<h4><strong><em>Homework 6</em>: Due Thursday, October
+19th</strong></h4>
 <p>Turn in your homework only as a <em>pdf</em> created in <span
 class="math inline">\(R\)</span>. No handwritten work please!</p>
 <ol style="list-style-type: decimal">
@@ -440,9 +446,9 @@ class="math inline">\(R\)</span>. No handwritten work please!</p>
 <li>6.15</li>
 </ol>
 </div>
-<div id="homework-7-due-thursday-october-13th" class="section level4">
+<div id="homework-7-due-thursday-october-26th" class="section level4">
 <h4><strong><em>Homework 7</em>: Due Thursday, October
-13th</strong></h4>
+26th</strong></h4>
 <p>Turn in your homework only as a <em>pdf</em> created in <span
 class="math inline">\(R\)</span>. No handwritten work please!</p>
 <ol style="list-style-type: decimal">
@@ -453,9 +459,9 @@ class="math inline">\(R\)</span>. No handwritten work please!</p>
 </ol>
 <hr />
 </div>
-<div id="homework-8-due-thursday-october-27th" class="section level4">
-<h4><strong><em>Homework 8</em>: Due Thursday, October
-27th</strong></h4>
+<div id="homework-8-due-thursday-november-9th" class="section level4">
+<h4><strong><em>Homework 8</em>: Due Thursday, November
+9th</strong></h4>
 <p>Turn in your homework only as a <em>pdf</em> created in <span
 class="math inline">\(R\)</span>. No handwritten work please!</p>
 <ol style="list-style-type: decimal">
@@ -477,9 +483,9 @@ Turn in your homework only as a *pdf* created in $R$. No handwritten work please
 -->
 <hr />
 </div>
-<div id="homework-9-due-thursday-november-3rd" class="section level4">
+<div id="homework-9-due-thursday-november-16th" class="section level4">
 <h4><strong><em>Homework 9</em>: Due Thursday, November
-3rd</strong></h4>
+16th</strong></h4>
 <p>Turn in your homework only as a <em>pdf</em> created in <span
 class="math inline">\(R\)</span>. No handwritten work please!</p>
 <ol style="list-style-type: decimal">
@@ -490,9 +496,9 @@ class="math inline">\(R\)</span>. No handwritten work please!</p>
 </ol>
 <hr />
 </div>
-<div id="homework-10-due-thursday-november-10th" class="section level4">
+<div id="homework-10-due-thursday-november-30th" class="section level4">
 <h4><strong><em>Homework 10</em>: Due Thursday, November
-10th</strong></h4>
+30th</strong></h4>
 <p>Turn in your homework only as a <em>pdf</em> created in <span
 class="math inline">\(R\)</span>. No handwritten work please!</p>
 <ol start="5" style="list-style-type: decimal">
