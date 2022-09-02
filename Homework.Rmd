@@ -63,7 +63,7 @@ Determine the LS equation for the model $y_i = \beta_0 + \beta_1x_i + \epsilon_i
 
 ***
 
-#### ***Homework 3*: Due Thursday, September 14th**
+#### ***Homework 3*: Due Thursday, September 20th**
 
 You are turning in two files. 1. Hand written work. 2. A pdf created by Rmarkdown for the problems where it says "Use R to check your answers".
 
