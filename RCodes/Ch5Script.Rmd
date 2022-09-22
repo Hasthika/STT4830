@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ### Read data from an URL
 
 ```{r comment=NA, warning=FALSE, message=FALSE}
-toluca <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%20%201%20Data%20Sets/CH01TA01.txt", sep ="" , header = FALSE)
+toluca <- read.table("http://www.cnachtsheim-text.csom.umn.edu/Kutner/Chapter%20%201%20Data%20Sets/CH01TA01.txt", sep ="" , header = FALSE)
 
 
 #Look at the first 6 entries
@@ -40,13 +40,13 @@ X <- toluca$lotSize
 Y <- toluca$hours
 
 Y <- as.matrix(Y) 
-Y                       # This is your Y
+Y                       # This is your vector Y
 
 X <- as.matrix(X)
-X                       # Not quite the X we need
+X                       # Not quite the X matrix we need
 
 X <- cbind(rep(1,n), X) # Adding a column of ones to make the X matrix
-X                       # This is your X
+X                       # This is your X matrix
 ```
 
 ### Find $X'X$
