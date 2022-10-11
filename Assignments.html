@@ -14,7 +14,7 @@
 
 <title>Schedule for STT 4830 - Fall 2022</title>
 
-<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
@@ -145,11 +145,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -277,7 +281,7 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">Schedule for STT 4830 - Fall 2022</h1>
 <h4 class="author">Dr. Lasanthi Watagoda</h4>
-<h4 class="date">Last Updated on: Aug 15, 2022 at 02:15:06 PM</h4>
+<h4 class="date">Last Updated on: Oct 10, 2022 at 09:53:44 PM</h4>
 
 </div>
 
@@ -355,7 +359,7 @@ Analysis</p>
 <ul>
 <li><p>Chapter 3: Diagnostics and Remedial Measures</p></li>
 <li><p>3.3 Diagnostics for Residuals</p></li>
-<li><p><strong><em>Test 1 </em></strong></p></li>
+<li><p><strong><em>Quiz 4</em></strong></p></li>
 </ul>
 <hr />
 <p><strong>Week 7: (Oct 03 – Oct 07)</strong></p>
@@ -368,6 +372,7 @@ Analysis</p>
 <li>3.7 F Test for Lack of Fit</li>
 <li>3.8 Overview of Remedial Measures</li>
 </ul></li>
+<li><p><strong><em>Test 1 </em></strong></p></li>
 </ul>
 <hr />
 <p><strong>Week 8: (Oct 10 – Oct 14)</strong></p>
@@ -377,6 +382,7 @@ Analysis</p>
 <li>3.9 Transformations</li>
 <li>3.10 Exploration of Shape of Regression Function</li>
 </ul></li>
+<li><p><strong><em>Quiz 5</em></strong></p></li>
 </ul>
 <hr />
 <p><strong>Week 9: (Oct 17 – Oct 21)</strong></p>
@@ -384,12 +390,12 @@ Analysis</p>
 <li><p>No Class Tuesday (Fall Break)</p></li>
 <li><p>Chapter 6: Multiple Regression</p>
 <ul>
-<li>6.1 Multiple Regression Models</li>
-<li>6.2 General Linear Regression Model in Matrix Terms</li>
-<li>6.3 Estimation of Regression Coefficients</li>
-<li>6.4 Fitted Values and Residuals</li>
+<li><p>6.1 Multiple Regression Models</p></li>
+<li><p>6.2 General Linear Regression Model in Matrix Terms</p></li>
+<li><p>6.3 Estimation of Regression Coefficients</p></li>
+<li><p>6.4 Fitted Values and Residuals</p></li>
+<li><p><strong><em>Quiz 6</em></strong></p></li>
 </ul></li>
-<li><p><strong><em>Quiz 4</em></strong></p></li>
 </ul>
 <hr />
 <p><strong>Week 10: (Oct 24 – Oct 28)</strong></p>
@@ -402,6 +408,7 @@ Analysis</p>
 Observation</li>
 <li>6.8 Diagnostics and Remedial Measures</li>
 </ul></li>
+<li><p><strong><em>Quiz 7</em></strong></p></li>
 </ul>
 <hr />
 <p><strong>Week 11: (Oct 31 – Nov 04)</strong></p>
@@ -413,7 +420,7 @@ Validation</p>
 <li>9.2 Surgical Unit Example</li>
 <li>9.3 Criteria for Model Selection</li>
 </ul></li>
-<li><p><strong><em>Quiz 5</em></strong></p></li>
+<li><p><strong><em>Quiz 8</em></strong></p></li>
 </ul>
 <hr />
 <p><strong>Week 12: (Nov 07 –Nov 11)</strong></p>
@@ -421,10 +428,10 @@ Validation</p>
 <li><p>Chapter 9: Building the Regression Model I: Model Selection and
 Validation</p>
 <ul>
-<li>9.4 Automatic Search Procedures for Model Selection</li>
-<li>9.6 Model Validation</li>
+<li><p>9.4 Automatic Search Procedures for Model Selection</p></li>
+<li><p>9.6 Model Validation</p></li>
+<li><p><strong><em>Test 2 </em></strong></p></li>
 </ul></li>
-<li><p><strong><em>Quiz 6</em></strong></p></li>
 </ul>
 <hr />
 <p><strong>Week 13: (Nov 14 –Nov 18)</strong></p>
@@ -434,11 +441,6 @@ Validation</p>
 and complete the note</li>
 <li>Watch <a href="https://youtu.be/wbCNuuN7i-A">9.6 lecture</a> and
 complete the note</li>
-</ul>
-<p><strong>Thursday:</strong></p>
-<ul>
-<li><strong><em>Test 2 </em></strong> (Please read the instructions
-below)</li>
 </ul>
 <p><!--
       * Log into the class zoom meeting at 2PM
