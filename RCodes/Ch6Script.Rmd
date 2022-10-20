@@ -49,9 +49,10 @@ range(Credit$Income)
 
 
 ```{r}
-#DwaineData <- read.table("https://people.stat.sc.edu/Hitchcock/studiodata.txt", sep ="" , header = FALSE)
 
-DwaineData <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%20%206%20Data%20Sets/CH06FI05.txt", sep ="" , header = FALSE)
+DwaineData <- read.table("https://people.stat.sc.edu/Hitchcock/studiodata.txt", sep ="" , header = FALSE)
+
+#DwaineData <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%20%206%20Data%20Sets/CH06FI05.txt", sep ="" , header = FALSE)
 
 #DwaineData <- read.table("https://people.stat.sc.edu/Hitchcock/studiodata.txt", sep ="" , header = FALSE)
 
@@ -63,7 +64,6 @@ head(DwaineData)
 dim(DwaineData)
 
 pairs(DwaineData)
-
 
 ```
 
@@ -121,9 +121,10 @@ bptest(DwaineModel, student = FALSE)
 
 
 ```{r comment=NA, warning=FALSE, message=FALSE}
+
 # Problem 5 from exercises
 
-p5 <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%20%206%20Data%20Sets/CH06PR05.txt", sep ="" , header = FALSE)
+p5 <- read.table("http://www.cnachtsheim-text.csom.umn.edu/Kutner/Chapter%20%206%20Data%20Sets/CH06PR05.txt", sep ="" , header = FALSE)
 
 
 p5Data <- data.frame(p5)
@@ -157,9 +158,10 @@ anova (Reduced, Full)
 ### F Test for Regression Relation, Problem 6.6 in the exercises
 
 ```{r comment=NA, warning=FALSE, message=FALSE}
+
 library(Matrix)
 
-p5 <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%20%206%20Data%20Sets/CH06PR05.txt", sep ="" , header = FALSE)
+p5 <- read.table("http://www.cnachtsheim-text.csom.umn.edu/Kutner/Chapter%20%206%20Data%20Sets/CH06PR05.txt", sep ="" , header = FALSE)
 
 
 p5Data <- data.frame(p5)
