@@ -286,7 +286,7 @@ p5model <- lm(y~x1+x2, data = p5Data)
 
 # prediction interval for the new observation x1 = 2, x2 = 4; x1 = 3, x2 = 3
 
-xnew <- matrix(c(2,4,3,3), nrow = 2, byrow = TRUE)
+xnew <- matrix(c(2,4), nrow = 1, byrow = TRUE)
 xnew <- data.frame(xnew)
 xnew
 
