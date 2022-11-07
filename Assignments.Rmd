@@ -236,7 +236,9 @@ output:
   ***  
 
   
-**Final Exam (TBA)**
+**Final Exam **
+
+* Tuesday December 13th 11:00 am to 1:30pm
 <!--
   * [Data set for question 1](question1.txt)
   * [Data set for question 2](question2.txt)
