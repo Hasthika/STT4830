@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Getting data -- Programming Task Example (examples 3 and 4 in the note)
 
 ```{r comment=NA, warning=FALSE, message=FALSE}
-progTaskData <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%2014%20Data%20Sets/CH14TA01.txt", sep ="" , header = FALSE)
+progTaskData <- read.table("http://www.cnachtsheim-text.csom.umn.edu/Kutner/Chapter%2014%20Data%20Sets/CH14TA01.txt", sep ="" , header = FALSE)
 progTaskData
 progTaskData <- progTaskData[,1:2] # Remove the last column to make the data set more practical
 
@@ -92,7 +92,7 @@ OR
 ## Repeat Observations-Binomial Outcomes
 
 ```{r comment=NA, warning=FALSE, message=FALSE}
-CouponData <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%2014%20Data%20Sets/CH14TA02.txt", sep ="" , header = FALSE)
+CouponData <- read.table("http://www.cnachtsheim-text.csom.umn.edu/Kutner/Chapter%2014%20Data%20Sets/CH14TA02.txt", sep ="" , header = FALSE)
 head(CouponData)
 
 CouponData <- CouponData[,1:3] # Remove the last column to make the data set more practical
@@ -164,7 +164,7 @@ OR
 ### Example 6 part 1
 
 ```{r comment=NA, warning=FALSE, message=FALSE}
-DiseaseData <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%2014%20Data%20Sets/CH14TA03.txt", sep ="" , header = FALSE)
+DiseaseData <- read.table("http://www.cnachtsheim-text.csom.umn.edu/Kutner/Chapter%2014%20Data%20Sets/CH14TA03.txt", sep ="" , header = FALSE)
 head(DiseaseData)
 dim(DiseaseData)
 
@@ -237,7 +237,7 @@ lrtest(DiseaseModelFull, DiseaseModelReduced)
 ## Example 10 (Best subsets procedures)
 
 
-```{r}
+```{r warning=FALSE}
 library(olsrr)
 # To obtain the set of plots in page 362 
 DiseaseModelAll <- lm(y ~ x1 + x2 + x3 + x4, data = DiseaseData)
@@ -267,7 +267,7 @@ tabAIC_SBC[order(tabAIC_SBC$SBC),]
 
 
 ```{r comment=NA, warning=FALSE, message=FALSE}
-CouponData <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%2014%20Data%20Sets/CH14TA02.txt", sep ="" , header = FALSE)
+CouponData <- read.table("http://www.cnachtsheim-text.csom.umn.edu/Kutner/Chapter%2014%20Data%20Sets/CH14TA02.txt", sep ="" , header = FALSE)
 head(CouponData)
 
 CouponData <- CouponData[,1:3] # Remove the last column to make the data set more practical
@@ -325,7 +325,7 @@ p_value
 ## Prediction of a New Observation
 
 ```{r comment=NA, warning=FALSE, message=FALSE}
-DiseaseData <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%2014%20Data%20Sets/CH14TA03.txt", sep ="" , header = FALSE)
+DiseaseData <- read.table("http://www.cnachtsheim-text.csom.umn.edu/Kutner/Chapter%2014%20Data%20Sets/CH14TA03.txt", sep ="" , header = FALSE)
 head(DiseaseData)
 dim(DiseaseData)
 
@@ -394,7 +394,7 @@ as.data.frame(classifi_table)
 ## Miller Lumber Company Example.
 
 ```{r comment=NA, warning=FALSE, message=FALSE, include=FALSE}
-LumberData <- read.table("http://users.stat.ufl.edu/~rrandles/sta4210/Rclassnotes/data/textdatasets/KutnerData/Chapter%2014%20Data%20Sets/CH14TA14.txt", sep ="" , header = FALSE)
+LumberData <- read.table("http://www.cnachtsheim-text.csom.umn.edu/Kutner/Chapter%2014%20Data%20Sets/CH14TA14.txt", sep ="" , header = FALSE)
 head(LumberData)
 dim(LumberData)
 
