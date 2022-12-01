@@ -122,16 +122,6 @@ Turn in your homework only as a *pdf* created in $R$. No handwritten work please
 
 Turn in your homework only as a *pdf* created in $R$. No handwritten work please!
 
-
-
-
-***
-
-
-#### ***Homework 8*: Due Thursday, November 9th**
-
-Turn in your homework only as a *pdf* created in $R$. No handwritten work please!
-
 1) 9.10
 2) 9.11
 3) 9.18 (Ignore the second half of the part a))
@@ -153,17 +143,19 @@ Turn in your homework only as a *pdf* created in $R$. No handwritten work please
 
 ***
 
-#### ***Homework 9*: Due Thursday, November 16th**
+#### ***Homework 8*: Due Thursday, November 16th**
 
 Turn in your homework only as a *pdf* created in $R$. No handwritten work please!
 
 1) 14.7
 2) 14.11
-3) 14.12
-4) 14.18
+3) 14.18
+4) 14.20
+5) 14.22
 
 ***
 
+<!--
 #### ***Homework 10*: Due Thursday, November 30th**
 
 Turn in your homework only as a *pdf* created in $R$. No handwritten work please!
@@ -171,11 +163,12 @@ Turn in your homework only as a *pdf* created in $R$. No handwritten work please
 5) 14.14
 6) 14.20
 7) 14.22
+Removed 14. 12 and 14.14 from F2022 hw number 8 and combined two of the hw
 
 
 
 ***
-
+-->
 
 ## **Textbook**
 [Download PFD textbook here](4830_Textbook.pdf)

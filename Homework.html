@@ -14,7 +14,7 @@
 
 <title>Homework for STT 4830 - Fall 2022</title>
 
-<script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
@@ -182,8 +182,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -191,16 +191,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -281,7 +274,7 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">Homework for STT 4830 - Fall 2022</h1>
 <h4 class="author">Dr. Lasanthi Watagoda</h4>
-<h4 class="date">Last Updated on: Sep 29, 2022 at 12:46:14 PM</h4>
+<h4 class="date">Last Updated on: Dec 01, 2022 at 06:27:44 AM</h4>
 
 </div>
 
@@ -457,13 +450,6 @@ class="math inline">\(R\)</span>. No handwritten work please!</p>
 26th</strong></h4>
 <p>Turn in your homework only as a <em>pdf</em> created in <span
 class="math inline">\(R\)</span>. No handwritten work please!</p>
-<hr />
-</div>
-<div id="homework-8-due-thursday-november-9th" class="section level4">
-<h4><strong><em>Homework 8</em>: Due Thursday, November
-9th</strong></h4>
-<p>Turn in your homework only as a <em>pdf</em> created in <span
-class="math inline">\(R\)</span>. No handwritten work please!</p>
 <ol style="list-style-type: decimal">
 <li>9.10</li>
 <li>9.11</li>
@@ -483,30 +469,33 @@ Turn in your homework only as a *pdf* created in $R$. No handwritten work please
 -->
 <hr />
 </div>
-<div id="homework-9-due-thursday-november-16th" class="section level4">
-<h4><strong><em>Homework 9</em>: Due Thursday, November
+<div id="homework-8-due-thursday-november-16th" class="section level4">
+<h4><strong><em>Homework 8</em>: Due Thursday, November
 16th</strong></h4>
 <p>Turn in your homework only as a <em>pdf</em> created in <span
 class="math inline">\(R\)</span>. No handwritten work please!</p>
 <ol style="list-style-type: decimal">
 <li>14.7</li>
 <li>14.11</li>
-<li>14.12</li>
 <li>14.18</li>
-</ol>
-<hr />
-</div>
-<div id="homework-10-due-thursday-november-30th" class="section level4">
-<h4><strong><em>Homework 10</em>: Due Thursday, November
-30th</strong></h4>
-<p>Turn in your homework only as a <em>pdf</em> created in <span
-class="math inline">\(R\)</span>. No handwritten work please!</p>
-<ol start="5" style="list-style-type: decimal">
-<li>14.14</li>
 <li>14.20</li>
 <li>14.22</li>
 </ol>
 <hr />
+<!--
+#### ***Homework 10*: Due Thursday, November 30th**
+
+Turn in your homework only as a *pdf* created in $R$. No handwritten work please!
+
+5) 14.14
+6) 14.20
+7) 14.22
+Removed 14. 12 and 14.14 from F2022 hw number 8 and combined two of the hw
+
+
+
+***
+-->
 </div>
 <div id="textbook" class="section level2">
 <h2><strong>Textbook</strong></h2>
