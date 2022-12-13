@@ -2471,6 +2471,59 @@ Y = 1        8       23</code></pre>
 <h1>Poisson Regression</h1>
 <div id="miller-lumber-company-example." class="section level2">
 <h2>Miller Lumber Company Example.</h2>
+<pre class="r"><code>LumberData &lt;- read.table(&quot;http://www.cnachtsheim-text.csom.umn.edu/Kutner/Chapter%2014%20Data%20Sets/CH14TA14.txt&quot;, sep =&quot;&quot; , header = FALSE)
+head(LumberData)</code></pre>
+<pre><code>  V1  V2    V3 V4   V5   V6
+1  9 606 41393  3 3.04 6.32
+2  6 641 23635 18 1.95 8.89
+3 28 505 55475 27 6.54 2.05
+4 11 866 64646 31 1.67 5.81
+5  4 599 31972  7 0.72 8.11
+6  4 520 41755 23 2.24 6.81</code></pre>
+<pre class="r"><code>dim(LumberData)</code></pre>
+<pre><code>[1] 110   6</code></pre>
+<pre class="r"><code># Rename columns
+names(LumberData) &lt;- c( &quot;y&quot;, &quot;x1&quot;, &quot;x2&quot; , &quot;x3&quot;, &quot;x4&quot;, &quot;x5&quot;)
+head(LumberData)</code></pre>
+<pre><code>   y  x1    x2 x3   x4   x5
+1  9 606 41393  3 3.04 6.32
+2  6 641 23635 18 1.95 8.89
+3 28 505 55475 27 6.54 2.05
+4 11 866 64646 31 1.67 5.81
+5  4 599 31972  7 0.72 8.11
+6  4 520 41755 23 2.24 6.81</code></pre>
+<pre class="r"><code># Fitting the poisson regression model
+options(scipen = 999) # You can turn off the Scientific notation with options(scipen = 999) and back on again with options(scipen = 0)
+
+LumberModel &lt;- glm(y ~ x1 + x2 + x3 + x4 + x5, data = LumberData, family = poisson(link = &#39;log&#39;))
+summary(LumberModel)</code></pre>
+<pre><code>
+Call:
+glm(formula = y ~ x1 + x2 + x3 + x4 + x5, family = poisson(link = &quot;log&quot;), 
+    data = LumberData)
+
+Deviance Residuals: 
+     Min        1Q    Median        3Q       Max  
+-2.93195  -0.58868  -0.00009   0.59269   2.23441  
+
+Coefficients:
+                Estimate   Std. Error z value             Pr(&gt;|z|)    
+(Intercept)  2.942437968  0.207247707  14.198 &lt; 0.0000000000000002 ***
+x1           0.000605767  0.000142121   4.262  0.00002023116145084 ***
+x2          -0.000011686  0.000002112  -5.534  0.00000003129249634 ***
+x3          -0.003726472  0.001781917  -2.091               0.0365 *  
+x4           0.168382986  0.025768998   6.534  0.00000000006389741 ***
+x5          -0.128773790  0.016201737  -7.948  0.00000000000000189 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+(Dispersion parameter for poisson family taken to be 1)
+
+    Null deviance: 422.22  on 109  degrees of freedom
+Residual deviance: 114.99  on 104  degrees of freedom
+AIC: 571.02
+
+Number of Fisher Scoring iterations: 4</code></pre>
 </div>
 </div>
 

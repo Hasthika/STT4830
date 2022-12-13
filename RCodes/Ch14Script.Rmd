@@ -393,7 +393,7 @@ as.data.frame(classifi_table)
 
 ## Miller Lumber Company Example.
 
-```{r comment=NA, warning=FALSE, message=FALSE, include=FALSE}
+```{r comment=NA, warning=FALSE, message=FALSE}
 LumberData <- read.table("http://www.cnachtsheim-text.csom.umn.edu/Kutner/Chapter%2014%20Data%20Sets/CH14TA14.txt", sep ="" , header = FALSE)
 head(LumberData)
 dim(LumberData)
