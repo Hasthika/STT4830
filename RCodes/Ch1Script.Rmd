@@ -38,6 +38,7 @@ colnames(toluca) <- c("lotSize", "hours")
 
 #Look at the first 6 entries
 #head(toluca)
+
 ```
 
 ### Creating a scatter plot 

@@ -12,7 +12,7 @@ output:
 
 ***
 
-**Week 1: (August 22 -- 26)**
+**Week 1: (August 21 -- 25)**
 
 * Go over syllabus.
 * Chapter 1: Linear Regression With One Predictor Variable
@@ -24,7 +24,7 @@ output:
 
 ***
 
-**Week 2: (August 29 -- September 2)**
+**Week 2: (August 28 -- September 1)**
 
 * Chapter 1: Linear Regression With One Predictor Variable
 
@@ -34,7 +34,7 @@ output:
     
 ***
 
-**Week 3: (September 5 -- Sep 9)**
+**Week 3: (September 4 -- Sep 8)**
 
 * Chapter 1: Linear Regression With One Predictor Variable
 
@@ -53,7 +53,7 @@ output:
     
 ***
 
-**Week 4: (Sep 12  -- Sep 16)**
+**Week 4: (Sep 11  -- Sep 15)**
  
 * Chapter 5: Matrix Approach to Simple Linear Regression Analysis
 
@@ -66,7 +66,7 @@ output:
     
 ***
 
-**Week 5: (Sep 19  -- Sep 23)**
+**Week 5: (Sep 18  -- Sep 22)**
  
 * Chapter 5: Matrix Approach to Simple Linear Regression Analysis  
     * 5.11  Fitted Values and Residuals
@@ -81,7 +81,7 @@ output:
     
 ***
 
-**Week 6: (Sep 26  -- Sep 30)**
+**Week 6: (Sep 25  -- Sep 29)**
 
 * Chapter 3: Diagnostics and Remedial Measures
  * 3.3  Diagnostics for Residuals
@@ -93,7 +93,7 @@ output:
 
 ***
 
-**Week 7: (Oct 03  -- Oct 07)**
+**Week 7: (Oct 02  -- Oct 06)**
 
 * Chapter 3: Diagnostics and Remedial Measures
 
@@ -108,7 +108,7 @@ output:
  
 ***
 
-**Week 8: (Oct 10  -- Oct 14)**
+**Week 8: (Oct 9  -- Oct 13)**
 
 * Chapter 3: Diagnostics and Remedial Measures
     
@@ -119,7 +119,7 @@ output:
  
 ***
 
-**Week 9: (Oct 17  -- Oct 21)**
+**Week 9: (Oct 16  -- Oct 20)**
 
 * No Class Tuesday (Fall Break)
 
@@ -134,7 +134,7 @@ output:
    
 ***
 
-**Week 10: (Oct 24  -- Oct 28)**
+**Week 10: (Oct 23  -- Oct 27)**
 
 * Chapter 6:  Multiple Regression
 
@@ -149,7 +149,7 @@ output:
 ***
 
     
-**Week 11: (Oct 31  -- Nov 04)**
+**Week 11: (Oct 30  -- Nov 03)**
 
 * Chapter 9:  Building the Regression Model I: Model Selection and Validation
 
@@ -163,7 +163,7 @@ output:
 
 ***
 
-**Week 12: (Nov 07  --Nov 11)**
+**Week 12: (Nov 06  --Nov 10)**
 
 * Chapter 9:  Building the Regression Model I: Model Selection and Validation
 
@@ -176,13 +176,15 @@ output:
 
 ***
 
-**Week 13: (Nov 14  --Nov 18)**
+**Week 13: (Nov 13  --Nov 17)**
 
-**Tuesday:**
+  * 14.1 Regression Models with Binary Response Variable
+  * 14.2 Sigmoidal Response Functions for Binary Responses
 
+  <!--
   * Watch [9.3 and 9.4 lecture](https://youtu.be/NoR2mXcMxas) and complete the note
   * Watch [9.6 lecture](https://youtu.be/wbCNuuN7i-A) and complete the note
-
+   --> 
 
 
 
@@ -197,13 +199,16 @@ output:
 
  ***
 
-**Week 14: (Nov 21  --Nov 25)**
+**Week 14: (Nov 20  --Nov 24)**
 
 **Tuesday:**
 
+<!--
+
   * Watch [14.1 Regression Models with Binary Response Variable
   and 14.2 Sigmoidal Response Functions for Binary Responses](https://youtu.be/yqdTYICcBF4)
-  
+-->
+
   
   * 14.3 Simple Logistic Regression
   * 14.4 Multiple Logistic Regression
@@ -217,9 +222,9 @@ output:
 * No Class Thursday - state holiday
 
 
-  ***
+***
 
-**Week 15: (Nov 28  --Dec 02)**
+**Week 15: (Nov 27  --Dec 01)**
 
   * 14.6 Automatic Model Selection Methods
   * 14.7 Tests for Goodness of Fit
@@ -227,22 +232,23 @@ output:
   
 * ***Quiz 8***
 
-  ***
+***
 
-**Week 16: (Dec 5  --Dec 06)**
+**Week 16: (Dec 04  --Dec 05)**
 
-* Dec 06 is Last day of class
+* Dec 05 is Last day of class
 
-  ***  
+***  
 
   
 **Final Exam **
 
-* Tuesday December 13th 11:00 am to 1:30pm
+* Tuesday December 12th 08:00 am to 10:30 am
+
 <!--
   * [Data set for question 1](question1.txt)
   * [Data set for question 2](question2.txt)
   * [Data set for question 3](question3.txt)
 -->
 
-  ***
+***
