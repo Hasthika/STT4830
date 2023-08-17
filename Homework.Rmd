@@ -49,6 +49,7 @@ Determine the LS equation for the model $y_i = \beta_0 + \beta_1x_i + \epsilon_i
 
 ***
 
+<!--
 
 #### ***Homework 2*: Due Thursday, September 15th**
 
@@ -140,7 +141,7 @@ Turn in your homework only as a *pdf* created in $R$. No handwritten work please
 
 -->
 
-
+<!--
 ***
 
 #### ***Homework 8*: Due Thursday, December 6th**
@@ -169,6 +170,8 @@ Removed 14. 12 and 14.14 from F2022 hw number 8 and combined two of the hw
 
 ***
 -->
+
+
 
 ## **Textbook**
 [Download PFD textbook here](4830_Textbook.pdf)
