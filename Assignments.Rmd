@@ -12,6 +12,7 @@ output:
 
 ***
 
+
 **Week 1: (August 21 -- 25)**
 
 * Go over syllabus.
