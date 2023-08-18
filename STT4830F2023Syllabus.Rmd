@@ -1,11 +1,10 @@
 ---
 title: "Syllabus: STT 4830 - Linear Regression Models"
-
 author: "Syllabus - Fall 2023"
 date: ""
 output:
   html_document:
-    css: asu.css
+    css: "style.css"
     highlight: textmate
     theme: yeti
 ---
@@ -61,10 +60,10 @@ As we are trying to make this experience as close to a regular class as possible
 **Course Grading:**
 
 * 20% of the grade will come from Homework.
-* 30% of the course grade will come from Quizzes.
+* 25% of the course grade will come from Quizzes.
 * 30% of the grade will come from the Mid-Exams.
 * 20% of the grade will come from the Final.
-* 05% extra credit will come from Attendance.
+* 05% of the grade will come from Attendance.
 
 | Range | Letter Grade | Range | Letter Grade | 
 |----------------|---------------------|----------------|---------------------|
