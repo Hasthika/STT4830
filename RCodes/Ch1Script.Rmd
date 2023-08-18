@@ -1,8 +1,10 @@
 ---
-title: "Finding LS estimates in $R$"
-author: " Dr. Hasthika Rupasinghe"
+title:  "Finding LS estimates in $R$"
+author: Dr. Hasthika Rupasinghe
 date: "August 22th 2023"
-output: html_document
+output:
+  rmdformats::readthedown:
+    toc_depth: 3
 ---
 
 ```{r setup, include=FALSE, comment=NA, warning=FALSE, message=FALSE}
@@ -10,15 +12,6 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ### Read data from an URL
-
-```{r comment=NA, warning=FALSE, message=FALSE}
-toluca <- read.table ("http://www.cnachtsheim-text.csom.umn.edu/Kutner/Chapter%20%201%20Data%20Sets/CH01TA01.txt", sep ="" , header = FALSE)
-#toluca
-
-```
-
-
-
 
 
 ```{r comment=NA, warning=FALSE, message=FALSE}
@@ -68,21 +61,32 @@ ggplot(toluca, aes(x = lotSize, y = hours)) +
 ### Finding the LS estimates
 ```{r comment=NA, warning=FALSE, message=FALSE}
 toluca_LS_model <- lm(hours ~ lotSize, data = toluca)
-summary(toluca_LS_model)
+summary_toluca_LS_model <- summary(toluca_LS_model)
+summary_toluca_LS_model
 ```
 
 ### Finding fitted values $\hat{y_i}$, and residuals $e_i =(y_i-\hat{y_i})$
 
 ```{r comment=NA, warning=FALSE, message=FALSE}
-library(moderndive)
-Fittedandresiduals <-get_regression_points(toluca_LS_model)
-Fittedandresiduals
+#Method 1
+#library(moderndive)
+#Fittedandresiduals <-get_regression_points(toluca_LS_model)
+#Fittedandresiduals
+
+#Method 2
+#Simply use the summary_toluca_LS_model object to get residuals and fitted values
+
 ```
 
 ### Calculating $SSE = \sum (y_i-\hat{y_i})^2$
 
 ```{r comment=NA, warning=FALSE, message=FALSE}
-sum_of_square_of_residuals <- sum(Fittedandresiduals$residual^2)
+#Using method 1 above
+#sum_of_square_of_residuals <- sum(Fittedandresiduals$residual^2)
+#sum_of_square_of_residuals
+
+#Using method 2
+sum_of_square_of_residuals <- sum(summary_toluca_LS_model$residuals^2)
 sum_of_square_of_residuals
 ```
 
