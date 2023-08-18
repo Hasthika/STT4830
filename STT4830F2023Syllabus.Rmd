@@ -16,8 +16,7 @@ output:
 
 **Office:** WA 324
 
-**Office Hours:** 
-
+**Office Hours:** In-person: Wednesday 01:00 - 03:00PM, Zoom: Tuesday, Thursday 11:15 - 12:15PM (Click [here](https://appstate.zoom.us/j/92132935945?pwd=SmlZVHk4Wk1MdWlKTDIrdzYzVWhmQT09)) Use the passcode: 642485
 
 <!--Questions related to the class should be addressed with the [piazza account for STT 3851](https://piazza.com/appstate/spring2018/stat3851/home).-->
 
