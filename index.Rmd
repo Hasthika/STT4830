@@ -10,7 +10,7 @@ title: "Welcome"
 
 * [`R Codes`](RcodesbyChapter.html)
 
-* [`Homework`](Homework.html) - *Homework is usually due every Thursday*
+* [`Homework`](Homework.html) - *Homework is usually due every Tuesday*
 
 
 * Click [`here`](https://forms.gle/u2f5gqa7wTHLjieYA) to record your attendance

@@ -75,7 +75,7 @@ summary_toluca_LS_model
 
 #Method 2
 #Simply use the summary_toluca_LS_model object to get residuals and fitted values
-
+summary_toluca_LS_model$residuals
 ```
 
 ### Calculating $SSE = \sum (y_i-\hat{y_i})^2$
