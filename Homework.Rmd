@@ -49,9 +49,9 @@ Determine the LS equation for the model $y_i = \beta_0 + \beta_1x_i + \epsilon_i
 
 ***
 
-<!--
 
-#### ***Homework 2*: Due Thursday, September 15th**
+
+#### ***Homework 2*: Due Thursday, September 12th**
 
 *Note: In order to receive full credit, please explain your answers well. Simple yes/no answers will not be given credit.*
 
@@ -64,9 +64,11 @@ Determine the LS equation for the model $y_i = \beta_0 + \beta_1x_i + \epsilon_i
 
 ***
 
+<!--
+
 #### ***Homework 3*: Due Thursday, September 22nd**
 
-You are turning in two files. 1. Hand written work. 2. A pdf created by Rmarkdown for the problems where it says "Use R to check your answers".
+You are turning in two files. 1. Hand written work. 2. A printed pdf created by Rmarkdown for the problems where it says "Use R to check your answers".
 
 1) *5.1*  (Show work by hand calculations. Use R to check your answers)
 2) *5.3*  (Hand calculations only)
