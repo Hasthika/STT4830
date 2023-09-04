@@ -1,9 +1,12 @@
 ---
-title: "Matrix Approach to Simple Linear Regression in $R$"
-author: ""
-date: ""
-output: html_document
+title:  "Matrix Approach to Simple Linear Regression in $R$"
+author: Dr. Hasthika Rupasinghe
+date: "August 22th 2023"
+output:
+  rmdformats::readthedown:
+    toc_depth: 3
 ---
+
 
 ```{r setup, include=FALSE, comment=NA, warning=FALSE, message=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
