@@ -55,35 +55,35 @@ Determine the LS equation for the model $y_i = \beta_0 + \beta_1x_i + \epsilon_i
 
 *Note: In order to receive full credit, please explain your answers well. Simple yes/no answers will not be given credit.*
 
-1) 1.19 (For part b., use $R$)
-2) 1.20 (For part b., use $R$)
-3) 1.23
-4) 1.24
+1) 1.19 (use $R$ as needed)
+2) 1.20 (use $R$ as needed)
+3) 1.23 (use $R$ as needed)
+4) 1.24 (use $R$ as needed)
 
+
+
+
+***
+
+
+
+#### ***Homework 3*: Due Thursday, September 19th**
+
+*You are turning in two files. 1. Hand written work. 2. A printed pdf created by Rmarkdown for the problems where it says "Use R to check your answers".*
+
+1) *5.1*  (Show work by hand calculations. Use R to check your answers)
+2) *5.3*  (Hand calculations only)
+3) *5.4*  (Show work by hand calculations. Use R to check your answers)
+4) *5.6*  (Show work by hand calculations. Use R to check your answers)
+5) *5.10* (Hand calculations are encouraged but using R would be easier. I will accept the answer either way)
+6) *5.12* (Hand calculations are encouraged but using R would be easier. I will accept the answer either way)
+7) *5.14* (Hand calculations are encouraged but using R would be easier. I will accept the answer either way)
 
 
 
 ***
 
 <!--
-
-#### ***Homework 3*: Due Thursday, September 22nd**
-
-You are turning in two files. 1. Hand written work. 2. A printed pdf created by Rmarkdown for the problems where it says "Use R to check your answers".
-
-1) *5.1*  (Show work by hand calculations. Use R to check your answers)
-2) *5.3*  (Hand calculations only)
-3) *5.4*  (Show work by hand calculations. Use R to check your answers)
-4) *5.6*  (Show work by hand calculations. Use R to check your answers)
-5) *5.10* (Hand calculations are fine but using R would be easier. I will accept the answer either way)
-6) *5.12* (Hand calculations are fine but using R would be easier. I will accept the answer either way)
-7) *5.14* (Hand calculations are fine but using R would be easier. I will accept the answer either way)
-
-
-
-***
-
-
 
 #### ***Homework 4*: Due Thursday, September 29th**
 Turn in your homework only as a *pdf* created in $R$. No handwritten work please!
