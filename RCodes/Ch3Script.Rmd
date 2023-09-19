@@ -1,11 +1,12 @@
 ---
-title: "Diagnostics and Remedial Measures in $R$"
-author: ""
-date: ""
-output: 
-  html_document:
-    number_sections: true
+title:  "Diagnostics and Remedial Measures in $R$"
+author: Dr. Hasthika Rupasinghe
+date: "August 22th 2023"
+output:
+  rmdformats::readthedown:
+    toc_depth: 3
 ---
+
 
 ```{r setup, include=FALSE, comment=NA, warning=FALSE, message=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -54,8 +55,14 @@ ggplot(data = tolucaDF, aes(x = lotSize)) + geom_dotplot(color = "blue", fill = 
 The Sequence plot for the lot sizes in the Toluca Company example.
 
 ```{r}
-plot(tolucaDF$lotSize, type = "b", lty = 2, xlab = "Run", ylab = "Lot Size")
-title("Sequence Plot")
+#plot(tolucaDF$lotSize, type = "b", lty = 2, xlab = "Run", ylab = "Lot Size") title("Sequence Plot")
+
+tolucaDF$rank <- c(1:25)
+ggplot(data = tolucaDF, aes(x = rank, y = lotSize )) +
+geom_point(color = "blue") +
+theme_bw()+
+geom_line()+
+ggtitle("Sequence Plot")
 ```
 
 ## Stem-and-leaf plot

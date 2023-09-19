@@ -16,10 +16,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 #### 2) [R Codes for Chapter 5](./RCodes/Ch5Script.html)
 
-
-<!--
 #### 3) [R Codes for Chapter 3](./RCodes/Ch3Script.html)
 
+
+<!--
 
 #### 4) [R Codes for Chapter 6](./RCodes/Ch6Script.html)
 
