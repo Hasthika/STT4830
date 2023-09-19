@@ -1,5 +1,5 @@
 ---
-title:  "Diagnostics and Remedial Measures in $R$"
+title:  "Diagnostics and Remedial Measures in $R$ "
 author: Dr. Hasthika Rupasinghe
 date: "August 22th 2023"
 output:
@@ -23,7 +23,7 @@ head(toluca)
 ```
 
 
-# Rename columns {-}
+# Rename columns{-}
 
 ```{r comment=NA, warning=FALSE, message=FALSE}
 colnames(toluca) <- c("lotSize", "hours")
