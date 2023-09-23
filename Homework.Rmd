@@ -83,33 +83,33 @@ Determine the LS equation for the model $y_i = \beta_0 + \beta_1x_i + \epsilon_i
 
 ***
 
-<!--
-
-#### ***Homework 4*: Due Thursday, September 29th**
-Turn in your homework only as a *pdf* created in $R$. No handwritten work please!
+#### ***Homework 4*: Due Tuesday, September 26th**
+Turn in your homework only as a printed *pdf* created in $R$. No handwritten work please!
 
 1) Refer to $\textbf{consumer finance}$ problems 5.5 and 5.13 in the text book.
- a) Using matrix methods, obtain the vector of estimated regression coefficients and vector of residuals. 
+ a) Using the matrix method, obtain the vector of estimated regression coefficients and vector of residuals. 
  b) Find the hat matrix $\bf{H}$.
  c) Find $s^2(e)$.
  
  
-2) Refer to $\textbf{Plastic hardness} Problems 1.22 and 5.7. Using matrix methods, obtain the following: 
-  (a) $(X' X)^{-1}$
+2) Refer to $\textbf{Plastic hardness}$ Problems 1.22 and 5.7. Using matrix methods, obtain the following: 
+  (a) $(\bf{X' X})^{-1}$
   (b) $\bf{b}$
   (c) $\bf{\hat{Y}}$
   (d) $\bf{e}$ 
   (e) $\bf{H}$ 
   
 
-#### ***Homework 5*: Due Thursday, October 12th**
-Turn in your homework only as a *pdf* created in $R$. No handwritten work please!
+#### ***Homework 5*: Due Tuesday, October 3rd**
+Turn in your homework only as a printed *pdf* created in $R$. No handwritten work please!
 
 1) 3.3 - Note: for part e) conduct the Breusch-Pagan test instead Brown-Forsythe test using $\alpha = 0.01$
 2) 3.4
 3) 3.11
 4) 3.15
 5) 3.17
+
+<!--
 
 #### ***Homework 6*: Due Thursday, October 19th**
 

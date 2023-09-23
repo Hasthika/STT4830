@@ -128,7 +128,7 @@ cbind(
   "Residual"                   = round(resid(toluca_LS_model), 2), # rounding upresiduals to 2 decimal places
   "Rank"                       = rank(resid(toluca_LS_model)), # this is where we find k value
   "Exp. Value under Normality" = round(sqrt(deviance(toluca_LS_model) / df.residual(toluca_LS_model)) * 
-                                       qnorm((rank(resid(toluca_LS_model)) - 0.375) / (nrow(tolucaDF) + 0.25)), 2)) # deviance funtion finds the SSE and to find MSE we need to divide it by d.f. Then qnorm givres us the z value of (k-.375/n+.25). Again we have use round funtion to get final results in 2 decimal places.
+                                       qnorm((rank(resid(toluca_LS_model)) - 0.375) / (nrow(tolucaDF) + 0.25)), 2)) # deviance function finds the SSE and to find MSE we need to divide it by d.f. Then qnorm gives us the z value of (k-.375/n+.25). Again we have use round function to get final results in 2 decimal places.
 ```
 
 ## Correlation Test for Normality 
