@@ -120,16 +120,24 @@ ggplot(toluca_LS_model, aes(sample = .resid)) + geom_qq(color = "blue") + geom_q
 
 $\mbox{Exp. Value under Normality} = \sqrt(MSE)[ z(\frac{k-0.375}{n+0.25})]$
 
-Note that MSE can be calculated below as the `SSE / DF`. Here I am using `deviance(toluca_LS_model)`
+Note that MSE can be calculated as the `SSE / DF`. Here I am using `deviance(toluca_LS_model)` to get `SSE` and `df.residual(toluca_LS_model)` to get the `DF`
 
 ```{r comment=NA, warning=FALSE, message=FALSE}
 # Expected value under normality comes from equation (3.6)
-cbind(
+tab <- cbind(
   "Residual"                   = round(resid(toluca_LS_model), 2), # rounding upresiduals to 2 decimal places
   "Rank"                       = rank(resid(toluca_LS_model)), # this is where we find k value
-  "Exp. Value under Normality" = round(sqrt(deviance(toluca_LS_model) / df.residual(toluca_LS_model)) * 
+  "ExpValueunderNormality" = round(sqrt(deviance(toluca_LS_model) / df.residual(toluca_LS_model)) * 
                                        qnorm((rank(resid(toluca_LS_model)) - 0.375) / (nrow(tolucaDF) + 0.25)), 2)) # deviance function finds the SSE and to find MSE we need to divide it by d.f. Then qnorm gives us the z value of (k-.375/n+.25). Again we have use round function to get final results in 2 decimal places.
+
+tab
 ```
+
+```{r include=FALSE}
+
+ggplot(data.frame(tab), aes(y = Residual, x = ExpValueunderNormality)) + geom_point()
+```
+
 
 ## Correlation Test for Normality 
 

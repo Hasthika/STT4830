@@ -1474,40 +1474,44 @@ F-statistic: 105.9 on 1 and 23 DF,  p-value: 4.449e-10</code></pre>
 <h2>Nonnormality of Error Terms</h2>
 <p><span class="math inline">\(\mbox{Exp. Value under Normality} =
 \sqrt(MSE)[ z(\frac{k-0.375}{n+0.25})]\)</span></p>
-<p>Note that MSE can be calculated below as the <code>SSE / DF</code>.
-Here I am using <code>deviance(toluca_LS_model)</code></p>
+<p>Note that MSE can be calculated as the <code>SSE / DF</code>. Here I
+am using <code>deviance(toluca_LS_model)</code> to get <code>SSE</code>
+and <code>df.residual(toluca_LS_model)</code> to get the
+<code>DF</code></p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="co"># Expected value under normality comes from equation (3.6)</span></span>
-<span id="cb18-2"><a href="#cb18-2" tabindex="-1"></a><span class="fu">cbind</span>(</span>
+<span id="cb18-2"><a href="#cb18-2" tabindex="-1"></a>tab <span class="ot">&lt;-</span> <span class="fu">cbind</span>(</span>
 <span id="cb18-3"><a href="#cb18-3" tabindex="-1"></a>  <span class="st">&quot;Residual&quot;</span>                   <span class="ot">=</span> <span class="fu">round</span>(<span class="fu">resid</span>(toluca_LS_model), <span class="dv">2</span>), <span class="co"># rounding upresiduals to 2 decimal places</span></span>
 <span id="cb18-4"><a href="#cb18-4" tabindex="-1"></a>  <span class="st">&quot;Rank&quot;</span>                       <span class="ot">=</span> <span class="fu">rank</span>(<span class="fu">resid</span>(toluca_LS_model)), <span class="co"># this is where we find k value</span></span>
-<span id="cb18-5"><a href="#cb18-5" tabindex="-1"></a>  <span class="st">&quot;Exp. Value under Normality&quot;</span> <span class="ot">=</span> <span class="fu">round</span>(<span class="fu">sqrt</span>(<span class="fu">deviance</span>(toluca_LS_model) <span class="sc">/</span> <span class="fu">df.residual</span>(toluca_LS_model)) <span class="sc">*</span> </span>
-<span id="cb18-6"><a href="#cb18-6" tabindex="-1"></a>                                       <span class="fu">qnorm</span>((<span class="fu">rank</span>(<span class="fu">resid</span>(toluca_LS_model)) <span class="sc">-</span> <span class="fl">0.375</span>) <span class="sc">/</span> (<span class="fu">nrow</span>(tolucaDF) <span class="sc">+</span> <span class="fl">0.25</span>)), <span class="dv">2</span>)) <span class="co"># deviance function finds the SSE and to find MSE we need to divide it by d.f. Then qnorm gives us the z value of (k-.375/n+.25). Again we have use round function to get final results in 2 decimal places.</span></span></code></pre></div>
-<pre><code>   Residual Rank Exp. Value under Normality
-1     51.02   22                      51.97
-2    -48.47    5                     -44.10
-3    -19.88   10                     -14.76
-4     -7.68   11                      -9.76
-5     48.72   21                      44.10
-6    -52.58    4                     -51.97
-7     55.21   23                      61.48
-8      4.02   15                       9.76
-9    -66.39    2                     -74.17
-10   -83.88    1                     -95.90
-11   -45.17    6                     -37.25
-12   -60.28    3                     -61.48
-13     5.32   16                      14.76
-14   -20.77    8                     -25.33
-15   -20.09    9                     -19.93
-16     0.61   14                       4.85
-17    42.53   20                      37.25
-18    27.12   18                      25.33
-19    -6.68   12                      -4.85
-20   -34.09    7                     -31.05
-21   103.53   25                      95.90
-22    84.32   24                      74.17
-23    38.83   19                      31.05
-24    -5.98   13                       0.00
-25    10.72   17                      19.93</code></pre>
+<span id="cb18-5"><a href="#cb18-5" tabindex="-1"></a>  <span class="st">&quot;ExpValueunderNormality&quot;</span> <span class="ot">=</span> <span class="fu">round</span>(<span class="fu">sqrt</span>(<span class="fu">deviance</span>(toluca_LS_model) <span class="sc">/</span> <span class="fu">df.residual</span>(toluca_LS_model)) <span class="sc">*</span> </span>
+<span id="cb18-6"><a href="#cb18-6" tabindex="-1"></a>                                       <span class="fu">qnorm</span>((<span class="fu">rank</span>(<span class="fu">resid</span>(toluca_LS_model)) <span class="sc">-</span> <span class="fl">0.375</span>) <span class="sc">/</span> (<span class="fu">nrow</span>(tolucaDF) <span class="sc">+</span> <span class="fl">0.25</span>)), <span class="dv">2</span>)) <span class="co"># deviance function finds the SSE and to find MSE we need to divide it by d.f. Then qnorm gives us the z value of (k-.375/n+.25). Again we have use round function to get final results in 2 decimal places.</span></span>
+<span id="cb18-7"><a href="#cb18-7" tabindex="-1"></a></span>
+<span id="cb18-8"><a href="#cb18-8" tabindex="-1"></a>tab</span></code></pre></div>
+<pre><code>   Residual Rank ExpValueunderNormality
+1     51.02   22                  51.97
+2    -48.47    5                 -44.10
+3    -19.88   10                 -14.76
+4     -7.68   11                  -9.76
+5     48.72   21                  44.10
+6    -52.58    4                 -51.97
+7     55.21   23                  61.48
+8      4.02   15                   9.76
+9    -66.39    2                 -74.17
+10   -83.88    1                 -95.90
+11   -45.17    6                 -37.25
+12   -60.28    3                 -61.48
+13     5.32   16                  14.76
+14   -20.77    8                 -25.33
+15   -20.09    9                 -19.93
+16     0.61   14                   4.85
+17    42.53   20                  37.25
+18    27.12   18                  25.33
+19    -6.68   12                  -4.85
+20   -34.09    7                 -31.05
+21   103.53   25                  95.90
+22    84.32   24                  74.17
+23    38.83   19                  31.05
+24    -5.98   13                   0.00
+25    10.72   17                  19.93</code></pre>
 </div>
 <div id="correlation-test-for-normality" class="section level2">
 <h2>Correlation Test for Normality</h2>
