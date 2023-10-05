@@ -170,16 +170,24 @@ bankdata <- read.table("http://www.cnachtsheim-text.csom.umn.edu/Kutner/Chapter%
 #Rename clumns
 colnames(bankdata) <- c("minDeposit", "NoNewAccs") # minDeposit - Size of minimum deposit, NoNewAccs - Number of new accounts
 
-#Look at the first 6 entries
-(bankdata)
+bankdata
+```
 
+
+```{r comment=NA, warning=FALSE, message=FALSE}
 #Model
 bankModel <- lm(NoNewAccs~minDeposit, data = bankdata)
 bankModel
+```
 
+
+```{r comment=NA, warning=FALSE, message=FALSE, include=FALSE}
 #ANOVA table
 anova(bankModel)
+```
 
+
+```{r comment=NA, warning=FALSE, message=FALSE}
 #Scatter Plot
 library(ggplot2)
 library(latex2exp)
@@ -190,8 +198,10 @@ ggplot(bankdata, aes(x = minDeposit, y = NoNewAccs)) +
   geom_smooth(method = "lm", se = FALSE) +
   geom_text(aes(x=120, label="yhat = 50.7 + 0.49x", y=85), colour="steelblue", angle=0, text=element_text(size=11)) +
   theme_bw()
+```
 
 
+```{r comment=NA, warning=FALSE, message=FALSE, include=FALSE}
 library(dplyr)
 
 dfbank <- bankdata %>%
