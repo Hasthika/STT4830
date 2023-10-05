@@ -275,7 +275,7 @@ library(dplyr)
 
 # Create a new scatter plot of using transformed data in R
   ggplot(salesTrainTrans, aes(x = daysTrainSqrt, y = performance)) +
-  geom_point(color = "blue") + geom_smooth(method = "lm", se = FALSE)
+  geom_point(color = "blue") + geom_smooth(method = "lm", se = FALSE)+
   labs(x = "Square root of Days", y = "Performance", title = "Sales Training Example scatter plot") +
   theme_bw()
 
