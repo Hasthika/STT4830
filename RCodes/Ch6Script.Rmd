@@ -1,8 +1,10 @@
 ---
-title: "Multiple Regression in $R$"
-author: ""
-date: ""
-output: html_document
+title:  "Multiple Regression in $R$"
+author: Dr. Hasthika Rupasinghe
+date: "Oct 12, 2023"
+output:
+  rmdformats::readthedown:
+    toc_depth: 3
 ---
 
 ```{r setup, include=FALSE, comment=NA, warning=FALSE, message=FALSE}
@@ -49,6 +51,9 @@ range(Credit$Income)
 
 
 ```{r}
+library(ggplot2)
+library(plotly)
+library(GGally)
 
 DwaineData <- read.table("https://people.stat.sc.edu/Hitchcock/studiodata.txt", sep ="" , header = FALSE)
 
@@ -63,7 +68,10 @@ colnames(DwaineData) <- c("TARGTPOP", "DISPOINC", "SALES")
 head(DwaineData)
 dim(DwaineData)
 
-pairs(DwaineData)
+#pairs(DwaineData) # Default Scatterplot matrix. Simple to make
+
+p <- ggpairs(DwaineData, title="Scatterplot matrix")
+ggplotly(p)
 
 ```
 
@@ -72,13 +80,6 @@ pairs(DwaineData)
 
 ```{r}
 cor(DwaineData)
-```
-
-
-```{r}
-# Wanna make it fancy?
-library("GGally")
-ggpairs(DwaineData)
 ```
 
 
@@ -107,8 +108,6 @@ bptest(DwaineModel, student = FALSE)
 
 #Reduced <- lm(SALES ~ TARGTPOP + DISPOINC, data = DwaineData) # This is our usual model
 #summary(Reduced)
-
-
 
 #Full <-  lm(SALES ~ factor(TARGTPOP)*factor(DISPOINC), data = DwaineData) # This is the full model
 #summary(Full)
@@ -150,7 +149,6 @@ $H_0: \mbox{Reduced model is good}$ $\quad$ $H_a: \mbox{Full model is good}$
 ```{r comment=NA, warning=FALSE, message=FALSE}
 
 anova (Reduced, Full)
-
 
 ```
 
