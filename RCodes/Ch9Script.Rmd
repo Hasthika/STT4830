@@ -54,9 +54,15 @@ plot_grid(bp1, bp2,bp3,bp4)
 ## Correlation Matrix
 
 ```{r comment=NA, warning=FALSE, message=FALSE}
+library(plotly)
+library(GGally)
+
 cor(surgicalData[1:4])
 
-pairs(surgicalData[1:4])
+#pairs(surgicalData[1:4])
+
+p <- ggpairs(surgicalData[1:4], title="Scatterplot matrix")
+ggplotly(p)
 ```
 
 ## First order regression model
@@ -105,6 +111,7 @@ cor(model.frame(surgicalModel2))
 
 pairs(model.frame(surgicalModel2), pch = 20, col = "darkgreen")
 ```
+
 All of these plots indicate that each of the predictor variables is Linearly associated with lnY , with X3  and X4 showing the highest
 degrees of association and X1 the lowest. 
 
@@ -141,8 +148,6 @@ tab <- cbind(obj$size, obj$r2)
 tab
 tab <- data.frame(tab)
 tab
-
-
 names(tab) <- c("p", "r2")
 tab 
 
@@ -183,7 +188,6 @@ obj
 tab <- cbind(obj$size, obj$adjr2)
 tab <- data.frame(tab)
 tab
-
 names(tab) <- c("p", "adjr2")
 tab 
 
@@ -198,7 +202,7 @@ ggplot(data = tab, aes(x=p, y=adjr2)) + geom_point(color = "red") +
 tab2 <- cbind(obj$size, obj$adjr2, obj$which)
 tab2
 
-tab2[which.max(tab2[,2]),] # Anotherway to find the  best subset model using  adjusted r^2 criterion
+tab2[which.max(tab2[,2]),] # Another way to find the  best subset model using  adjusted r^2 criterion
 ```
 
 ## Plot with $C_p$
