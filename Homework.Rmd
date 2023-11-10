@@ -133,15 +133,15 @@ Turn in your homework only as a *pdf* created in $R$. No handwritten work please
 
 ***
 
+#### ***Homework 8*: Due Tuesday, November 14th**
+
+
+1) 6.15
+2) 6.16
+3) 6.17
+
+***
 <!--
-
-
-Keep for the next HW
-4) 6.15
-5) 6.16
-6) 6.17
-
-
 
 
 #### ***Homework 7*: Due Thursday, October 26th**
@@ -150,7 +150,7 @@ Turn in your homework only as a *pdf* created in $R$. No handwritten work please
 
 1) 9.10
 2) 9.11
-3) 9.18 (Ignore the second half of the part a))
+3) 9.18 (Ignore the second half of part a))
 4) 9.22
 
 
