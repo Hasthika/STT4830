@@ -1,8 +1,10 @@
 ---
-title: "Chapter 14 – Logistic Regression, Poisson Regression, and Generalized Linear Models"
-author: ""
-date: ""
-output: html_document
+title:  "Chapter 14 – Logistic Regression, Poisson Regression, and Generalized Linear Models"
+author: Dr. Hasthika Rupasinghe
+date: "Nov 14, 2023"
+output:
+  rmdformats::readthedown:
+    toc_depth: 3
 ---
 
 ```{r setup, include=FALSE, comment=NA, warning=FALSE, message=FALSE}
