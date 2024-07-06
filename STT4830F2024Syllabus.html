@@ -9,10 +9,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="" />
+<meta name="author" content="Syllabus - Fall 2024" />
 
 
-<title>R codes by Chapter</title>
+<title>Syllabus: STT 4830 - Linear Regression Models</title>
 
 <script src="site_libs/header-attrs-2.27/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -61,7 +61,7 @@ if (window.hljs) {
 
 
 
-<link rel="stylesheet" href="styles.css" type="text/css" />
+<link rel="stylesheet" href="style.css" type="text/css" />
 
 
 
@@ -272,40 +272,143 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore"><strong>R codes by Chapter</strong></h1>
-<h4 class="author"></h4>
+<h1 class="title toc-ignore">Syllabus: STT 4830 - Linear Regression
+Models</h1>
+<h4 class="author">Syllabus - Fall 2024</h4>
 
 </div>
 
 
+<p><strong>Instructor:</strong> Dr. Hashtika Rupasinghe</p>
+<p><strong>Class meeting:</strong> TR 09:30am - 10:45am, WA 209B</p>
+<p><strong>Office:</strong> WA 324</p>
+<p><strong>Office Hours:</strong> In-person: TBA, Zoom: TBA (Click <a
+href="https://appstate.zoom.us/j/92132935945?pwd=SmlZVHk4Wk1MdWlKTDIrdzYzVWhmQT09">here</a>)
+Use the passcode: 642485</p>
+<!--Questions related to the class should be addressed with the [piazza account for STT 3851](https://piazza.com/appstate/spring2018/stat3851/home).-->
+<p>Prerequisite: MAT 2240 and either STT 3820 or STT 3850.</p>
+<p><strong>Course Description:</strong></p>
+<p>An introduction to least squares estimation for both simple and
+multiple regression models. Linear algebra is used to represent both
+regression models and estimated parameters. Considerable attention is
+given to the analysis of variance, aptness of the model tests, residual
+analysis, the effects of multicollinearity, and variable selection
+procedures. Logistic regression, Poisson regression, and Generalized
+Linear Models are also introduced. Theoretical results will be explored
+with a comprehensive and up to date statistical programming
+language.</p>
+<p><strong>Course Text:</strong></p>
+<p>Course Text: Applied Linear Statistical Models, Fifth Edition.
+Michael H. Kutner, Christopher J. Nachtsheim, John Neter ans William
+Li.</p>
+<p><a href="4830_Textbook.pdf">Download PDF text book here</a></p>
+<p><strong>Required Resources:</strong></p>
+<p>Text book, Note book, notes, pencil, a calculator and access to
+AppState RStudio server</p>
+<p><strong>Homework:</strong> Students are expected to work all assigned
+problems. Only selected assignments or parts of assignments may at times
+be graded. See schedule for the dates.</p>
+<p><strong>Quizzes:</strong> I anticipate giving in class quizzes weekly
+during the semester. See schedule for the dates.
+<!--The lowest quiz grade will be
+dropped when determining the final grade.--></p>
+<p><strong>Tests:</strong> Two mid exams will be given.</p>
+<p><strong>Final Exam:</strong> The final exam will be comprehensive,
+covering all material that is covered in the course.</p>
+<p><strong>Attendance:</strong> Attendance will be taken at the end of
+each class. Students are expected to attend every class. A detailed
+description of the ASU attendance policy can be found at the following
+link, [<a
+href="https://academicaffairs.appstate.edu/resources/syllabi-policy-and-statement-information"
+class="uri">https://academicaffairs.appstate.edu/resources/syllabi-policy-and-statement-information</a>]</p>
+<p>As we are trying to make this experience as close to a regular class
+as possible, interactivity is important. Therefore you are required to
+have your video on and actively participate in all the class
+discussions. — There may be some extra credit allocated for
+participation and attendance.</p>
+<p><strong>Course Grading:</strong></p>
+<ul>
+<li>20% of the grade will come from Homework.</li>
+<li>25% of the course grade will come from Quizzes.</li>
+<li>30% of the grade will come from the Mid-Exams.</li>
+<li>20% of the grade will come from the Final.</li>
+<li>05% of the grade will come from Attendance.</li>
+</ul>
+<table>
+<colgroup>
+<col width="21%" />
+<col width="28%" />
+<col width="21%" />
+<col width="28%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Range</th>
+<th>Letter Grade</th>
+<th>Range</th>
+<th>Letter Grade</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>92.50% and above</td>
+<td>A</td>
+<td>72.50-77.49%</td>
+<td>C</td>
+</tr>
+<tr class="even">
+<td>90.00–92.49%</td>
+<td>A–</td>
+<td>70.00-72.49%</td>
+<td>C–</td>
+</tr>
+<tr class="odd">
+<td>87.50–89.99%</td>
+<td>B+</td>
+<td>67.50-69.99%</td>
+<td>D+</td>
+</tr>
+<tr class="even">
+<td>82.50–87.49%</td>
+<td>B</td>
+<td>62.50-67.49%</td>
+<td>D</td>
+</tr>
+<tr class="odd">
+<td>80.00-82.49%</td>
+<td>B–</td>
+<td>60.00-62.49%</td>
+<td>D–</td>
+</tr>
+<tr class="even">
+<td>77.50-79.99%</td>
+<td>C+</td>
+<td>59.99% and below</td>
+<td>F</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Academic Integrity Policy, Disability Services, and Religious
+Holiday Observance:</strong></p>
+<p>All students must abide by the ASU Academic Integrity Code posted at
+<a
+href="www.studentconduct.appstate.edu/">www.studentconduct.appstate.edu/</a>
+Those seeking accommodations for a disability should contact the Office
+of Disability Services (ODS) at <a
+href="http://www.ods.appstate.edu/">http://www.ods.appstate.edu/</a> or
+828-262-3056. The statements regarding University policies for students
+are posted at <a
+href="http://academicaffairs.appstate.edu/syllabi">http://academicaffairs.appstate.edu/syllabi</a></p>
+<p><strong>University Policies</strong></p>
+<p>This course conforms with all Appalachian State University policies
+with respect to academic integrity, disability services, and class
+attendance. The details of the policies may be found at <a
+href="http://academicaffairs.appstate.edu/resources/syllabi"
+class="uri">http://academicaffairs.appstate.edu/resources/syllabi</a>.</p>
 <hr />
-<div id="r-codes-for-chapter-1" class="section level4">
-<h4>1) <a href="./RCodes/Ch1Script.html">R Codes for Chapter 1</a></h4>
-<hr />
-<!--
-
-#### 2) [R Codes for Chapter 5](./RCodes/Ch5Script.html)
-
-#### 3) [R Codes for Chapter 3](./RCodes/Ch3Script.html)
-
-#### 4) [R Codes for Chapter 6](./RCodes/Ch6Script.html)
-
-#### 5) [R Codes for Chapter 9](./RCodes/Ch9Script.html)
-
-#### 6) [R Codes for Chapter 14](./RCodes/Ch14Script.html)
-
--->
-</div>
-<div id="data-sets" class="section level2">
-<h2><strong>Data sets</strong></h2>
-<div id="click-here-to-get-data-sets-to-use-in-the-assignments"
-class="section level4">
-<h4><a
-href="http://www.cnachtsheim-text.csom.umn.edu/Chapter%20%201%20Data%20Sets.html">Click
-here</a> to get Data sets to use in the assignments</h4>
-<hr />
-</div>
-</div>
+<p>#<a
+href="https://lasanthiwatagoda.github.io/STT4830ClassRepo/index.html">Home
+Page</a></p>
 
 <div id="footer">
      <p><strong>Hasthika Rupasinghe</strong> </br>

@@ -12,7 +12,7 @@ output:
 
 ***
 
-#### ***Homework 1*: Due Tuesday, September 5th**
+#### ***Homework 1*: Due Tuesday, September 4th**
 
 1) (1.2)
 2) (1.5 Give reason for your answer)
@@ -49,7 +49,7 @@ Determine the LS equation for the model $y_i = \beta_0 + \beta_1x_i + \epsilon_i
 
 ***
 
-
+<!--
 
 #### ***Homework 2*: Due Tuesday, September 12th**
 
@@ -154,8 +154,13 @@ Turn in your homework only as a *pdf* created in $R$. No handwritten work please
 4) 9.22
 
 ***
+-->
+
 
 <!--
+
+Old ones
+
 ***
 #### ***Homework 9*: Due Wednesday, November 16th**
 

@@ -1,7 +1,7 @@
 ---
 title:  "Finding LS estimates in $R$"
 author: Dr. Hasthika Rupasinghe
-date: "August 22th 2023"
+date: ""
 output:
   rmdformats::readthedown:
     toc_depth: 3
@@ -30,8 +30,8 @@ head(toluca)
 colnames(toluca) <- c("lotSize", "hours")
 
 #Look at the first 6 entries
-#head(toluca)
-View(toluca)
+head(toluca)
+#View(toluca)
 ```
 
 ### Creating a scatter plot 

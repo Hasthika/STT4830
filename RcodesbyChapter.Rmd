@@ -14,6 +14,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 #### 1) [R Codes for Chapter 1](./RCodes/Ch1Script.html)
 
+***
+
+<!--
+
 #### 2) [R Codes for Chapter 5](./RCodes/Ch5Script.html)
 
 #### 3) [R Codes for Chapter 3](./RCodes/Ch3Script.html)
@@ -24,9 +28,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 #### 6) [R Codes for Chapter 14](./RCodes/Ch14Script.html)
 
+-->
 
 
-***
 
 ## **Data sets**
 #### [Click here](http://www.cnachtsheim-text.csom.umn.edu/Chapter%20%201%20Data%20Sets.html) to get Data sets to use in the assignments 

@@ -4,7 +4,7 @@ title: "Welcome"
 
 ***
 
-* The course syllabus  [`Syllabus`](STT4830F2023Syllabus.html) 
+* The course syllabus  [`Syllabus`](STT4830F2024Syllabus.html) 
 
 *  [`Course Pacing`](Assignments.html) 
 
