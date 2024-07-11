@@ -15,9 +15,13 @@ output:
 
 **Office:** WA 324
 
-**Office Hours:** In-person: TBA, Zoom: TBA (Click [here](https://appstate.zoom.us/j/92132935945?pwd=SmlZVHk4Wk1MdWlKTDIrdzYzVWhmQT09)) Use the passcode: 642485
+**Office Hours:** In-person: Tuesday, Thursday 11:00 - 11:30 AM in WA324, Zoom: Wednesday 09:30 - 11:30 AM (Click [here](https://appstate.zoom.us/j/92132935945?pwd=SmlZVHk4Wk1MdWlKTDIrdzYzVWhmQT09)) Use the passcode: 642485
 
 <!--Questions related to the class should be addressed with the [piazza account for STT 3851](https://piazza.com/appstate/spring2018/stat3851/home).-->
+
+
+
+
 
 
 
