@@ -13,6 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Read data from an URL
 
+The `toluca` data set is coming from the Table 1 in Chapter 1. (`CH01TA01.txt`). To access the data sets go to this url: [http://www.cnachtsheim-text.csom.umn.edu/Chapter%20%201%20Data%20Sets.html](http://www.cnachtsheim-text.csom.umn.edu/Chapter%20%201%20Data%20Sets.html). Use the following set of codes to load the `toluca` data set in to `R`
 
 ```{r comment=NA, warning=FALSE, message=FALSE}
 toluca <- read.table("http://www.cnachtsheim-text.csom.umn.edu/Kutner/Chapter%20%201%20Data%20Sets/CH01TA01.txt", sep ="" , header = FALSE)
