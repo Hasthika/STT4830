@@ -1,0 +1,182 @@
+---
+title: "Final Capstone Project"
+author: "Name:______________________"
+date: "2024-08-18"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Certainly! I'll guide you through implementing the project in R using the Telco Customer Churn dataset from Kaggle. The project will cover data preprocessing, exploratory data analysis (EDA), building linear, logistic, and non-linear regression models, performing diagnostics, and comparing the models.
+
+### Step 1: Setup and Data Loading
+
+First, you'll need to download the dataset and load it into R.
+
+```{r}
+# Load necessary libraries
+library(dplyr)
+library(ggplot2)
+library(caret)
+library(car)
+library(nnet)
+library(MASS)
+library(pROC)
+
+
+# Set the file path (adjust the path if necessary)
+file_path <- "WA_Fn-UseC_-Telco-Customer-Churn.csv"
+
+# Load the dataset
+telco_data <- read.csv(file_path)
+
+# Preview the data
+head(telco_data)
+str(telco_data)
+summary(telco_data)
+```
+
+### Step 2: Data Preprocessing
+
+We need to clean the data, handle missing values, and convert categorical variables to factors.
+
+```{r}
+# Handle missing values
+telco_data <- telco_data %>% na.omit()
+
+# Convert categorical variables to factors
+telco_data$Churn <- as.factor(telco_data$Churn)
+telco_data$gender <- as.factor(telco_data$gender)
+telco_data$Partner <- as.factor(telco_data$Partner)
+telco_data$Dependents <- as.factor(telco_data$Dependents)
+telco_data$PhoneService <- as.factor(telco_data$PhoneService)
+telco_data$MultipleLines <- as.factor(telco_data$MultipleLines)
+telco_data$InternetService <- as.factor(telco_data$InternetService)
+telco_data$OnlineSecurity <- as.factor(telco_data$OnlineSecurity)
+telco_data$OnlineBackup <- as.factor(telco_data$OnlineBackup)
+telco_data$DeviceProtection <- as.factor(telco_data$DeviceProtection)
+telco_data$TechSupport <- as.factor(telco_data$TechSupport)
+telco_data$StreamingTV <- as.factor(telco_data$StreamingTV)
+telco_data$StreamingMovies <- as.factor(telco_data$StreamingMovies)
+telco_data$Contract <- as.factor(telco_data$Contract)
+telco_data$PaperlessBilling <- as.factor(telco_data$PaperlessBilling)
+telco_data$PaymentMethod <- as.factor(telco_data$PaymentMethod)
+```
+
+### Step 3: Exploratory Data Analysis (EDA)
+
+We'll explore the data to understand relationships between features and the target variable (Churn).
+
+```{r}
+# Summary statistics of numeric features
+summary(telco_data %>% select_if(is.numeric))
+
+# Churn distribution
+ggplot(telco_data, aes(x = Churn)) +
+  geom_bar(fill = "steelblue") +
+  labs(title = "Distribution of Churn")
+
+# Relationship between MonthlyCharges and Churn
+ggplot(telco_data, aes(x = MonthlyCharges, fill = Churn)) +
+  geom_histogram(binwidth = 5, alpha = 0.7, position = "identity") +
+  labs(title = "Monthly Charges vs Churn")
+
+# Relationship between Tenure and Churn
+ggplot(telco_data, aes(x = tenure, fill = Churn)) +
+  geom_histogram(binwidth = 5, alpha = 0.7, position = "identity") +
+  labs(title = "Tenure vs Churn")
+```
+
+### Step 4: Linear Regression Model
+
+We'll start by building a linear regression model to predict the probability of churn.
+
+```{r}
+# Linear regression model
+linear_model <- lm(tenure ~ MonthlyCharges + TotalCharges + Contract, data = telco_data)
+
+# Summary of the model
+summary(linear_model)
+```
+
+### Step 5: Model Diagnostics
+
+We will check for multicollinearity and plot residuals to diagnose any issues with the linear model.
+
+```{r}
+# Check multicollinearity
+vif(linear_model)
+
+# Residuals plot
+plot(linear_model)
+```
+
+### Step 6: Logistic Regression
+
+Since churn is a binary variable, we'll use logistic regression to predict churn.
+
+```{r}
+# Logistic regression model
+logistic_model <- glm(Churn ~ MonthlyCharges + TotalCharges + Contract, data = telco_data, family = "binomial")
+
+# Summary of the model
+summary(logistic_model)
+
+# Predicting probabilities
+pred_probs <- predict(logistic_model, type = "response")
+
+# ROC Curve and AUC
+roc_curve <- roc(telco_data$Churn, pred_probs)
+plot(roc_curve)
+auc(roc_curve)
+```
+
+### Step 7: Non-Linear Regression
+
+If non-linear relationships are suspected, a non-linear model can be implemented.
+
+```{r}
+# Example: Non-linear model using nnet package (Neural Network)
+nonlinear_model <- nnet::nnet(Churn ~ MonthlyCharges + TotalCharges + Contract, data = telco_data, size = 5, linout = TRUE)
+
+# Summary of the model
+summary(nonlinear_model)
+```
+
+### Step 8: Model Comparison
+
+We will compare the models using metrics like AIC, BIC, and misclassification error.
+
+
+
+```{r}
+# Compare AIC and BIC
+AIC(linear_model, logistic_model)
+BIC(linear_model, logistic_model)
+
+# Misclassification Error for Logistic Model
+pred_class <- ifelse(pred_probs > 0.5, "Yes", "No")
+conf_matrix <- table(Predicted = pred_class, Actual = telco_data$Churn)
+conf_matrix
+misclass_error <- 1 - sum(diag(conf_matrix)) / sum(conf_matrix)
+misclass_error
+```
+
+### Step 9: Final Report
+
+You can compile the results into a report and create visualizations as needed.
+
+```{r}
+# Visualization of model comparison
+ggplot(telco_data, aes(x = MonthlyCharges, y = as.numeric(Churn))) +
+  geom_point() +
+  geom_smooth(method = "glm", method.args = list(family = "binomial")) +
+  labs(title = "Logistic Regression Fit")
+
+# Save the workspace
+save.image(file = "churn_analysis.RData")
+```
+
+This code covers all aspects of the project. You can run each block in R, modify as needed, and interpret the outputs for your final report.
