@@ -42,7 +42,7 @@ output:
     * 1.7 Estimation of Error Terms Variance $\sigma^2$
     * 1.8 Normal Error Regression Model  
     
-* Chapter 5: Matrix Approach to Simple Linear Regression Analysis
+* Chapter 5: [Matrix Approach to Simple Linear Regression Analysis](PDF_notes/STT4830_Ch_1.pdf)
 
     * 5.1 Matrices
     * 5.2 Matrix Addition and Subtraction
