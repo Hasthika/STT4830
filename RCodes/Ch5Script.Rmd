@@ -53,7 +53,7 @@ X                       # This is your X matrix
 ```
 
 ### Find $X'X$
-```{r comment=NA, warning=FALSE, message=FALSE}
+```{r comment=NA, warning=FALSE, message=FALSE, include=FALSE}
 
 Xt <- t(X) # Taking the transpose of X matrix
 Xt
@@ -63,14 +63,14 @@ XtX
 ```
 
 ### Find $X'Y$
-```{r comment=NA, warning=FALSE, message=FALSE}
+```{r comment=NA, warning=FALSE, message=FALSE, include=FALSE}
 
 XtY <- Xt %*% Y
 XtY
 ```
 
 ### Find $(X'X)^{-1}$
-```{r comment=NA, warning=FALSE, message=FALSE}
+```{r comment=NA, warning=FALSE, message=FALSE, include=FALSE}
 
 XtXinv <- solve(XtX)
 XtXinv
@@ -78,7 +78,7 @@ XtXinv
 
 
 ### Find $\bf{b} = (X'X)^{-1}X'Y$
-```{r comment=NA, warning=FALSE, message=FALSE}
+```{r comment=NA, warning=FALSE, message=FALSE, include=FALSE}
 
 b <- XtXinv %*% Xt %*% Y
 b
@@ -88,7 +88,7 @@ b
 
 
 ### Varify answer by Finding the LS estimates uing $lm$ function
-```{r comment=NA, warning=FALSE, message=FALSE}
+```{r comment=NA, warning=FALSE, message=FALSE, include=FALSE}
 toluca_LS_model <- lm(hours ~ lotSize, data = toluca)
 summary(toluca_LS_model)
 ```
