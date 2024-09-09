@@ -1,7 +1,7 @@
 ---
 title:  "Matrix Approach to Simple Linear Regression in $R$"
 author: Dr. Hasthika Rupasinghe
-date: "August 22th 2023"
+date: "Sep 9th 2024"
 output:
   rmdformats::readthedown:
     toc_depth: 3
@@ -96,7 +96,7 @@ summary(toluca_LS_model)
 ## Section 5.11: Fitted Values and Residuals 
 
 
-```{r}
+```{r, include=FALSE}
 
 Yhat <- X %*% b # Fitted Values
 Yhat
@@ -107,7 +107,7 @@ e
 ```
 
 ## Uses of inverse matrix
-Consider the simultanious equations:
+Consider the simultaneous equations:
 $$2y_1+4y_2 =20$$
 $$3y_1+y_2=10$$
 Using Matrix methods, find the solutions for $y_1$ and $y_2$.
