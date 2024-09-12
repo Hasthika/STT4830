@@ -62,6 +62,8 @@ ggplot(toluca, aes(x = lotSize, y = hours)) +
 ### Finding the LS estimates
 ```{r comment=NA, warning=FALSE, message=FALSE}
 toluca_LS_model <- lm(hours ~ lotSize, data = toluca)
+
+
 summary_toluca_LS_model <- summary(toluca_LS_model)
 summary_toluca_LS_model
 ```
@@ -70,9 +72,9 @@ summary_toluca_LS_model
 
 ```{r comment=NA, warning=FALSE, message=FALSE}
 #Method 1
-#library(moderndive)
-#Fittedandresiduals <-get_regression_points(toluca_LS_model)
-#Fittedandresiduals
+library(moderndive)
+Fittedandresiduals <-get_regression_points(toluca_LS_model)
+Fittedandresiduals
 
 #Method 2
 #Simply use the summary_toluca_LS_model object to get residuals and fitted values

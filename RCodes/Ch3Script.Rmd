@@ -1,7 +1,7 @@
 ---
 title:  "Diagnostics and Remedial Measures in $R$ "
 author: Dr. Hasthika Rupasinghe
-date: "August 22th 2023"
+date: "Sep 12th 2024"
 output:
   rmdformats::readthedown:
     toc_depth: 3
