@@ -81,25 +81,27 @@ Determine the LS equation for the model $y_i = \beta_0 + \beta_1x_i + \epsilon_i
 
 ***
 
-<!--
 
-#### ***Homework 4*: Due Tuesday, September 26th**
+
+#### ***Homework 4*: Due Tuesday, September 24th**
 Turn in your homework only as a printed *pdf* created in $R$. No handwritten work please!
 
 1) Refer to $\textbf{consumer finance}$ problems 5.5 and 5.13 in the text book.
- a) Using the matrix method, obtain the vector of estimated regression coefficients and vector of residuals. 
- b) Find the hat matrix $\bf{H}$.
- c) Find $s^2(e)$.
+    a) Using the matrix method, obtain the vector of estimated regression coefficients and vector of residuals. 
+    b) Find the hat matrix $\bf{H}$.
+    c) Find $s^2(e)$.
  
  
 2) Refer to $\textbf{Plastic hardness}$ Problems 1.22 and 5.7. Using matrix methods, obtain the following: 
-  (a) $(\bf{X' X})^{-1}$
-  (b) $\bf{b}$
-  (c) $\bf{\hat{Y}}$
-  (d) $\bf{e}$ 
-  (e) $\bf{H}$ 
+    (a) $(\bf{X' X})^{-1}$
+    (b) $\bf{b}$
+    (c) $\bf{\hat{Y}}$
+    (d) $\bf{e}$ 
+    (e) $\bf{H}$ 
 
 *** 
+
+<!--
 
 #### ***Homework 5*: Due Tuesday, October 3rd**
 Turn in your homework only as a printed *pdf* created in $R$. No handwritten work please!

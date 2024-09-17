@@ -84,7 +84,7 @@ ggplot(data = tolucaDF, aes(x = lotSize)) + geom_boxplot(color = "steelblue", fi
 
 ## Create the LS model
 
-```{r comment=NA, warning=FALSE, message=FALSE}
+```{r comment=NA, warning=FALSE, message=FALSE, include=FALSE}
 # Recall from ch1
 toluca_LS_model <- lm(hours ~ lotSize, data = toluca)
 summary(toluca_LS_model)
@@ -92,21 +92,21 @@ summary(toluca_LS_model)
 
 ## Plot of residuals against predictor variable
 
-```{r comment=NA, warning=FALSE, message=FALSE}
+```{r comment=NA, warning=FALSE, message=FALSE, include=FALSE}
 library(ggplot2)
 ggplot(toluca_LS_model, aes(x = lotSize, y = .resid)) + geom_point(color = "blue", dotsize = .5) + theme_bw() #no need to find residual seperately. Just use ".resid"
 ```
 
 ## Plot of residuals against fitted values.
 
-```{r comment=NA, warning=FALSE, message=FALSE}
+```{r comment=NA, warning=FALSE, message=FALSE, include=FALSE}
 ggplot(toluca_LS_model, aes(x = .fitted, y = .resid)) + geom_point(color = "blue", dotsize = .5) + theme_bw() #Use the model as the data and use ".fitted" to get the fitted values for x axis
 ```
 
 
 ## Box plot of residuals
 
-```{r}
+```{r, include=FALSE}
 ggplot(toluca_LS_model, aes(x = .resid)) + geom_boxplot(color = "steelblue", fill = "orchid4") + theme_bw()
 ```
 
