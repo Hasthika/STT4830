@@ -45,7 +45,7 @@ head(tolucaDF)
 
 The dot plot for the lot sizes in the Toluca Company example.
 
-```{r comment=NA, warning=FALSE, message=FALSE}
+```{r comment=NA, warning=FALSE, message=FALSE, echo=FALSE}
 library(ggplot2)
 ggplot(data = tolucaDF, aes(x = lotSize)) + geom_dotplot(color = "blue", fill = "orchid4", dotsize = .5) + theme_bw()
 ```
@@ -54,7 +54,7 @@ ggplot(data = tolucaDF, aes(x = lotSize)) + geom_dotplot(color = "blue", fill = 
 
 The Sequence plot for the lot sizes in the Toluca Company example.
 
-```{r}
+```{r, echo=FALSE}
 #plot(tolucaDF$lotSize, type = "b", lty = 2, xlab = "Run", ylab = "Lot Size") title("Sequence Plot")
 
 tolucaDF$rank <- c(1:25)
@@ -76,7 +76,7 @@ stem(tolucaDF$lotSize, scale = 3)
 
 Box plot of the lot sizes for the Toluca Company example.  
 
-```{r comment=NA, warning=FALSE, message=FALSE}
+```{r comment=NA, warning=FALSE, message=FALSE, echo=FALSE}
 ggplot(data = tolucaDF, aes(x = lotSize)) + geom_boxplot(color = "steelblue", fill = "orchid4") + theme_bw()
 ```
 
