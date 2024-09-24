@@ -101,9 +101,9 @@ Turn in your homework only as a printed *pdf* created in $R$. No handwritten wor
 
 *** 
 
-<!--
 
-#### ***Homework 5*: Due Tuesday, October 3rd**
+
+#### ***Homework 5*: Due Tuesday, October 1st**
 Turn in your homework only as a printed *pdf* created in $R$. No handwritten work please!
 
 1) 3.3 - Note: for part e) conduct the Breusch-Pagan test instead Brown-Forsythe test using $\alpha = 0.01$
@@ -113,6 +113,8 @@ Turn in your homework only as a printed *pdf* created in $R$. No handwritten wor
 5) 3.17
 
 ***
+
+<!--
 
 #### ***Homework 6*: Due Tuesday, October 24th**
 Turn in your homework only as a printed *pdf* created in $R$. No handwritten work please!
