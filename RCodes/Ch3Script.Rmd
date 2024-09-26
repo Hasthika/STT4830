@@ -266,7 +266,7 @@ ggplot(salesTrain, aes(x = daysTrain, y = performance)) +
     * We shall consider a transformation on X. We shall consider initially the square root transformation (or go with the log 10 transformation of X)
 
 
-```{r comment=NA, warning=FALSE, message=FALSE}
+```{r comment=NA, warning=FALSE, message=FALSE, echo=FALSE}
 library(dplyr)
 # Find the transformed X values
     salesTrainTrans <- salesTrain %>%
