@@ -298,9 +298,12 @@ library(dplyr)
 # Perform a correlation test for normality for this data
   
   res <- resid(modelTrans)
+  
   expRes <- sqrt(deviance(modelTrans) / df.residual(modelTrans)) * 
                                        qnorm((rank(resid(modelTrans)) - 0.375) / (nrow(salesTrainTrans) + 0.25))
+  
   cor(res, expRes)
+  
   nrow(salesTrainTrans)
 ```
 
@@ -404,15 +407,30 @@ library(dplyr)
 
 ### Box-Cox transfomations for Plasma Levels Example {-}
 
+The Box-Cox method searches over a range of possible transformations and finds the optimal one. `boxcox()` produces a plot of the profile log-likelihood values (the definition of this term is beyond the scope of this class) as a function of $\lambda$ 
+
+The plot should have an upside-down U shape, and the optimal $\lambda$ value is the one at which the log-likelihood is maximized. The object you assign the output to (below, LAMBDA) will contain elements x and y (note: these are NOT our explanatory and response variables) corresponding to the points being plotted to create the figure. These can be used to extract the optimal $\lambda$ value using `which()`.
+
+
 ```{r comment=NA, warning=FALSE, message=FALSE}
-library(ALSM)
-obj <- boxcox.sse(plasmaData$age, plasmaData$plasmaLevel, l=seq(-2,2,.1))
-obj
+# ALSM no longer works!
+#library(ALSM)
+#obj <- boxcox.sse(plasmaData$age, plasmaData$plasmaLevel, l=seq(-2,2,.1))
+#obj
+#obj[which.min(obj$SSE),]
 
 
-obj[which.min(obj$SSE),]
+library(MASS)
+fit <- lm(plasmaLevel ~ age,data = plasmaData)
+LAMBDA <- boxcox(fit, lambda = seq(-2, 2, 0.1))
+LAMBDA$x[which(LAMBDA$y == max(LAMBDA$y))]
 
 ```
+
+The optimal value for this example is -0.5050505, which we can round to -0.5. Thus, our Box-Cox transformation is $1/\sqrt{Y}$. 
+
+ 
+
 
 
 ### lowess Method for Toluca example
