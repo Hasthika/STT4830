@@ -94,7 +94,7 @@ cor(DwaineData)
 
 ## Breusch-Pagan Test for Constancy of Error Variance {-}
 
-```{r comment=NA, warning=FALSE, message=FALSE}
+```{r comment=NA, warning=FALSE, message=FALSE, include=FALSE}
 DwaineModel <- lm(SALES ~ TARGTPOP + DISPOINC, data = DwaineData)
 
 library(lmtest)
