@@ -1,7 +1,7 @@
 ---
 title:  "Multiple Regression in $R$"
 author: Dr. Hasthika Rupasinghe
-date: "Oct 12, 2023"
+date: "Oct 22, 2024"
 output:
   rmdformats::readthedown:
     toc_depth: 3
