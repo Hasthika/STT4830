@@ -1,7 +1,7 @@
 ---
 title:  "Buildrng the Regression Model I: Model Selection and Validation"
 author: Dr. Hasthika Rupasinghe
-date: "Nov 07, 2023"
+date: "Nov 14, 2024"
 output:
   rmdformats::readthedown:
     toc_depth: 3
@@ -28,7 +28,7 @@ For simplicity we only use first four explanatory variable and first 54 of the 1
 
 ## Stem and Leaf plots for individual X variables
 
-```{r comment=NA, warning=FALSE, message=FALSE}
+```{r comment=NA, warning=FALSE, message=FALSE, include=FALSE}
 
 s1<- stem(surgicalData$X1, 3)
 s2<- stem(surgicalData$X2, 3)
@@ -39,7 +39,7 @@ s4<- stem(surgicalData$X4, 3)
 ```
 
 ## Box plots for individual X variables
-```{r}
+```{r, include=FALSE}
 library(ggplot2)
 library(cowplot)
 bp1<- ggplot(surgicalData, aes(x = X1)) + geom_boxplot(color = "steelblue", fill = "orchid4") + theme_bw()+coord_flip()
@@ -53,7 +53,7 @@ plot_grid(bp1, bp2,bp3,bp4)
 
 ## Correlation Matrix
 
-```{r comment=NA, warning=FALSE, message=FALSE}
+```{r comment=NA, warning=FALSE, message=FALSE, include=FALSE}
 library(plotly)
 library(GGally)
 
@@ -67,7 +67,7 @@ ggplotly(p)
 
 ## First order regression model
 
-```{r comment=NA, warning=FALSE, message=FALSE}
+```{r comment=NA, warning=FALSE, message=FALSE, include=FALSE}
 surgicalModel1 <- lm(Y ~ X1 + X2 + X3 + X4, data = surgicalData)
 
 library(ggplot2)
@@ -89,7 +89,7 @@ transformation would also reduce the apparent curvature, the investigator examin
 
 ## Regression model with transformed Y
 
-```{r comment=NA, warning=FALSE, message=FALSE}
+```{r comment=NA, warning=FALSE, message=FALSE, include=FALSE}
 surgicalModel2 <- lm(lnY ~ X1 + X2 + X3 + X4, data = surgicalData)
 
 library(ggplot2)
@@ -243,6 +243,8 @@ tab2
 tab2[which.min(tab2[,2]),]
 ```
 
+<!--
+
 ## Multiple Criterians at once
 
 ```{r}
@@ -350,4 +352,5 @@ rownames(compare) <- c( "MSPR" , "Adj R square")
 compare
 ```
 
+-->
 
