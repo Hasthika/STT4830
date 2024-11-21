@@ -61,7 +61,7 @@ cor(surgicalData[1:4])
 
 #pairs(surgicalData[1:4])
 
-p <- ggpairs(surgicalData[1:4], title="Scatterplot matrix")
+p <- ggpairs(surgicalData[c(1:4,9)], title="Scatterplot matrix")
 ggplotly(p)
 ```
 
@@ -243,7 +243,7 @@ tab2
 tab2[which.min(tab2[,2]),]
 ```
 
-<!--
+
 
 ## Multiple Criterians at once
 
@@ -253,12 +253,6 @@ library(olsrr)
 obj2 <- ols_step_all_possible(surgicalModel2)
 obj2 # Default table
 plot(obj2) # Plots
-
-# Custom Tables (Ex: with AIC)
-tabAIC <- cbind(obj2$predictors, obj2$aic)
-tabAIC <- data.frame(tabAIC)
-names(tabAIC) <- c("Predictors", "AIC")
-tabAIC 
 
 ```
 
@@ -352,5 +346,5 @@ rownames(compare) <- c( "MSPR" , "Adj R square")
 compare
 ```
 
--->
+
 
