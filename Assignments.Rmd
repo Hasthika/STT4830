@@ -1,5 +1,5 @@
 ---
-title: "Schedule for STT 4830 - Fall 2024"
+title: "Schedule for STT 4830 - Fall 2025"
 author: "Dr. Hasthika Rupasinghe"
 date: 'Last Updated on: `r format(Sys.time(), "%b %d, %Y at %X")`'
 output: 
@@ -13,7 +13,7 @@ output:
 ***
 
 
-**Week 1: (August 19 -- 23)**
+**Week 1: (August 18 -- 22)**
 
 * Go over syllabus.
 * [Chapter 1: Linear Regression With One Predictor Variable](PDF_notes/STT4830_Ch_1.pdf)
@@ -25,7 +25,7 @@ output:
 
 ***
 
-**Week 2: (August 26 -- August 30)**
+**Week 2: (August 25 -- August 29)**
 
 * Chapter 1: Linear Regression With One Predictor Variable
 
@@ -35,7 +35,7 @@ output:
     
 ***
 
-**Week 3: (September 2 -- Sep 6)**
+**Week 3: (September 1 -- Sep 5)**
 
 * Chapter 1: Linear Regression With One Predictor Variable
 
@@ -54,7 +54,7 @@ output:
     
 ***
 
-**Week 4: (Sep 9  -- Sep 13)**
+**Week 4: (Sep 8  -- Sep 12)**
  
 * Chapter 5: Matrix Approach to Simple Linear Regression Analysis
 
@@ -67,7 +67,7 @@ output:
     
 ***
 
-**Week 5: (Sep 16  -- Sep 20)**
+**Week 5: (Sep 15  -- Sep 19)**
  
 * Chapter 5: Matrix Approach to Simple Linear Regression Analysis  
     * 5.11  Fitted Values and Residuals
@@ -82,7 +82,7 @@ output:
     
 ***
 
-**Week 6: (Sep 23  -- Sep 27)**
+**Week 6: (Sep 22  -- Sep 26)**
 
 * Chapter 3: Diagnostics and Remedial Measures
  * 3.3  Diagnostics for Residuals
@@ -94,7 +94,7 @@ output:
 
 ***
 
-**Week 7: (Sep 30  -- Oct 06)**
+**Week 7: (Sep 29  -- Oct 05)**
 
 * Chapter 3: Diagnostics and Remedial Measures
 
@@ -109,7 +109,7 @@ output:
  
 ***
 
-**Week 8: (Oct 7  -- Oct 11)**
+**Week 8: (Oct 6  -- Oct 10)**
 
 * Chapter 3: Diagnostics and Remedial Measures
     
@@ -120,7 +120,7 @@ output:
  
 ***
 
-**Week 9: (Oct 14  -- Oct 18)**
+**Week 9: (Oct 13  -- Oct 17)**
 
 * No Class Tuesday (Fall Break)
 
@@ -135,7 +135,7 @@ output:
    
 ***
 
-**Week 10: (Oct 21  -- Oct 25)**
+**Week 10: (Oct 20  -- Oct 24)**
 
 * Chapter 6:  Multiple Regression
 
@@ -150,7 +150,7 @@ output:
 ***
 
     
-**Week 11: (Oct 28  -- Nov 01)**
+**Week 11: (Oct 27  -- Oct 31)**
 
 * Chapter 9:  Building the Regression Model I: Model Selection and Validation
 
@@ -164,7 +164,7 @@ output:
 
 ***
 
-**Week 12: (Nov 04  --Nov 08)**
+**Week 12: (Nov 03  --Nov 07)**
 
 * Chapter 9:  Building the Regression Model I: Model Selection and Validation
 
@@ -177,7 +177,7 @@ output:
 
 ***
 
-**Week 13: (Nov 11  --Nov 15)**
+**Week 13: (Nov 10  --Nov 14)**
 
   * 14.1 Regression Models with Binary Response Variable
   * 14.2 Sigmoidal Response Functions for Binary Responses
@@ -200,7 +200,7 @@ output:
 
  ***
 
-**Week 14: (Nov 18  --Nov 22)**
+**Week 14: (Nov 17  --Nov 21)**
 
 **Tuesday:**
 
@@ -225,7 +225,7 @@ output:
 
 ***
 
-**Week 15: (Nov 25  --Nov 29)**
+**Week 15: (Nov 24  --Nov 28)**
 
   * 14.6 Automatic Model Selection Methods
   * 14.7 Tests for Goodness of Fit
@@ -235,7 +235,7 @@ output:
 
 ***
 
-**Week 16: (Dec 02  --Dec 03)**
+**Week 16: (Dec 01  --Dec 02)**
 
 * Dec 03 is Last day of class
 
