@@ -9,7 +9,7 @@ output:
     theme: yeti
 ---
 
-**Instructor:**  Dr. Hashtika Rupasinghe
+**Instructor:**  Dr. Hasthika Rupasinghe
 
 **Class meeting:** TR 09:30am - 10:45am, WA 209B
 
