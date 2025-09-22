@@ -83,9 +83,10 @@ Determine the LS equation for the model $y_i = \beta_0 + \beta_1x_i + \epsilon_i
 
 ***
 
-<!--
 
-#### ***Homework 4*: Due Tuesday, September 24th**
+
+#### ***Homework 4*: Due Thursday, September 25th**
+
 Turn in your homework only as a printed *pdf* created in $R$. No handwritten work please!
 
 1) Refer to $\textbf{consumer finance}$ problems 5.5 and 5.13 in the text book.
@@ -103,7 +104,7 @@ Turn in your homework only as a printed *pdf* created in $R$. No handwritten wor
 
 *** 
 
-
+<!--
 
 #### ***Homework 5*: Due Tuesday, October 1st**
 Turn in your homework only as a printed *pdf* created in $R$. No handwritten work please!
