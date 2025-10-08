@@ -105,7 +105,7 @@ Turn in your homework only as a printed *pdf* created in $R$. No handwritten wor
 *** 
 
 
-#### ***Homework 5*: Due Thursday, October 2nd**
+#### ***Homework 5*: Due ~~Thursday, October 2nd~~ Moved to Tuesday October 7th**
 
 Turn in your homework only as a printed *pdf* created in $R$. No handwritten work please!
 
@@ -113,22 +113,24 @@ Turn in your homework only as a printed *pdf* created in $R$. No handwritten wor
 2) 3.4
 3) 3.11
 4) 3.15
-5) 3.17
+
+~~5) 3.17~~ Moved to next HW
 
 ***
 
-<!--
 
 
-#### ***Homework 6*: Due Tuesday, October 29th**
+
+#### ***Homework 6*: Due Tuesday, October 20th**
 Turn in your homework only as a printed *pdf* created in $R$. No handwritten work please!
 
 1) 3.6 a), b), c) Only
 2) 3.16
-
+3) 3.17
 
 ***
 
+<!--
 
 #### ***Homework 7*: Due Tuesday, Nov 12th**
 
