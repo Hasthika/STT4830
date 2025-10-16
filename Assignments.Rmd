@@ -72,7 +72,7 @@ output:
 * Chapter 5: Matrix Approach to Simple Linear Regression Analysis  
     * 5.11  Fitted Values and Residuals
     
-* Chapter 3: Diagnostics and Remedial Measures
+* Chapter 3: [Diagnostics and Remedial Measures](PDF_notes/STT4830_Ch_6.pdf)
 
     * 3.1  Diagnostics for Predictor Variable
     * 3.2  Residuals
