@@ -240,6 +240,12 @@ anova (Reduced, Full)
 
 ```
 
+ii) Test Statistic = 14.801
+
+iii) P-value = 0.005594
+
+iv) p-value. = 0.005594 < 0.05. ($\alpha = 0.05$) Reject $H_0$
+There is enough evidence to conclude that the full model is good.
 
 ### Example on page 129: Sales training example {-}
 
